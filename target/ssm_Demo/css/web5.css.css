@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+			}
+			
+			
+#tou{
+	width: 1349px;
+	height: 100px;
+	background-color: black;
+	overflow: hidden;
+	margin: 0 auto;
+			}
+			
+#sousuokuang{
+	width: 900px;
+	height: 100px;
+	margin: 0 auto;
+	background-image:url(../image/web5/search_ico.png);
+	background-position:30px 30px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	/* float: left; */
+	position: relative;
+			}
+			
+#wenbenkuang{
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+	/* float: left; */
+	width:710px;
+	height: 30px;
+	padding-left:20px ;
+	border: none;
+	background-color: black;
+	color: white;
+			}
+#chahao{
+	width: 20px;
+	height: 20px;
+	float: right;
+	background-image: url(../image/web5/search_close.png);
+	position: absolute;
+	right: 20px;
+	top: 40px;
+	cursor: pointer;
+}
+
+#padd-kongzhi{
+	background: #1e1e1e;
+	padding-top: 80px;
+	padding-bottom: 30px;
+}
+
+#neirong{
+	width: 980px;
+	margin: 0 auto;
+}
+
+#neirong ul{
+	list-style-type: none;
+	padding-top: 30px;
+	
+}
+
+#neirong li{
+	height: 37px;
+	float: left;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+#neirong li img{
+	height: 100%;
+	width: auto;
+}
+
+
+
+
+
+
+
+/* bottom文字定位容器 */
+#bottom{
+	width: 1080px;
+	height: 276px;
+	margin: 0 auto;
+	padding:51px 0px ;
+}
+
+#bottom-wenzi{  /* 底部文字布局 */
+	width: 1080px;
+	height: 40px;
+	
+}
+
+#bottom-wenzi a:link{       /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:visited{        /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:hover{          /* 文字连接样式 */
+	color: #23527c;
+	text-decoration: underline;
+	
+}
+
+#bottom-wenzi img{        /* 微信和微博 定位*/
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 30px;
+}
+#weixin-img{
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 10px;
+	position: relative;
+	cursor:pointer;
+}
+/* js鼠标放上以后  显示的二维码  */
+#onms-erweima{
+	width: 160px;
+	height: 236px;
+	/* background-color: #23527C; */
+	margin-top: -240px;
+	margin-left: -76px;
+	z-index: 999;
+	background-image: url(../image/index/footer-qr.png);
+	position: absolute;
+	cursor:pointer;
+	display: none;
+}
+/* #onms-erweima img{
+	width: 160px;
+	height:236px;
+} */
+#bottom-wenzi p{        
+	color: #818181;
+	font-size: 12px;
+	line-height: 30px;
+	margin-top: 30px;
+}

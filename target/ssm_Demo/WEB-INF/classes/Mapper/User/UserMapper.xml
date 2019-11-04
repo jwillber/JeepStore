@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jeep.UserMapper.UserMapper"> 
+  <resultMap id="BaseResultMap" type="cn.jeep.UserBean.User">
+    <id column="uoid" jdbcType="VARCHAR" property="uoid" />
+    <result column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="uname" jdbcType="VARCHAR" property="uname" />
+    <result column="upwd" jdbcType="VARCHAR" property="upwd" />
+    <result column="ushenfen" jdbcType="VARCHAR" property="ushenfen" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="areaa" jdbcType="VARCHAR" property="areaa" />
+    <result column="usex" jdbcType="INTEGER" property="usex" />
+    <result column="utell" jdbcType="VARCHAR" property="utell" />
+    <result column="br" jdbcType="VARCHAR" property="br" />
+    <result column="zt" jdbcType="INTEGER" property="zt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    uoid,uid,uname,upwd,ushenfen,province,city,areaa,usex,utell,br,zt
+  </sql>
+	<select id="selectAllUserInfo" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from zys_users
+	</select>
+	
+	<!-- 用户登录 -->
+	<select id="login" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from zys_users where uid=#{uid} and upwd=#{upwd}
+	</select>
+	
+	<!-- 通过uid查询购物车条数 -->
+	<select id="gouCarCount" resultType="java.lang.Integer">
+		SELECT count(*) FROM zys_users JOIN zys_goucar ON zys_users.`uid`=zys_goucar.`uid` WHERE zys_users.`uid`=#{uid}
+	</select>
+	
+	
+	
+	
+	
+	
+	
+</mapper>

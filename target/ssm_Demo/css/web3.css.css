@@ -1,0 +1,1232 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+#heard{                /* 头部定义导航栏布局 */
+	width: 1080px;
+	height: 70px;
+	margin: 0 auto;
+	
+	
+}
+#logo{
+	float: left;        /* 头标志 */
+	padding: 23px 0;
+/* 	box-sizing: border-box; */
+	
+}
+#heard-left{     /* 导航栏左边 */
+	float: left;
+	height: 70px;
+	margin-left: 35px;
+	color: #ffffff;
+	width: 590px;
+	
+}
+.cars{            /* 导航栏文字定位以及样式 */
+	float: left;
+	line-height: 70px;
+	text-align: center;
+	font-size: 16px;
+	width: 98px;
+}
+
+   /* ---------------------------------------------------------------js操作区域 */
+				   
+#hid-car{                      /* jsjsjsjsjs隐藏区域   汽车 */
+	width: 1079px;
+	height: 556px;
+/* 	background-color:skyblue ; */
+	margin-left: -92px;
+	display: none;
+}
+/* <!-- js隐藏区域 汽车列表 --> */
+#hid-car-left{
+	width: 458px;
+	height: 556px;
+	float: left;
+	background-color: white;
+}
+.li-bgcolor{         /* 用于js修改li属性 */
+	background-color: white;
+}
+#hid-car-left ul{
+	list-style-type: none;
+}
+#hid-car-left li{
+	width: 229px;
+	height: 111px;
+	float: left;
+	cursor:pointer;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+#hid-car-left img{
+	height: 100%;
+}
+/* <!-- js操作隐藏汽车区域右边总体布局       容器 --> */
+#hid-car-right{
+	height: 556px;
+	width: 621px;
+	float: right;
+	background-color: white;
+}
+#hid-cars img{
+	width: 621px;
+	height: 421px;
+}
+/* <!--隐藏汽车 底部图片 --> */
+#hid-right-bottom{
+	width: 621px;
+	height: 140px;
+	text-align: left;
+}
+#hid-right-bottom img{
+	width: 50%;
+	float: left;
+}
+
+
+
+
+
+
+#heard-left a:link{       /*  导航栏链接样式 */
+	text-decoration: none;
+	color: #ffffff;
+}
+#heard-left a:hover{ /*  导航栏链接样式 */
+	text-decoration:underline;
+	color: #ffffff;
+}
+#heard-left a:visited{ /*  导航栏链接样式 */
+	color: #ffffff;
+}
+
+#heard-right{                   /* 导航栏右边链接样式 */
+	float: left;
+	width: 399px;
+	height: 70px;
+}
+.cars-right{     /* 导航栏右边 */
+	float: left;
+	line-height: 70px;
+	text-align: center;
+	width: 108px;
+}
+#xiabiao{                          /* 向下的箭头 */
+	width: 8px;
+	height: 8px;
+/* 	position: relative; */
+	border-left: 1px solid #ffffff;
+	border-bottom:1px solid #ffffff ;
+	float: right;
+	transform:rotate(-45deg);/* 旋转 */
+	margin-top: 30px;
+	margin-right: 10px;
+	
+}
+#shangbiao{                  /* 向上的箭头 */
+	width: 8px;
+	height: 8px;
+	/* 	position: relative; */
+	border-left: 1px solid #f9be01;
+	border-bottom:1px solid #f9be01 ;
+	float: right;
+	transform:rotate(135deg);/* 旋转 */
+	margin-top: 33px;
+	margin-right: 10px;
+	display: none;
+}
+
+
+#heard-right a:link{          /* 导航栏右边链接样式 */
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+}
+#heard-right a:hover{
+	text-decoration:underline;
+	color: #ffffff;
+}
+#heard-right a:visited{
+	color: #ffffff;
+}
+#search{    /* 放大镜 */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/search.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 10px;
+	cursor: pointer;
+	
+}
+#fav{       /* 收藏夹与消息(导航栏黄色标签) */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/fav.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 29px;
+	cursor: pointer;
+}
+.fav-count{        /* 消息提示(导航栏黄色标签白点) */
+	background: #fff;
+	border-radius: 50%;
+	text-align:center;
+	position:relative;
+	left: 48.5%;
+	top:10%;
+	width: 20px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	cursor: pointer;   /* 链接变成小手 */
+}
+#diqiu{                                          /* 地球图片 */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/fca.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 23px;
+	cursor: pointer;
+}
+#bigimg{
+	width: 1349px;
+	margin: 0 auto;
+} 
+#carsflow-backgroundimg{                                          /* 汽车滚动背景图 */
+	width: 100%; 
+	background-image:url(../image/index/block1.jpg);
+	background-repeat: repeat-x;
+	background-size: 1349px 432px;
+	margin: -4 0 auto;
+}
+#carsflow{                                               /* 箭头和汽车滚动容器 */
+	width: 1114px;
+	height: 432px;
+	margin: 0 auto;
+}
+.jiantou{                            /* 汽车滚动左箭头 */
+	width: 17px;
+	height: 100%;
+	float: left;
+}
+#carmain{          /*    汽车滚动定位 */
+	width: 1080px;
+	height: 100%;
+	float: left;
+}
+
+
+/* 第二个导航栏------------------------------------- */
+
+	#daohang2{
+		width: 100%;
+		height: 75px;
+		background-color: black;
+		position: fixed;
+		margin-top: 0px;
+		z-index: 999;
+	}
+	#daohang2-main{
+		width: 1080px;
+		height: 75px;
+		margin: 0 auto;
+		background-color: black;
+	}
+	.daohang2-link{
+		width: 73px;
+		height: 70px;
+		float: left;
+		text-align: center;
+		font-size: 14px;
+		cursor: pointer;
+		line-height: 70px;
+		margin-right: 25px;
+		color: white;
+	}
+	.daohang2-link a:link{
+		text-decoration: none;
+		color: white;
+	}
+	
+	.daohang2-link a:hover{
+		text-decoration: underline;
+		color: white;
+	}
+	.daohang2-link a:visited{
+		text-decoration: none;
+		color: white;
+	}
+	
+	#daohang2-top{
+		width: 40px;
+		height: 40px;
+		float: right;
+		margin-top: 25px;
+		background-image: url(../image/web/arrow-top.jpg);
+		background-repeat: no-repeat;
+		/* background-size: 40px 40px; */
+		cursor: pointer;
+	}
+	#lscx{
+		padding-bottom: 3px;
+		border-bottom: 3px solid #f8be00;
+		border-bottom:none;
+		color: white;
+	}
+	#txjlb{
+		text-decoration: none;
+		color: white;
+	}
+		
+
+/* 预留头位置 */
+
+
+
+
+/* jeep全境界开始布局 */
+#jpqjj-title{          /* 标题 */
+	width: 100%;
+	height: 74px;
+	background: black;
+	color: white;
+	font-size: 25px;
+	line-height: 74px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#jpqjj-main{   /* 背景图 */
+	width: 1349px;
+	height:689px;
+	margin:0 auto;
+	background-image: url(../image/web3/banner.png);
+	background-size:100% auto;
+	overflow: hidden;
+}
+
+
+#jpqjj-main-content{
+	width: 845px;         /* 小选项卡 */
+	height: 193px;
+	margin: 0 auto;
+	/* background: #23527C; */
+	margin-top:470px;
+}
+
+#jpqjj-main-content-title{
+	width: 845px;             /* 小选项卡的背景图 */
+	height: 82px;
+	background-color: white;
+	background-image: url(../image/web3/bj-1.png);
+}
+
+
+/* li写三个带图片的小点 */
+#jpqjj-main-content-title ul{
+	list-style-type: none;
+	/* margin: 0 auto; */
+	margin-left: 220px;
+	margin-top: 20px;
+}
+#jpqjj-main-content-title li{
+	width: 45px;
+	height: 45px;
+	/* background-color: #fabe00; */
+	float: left;
+	border-radius: 50%;
+	padding: 2px;
+	
+	/* text-align: center; */
+	margin-left: 20px;
+	line-height: 40px;
+	margin-top: 12px;
+	cursor: pointer;
+	text-align: left;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* div填充色 */
+.limian{
+	width: 39px;
+	height: 39px;
+	background-color: #fabe00;
+	margin:  0 auto;
+	/* margin-top: 2px ; */
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.jpqjj-main-content-neirong{        /* 选项卡的内容   容器 */
+	width: 845px;
+	height: 110px;
+	background-color: white;
+	text-align: center;
+	padding-top: 18px;
+	font-size: 14px;
+}
+/* 此皇室用于操控js边框隐藏 */
+.caokongbk {
+		border: 1px solid #fabe00;
+		border: none;
+}
+
+
+
+/* 车主权益部分 */
+
+#chezhuquanyi-title{
+	width: 100%;
+	height: 74px;
+	background: black;
+	color: white;
+	font-size: 25px;
+	line-height: 74px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#chezhuquanyi-content{
+	width: 1349px;
+	height: 700px;
+	margin: 0 auto;
+	background-color: #323232;
+	overflow: hidden;
+}
+/* ==================================从web2调用样式=======================*/
+#jinrongfuwu-maincontent{
+	width: 1080px;
+	height: 600px;
+	background-color: #1e1e1e;
+	
+	margin: 0 auto;
+	margin-top: 40px;
+}
+#jinrongfuwu-title{    /* 经融服务标题 */
+	width: 1080px;
+	height: 50px;
+	background-color: black;
+}
+
+#jinrongfuwu-title ul{   /* 标题设置 */
+	color: white;
+	list-style-type: none;
+}
+
+#jinrongfuwu-title li{
+	float: left;
+	width: 50%;
+	text-align:center;
+	line-height: 50px;
+	font-size: 20px;
+	cursor: pointer;
+}
+#jr-border{
+	width: 250px;
+	height: 3px;
+	background-color: #f8be00;
+	margin: 0 auto;
+	margin-top: -10px;
+}
+#jsq-border{
+	width: 100px;
+	height: 3px;
+	background-color: #f8be00;
+	margin: 0 auto;
+	margin-top: -10px;
+	display: none;
+}
+#jinrongfuwu-none{  /* 金融服务的隐藏域 */
+	width: 1080px;
+	height: 550px;
+	text-align:center;
+	/* display: none; */
+	margin:0 auto;
+	background-color: #d7d7d7;
+}
+#jrjsq-none{         /* 金融计算器 */
+	width: 1080px;
+	height: 550px;
+	text-align:center;
+	display: none;
+	margin:0 auto;
+	overflow: hidden;
+	background-color: #d7d7d7;
+}
+/* 车辆包修、包换、包退政策   隐藏内容*/
+
+#jinrongfuwu-none-left{
+	width: 540px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	/* background-color: #23527C; */
+	text-align: center;
+	padding-top: 145px;
+	padding-left: 58px;
+}
+#jinrongfuwu-none-left img{
+	width: 85%;
+	height: auto;
+}
+#jinrongfuwu-none-right{
+	width: 540px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	/* background-color: #23527C; */
+	text-align: left;
+	padding-top: 145px;
+	/* padding-left: 58px; */
+	font-size: 13px;
+	line-height: 30px;
+	font-weight: bold;
+}
+/* 纯正配件样式 */
+#jrjsq-none-left{
+	width: 540px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	/* background-color: #23527C; */
+	text-align: left;
+	padding-top: 83px;
+	/* padding-left: 58px; */
+}
+#jrjsq-none-left img{
+	width: 95%;
+	height: auto;
+}
+#jrjsq-none-right{
+	width: 540px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	/* background-color: #23527C; */
+	text-align: left;
+	padding-top: 40px;
+	/* padding-left: 58px; */
+	font-size: 13px;
+	line-height: 25px;
+	font-weight: bold;
+	
+}
+
+
+
+/* 车主服务区域========================================================== */
+#chezhufuwu-title{
+	width: 100%;
+	height: 74px;
+	background: black;
+	color: white;
+	font-size: 25px;
+	line-height: 74px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#chezhufuwu-content{
+	width: 1080px;
+	height: 652px;
+	margin: 0 auto;
+	background-color: white;
+	/* padding-top: 40px; */
+	border: 1px solid #a0a0a0;
+	border-top: none;
+	margin-top: 40px;
+	overflow: hidden;
+}
+/* 内部标题  ul   li布局 */
+#chezhufuwu-content-title{
+	width: 1080px;
+	height: 52px;
+	margin: 0 auto;
+	background-color: black;
+}
+
+#chezhufuwu-content-title ul{
+	list-style-type: none;
+}
+
+#chezhufuwu-content-title li{
+	color: white;
+	float: left;
+	line-height: 45px;
+	font-size: 18px;
+	margin-left: 87px;
+	cursor: pointer;
+}
+
+/* 每个li下方的横岗 */
+#qje-b{
+	background-color: #fabe00;
+	width: 125px;
+	height: 3px;
+	margin: 0 auto;
+}
+#jiuyuan-b{
+	background-color: #fabe00;
+	width: 147px;
+	height: 3px;
+	margin: 0 auto;
+	display: none;
+}
+#huanbao-b{
+	background-color: #fabe00;
+	width: 108px;
+	height: 3px;
+	margin: 0 auto;
+	display: none;
+}
+#chejia-b{
+	background-color: #fabe00;
+	width: 90px;
+	height: 3px;
+	margin: 0 auto;
+	display: none;
+}
+#tuijian-b{
+	background-color: #fabe00;
+	width: 75px;
+	height: 3px;
+	margin: 0 auto;
+	display: none;
+}
+/* 车主服务的主要内容    隐藏和显示*/
+
+.ycxs{  /* ====================此div用于隐藏和显示  没有具体实际意义 =====================*/
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+}
+
+.chezhufuwu-content-main1{
+	width: 1078px;
+	height: 515px;
+	background-image:url(../image/web3/jeeperweim2a.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+#neirong1{   /* 下方隐藏的div */
+	width: 1078px;
+	height: 600px;
+	/* margin-top: 513px; */
+	background-image:url(../image/web3/jeeperweima1.jpg) ;
+	background-repeat: no-repeat;
+	background-size:100% auto;
+	cursor: pointer;
+	/* display: none; */
+	overflow: hidden;
+}
+/* 参加活动鼠标移上 */
+#cjhuodong{
+	/* background: #1E1E1E; */
+	width:130px;
+	height:35px;
+	margin: 0 auto;
+	margin-top: 466px;
+	cursor: pointer;
+	position: relative;
+}
+/* 二维码图片 */
+#erweima{
+	width: 148px;
+	height: 155px;
+	background-image: url(../image/web3/hover_erweima.png);
+	background-repeat:no-repeat;
+	background-size: 100% auto;
+	margin-left: -150px;
+	position: absolute;
+	top: -40px;
+}
+
+#pbq{   /*  p标签的属性 */
+	width:1000px;
+	margin-top: 40px; 
+	margin-left: 45px; 
+	font-size: 14px; 
+	font-weight: bold;
+	line-height: 20px;
+	background-image: url(../image/web3/smallProgram.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: right;
+}
+
+
+/* 环保信息   选项卡*/
+#san{
+	width: 100%;
+	height: 400px;
+	margin: 0 auto;
+	background-image: url(../image/web3/ddddddddddddd.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 40px;
+	overflow: hidden;
+}
+#san-ul{
+	width: 71%;
+	height: 35px;
+	margin: 0 auto;
+	/* background-color: #337AC6; */
+	margin-top:170px ;
+}
+#san-ul ul{
+	list-style-type: none;
+}
+#san-ul li{
+	float: left;
+	width: 130px;
+	height: 35px;
+	background-color: #fabe00;
+	background-image: url(../image/web3/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 110px 10px;
+	margin-left: 169px;
+	
+	line-height: 35px;
+	text-align: center;
+	font-size: 13px;
+	cursor: pointer;
+}
+#san-ul li a:hover{
+	color: #BF0000;
+}
+
+/* 我要推荐左边 */
+#woyaotuijian-left{
+	width: 50%;
+	height: 80%;
+	float: left;
+	background-image: url(../image/web3/phone.png);
+	background-repeat: no-repeat;
+	background-size: 56% auto;
+	margin-top: 31px;
+	margin-left: 20px;
+	background-position: right;
+}
+/* 我要推荐右边 */
+#woyaotuijian-right{
+	width: 48%;
+	height: 80%;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 200px;
+}
+
+
+/* 精彩全境界 */
+#jingcaiquanjingjie-title{   /* 精彩全景姐 */
+	width: 100%;
+	height: 74px;
+	background: black;
+	color: white;
+	font-size: 25px;
+	line-height: 74px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+ 
+/* 精彩全境界内容               使用ul  li 布局===================================================================*/
+#jingcaiquanjingjie-content{
+	width: 1080px;
+	height: 600px;
+	background: white;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+#jingcaiquanjingjie-content ul{
+	list-style-type: none;
+}
+#jingcaiquanjingjie-content li{
+	float: left;
+	margin-top: 38px;
+	margin-left: 45px;
+}
+.li-div{
+	width: 300px;
+	height: 255px;
+}
+.li-div img{
+	width: 300px;
+	height: 170px;
+}
+
+.li-div p {
+	padding-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.li-div span{
+	padding-left: 10px;
+	font-size: 13px;
+	/* margin-top: 10px; */
+	padding-top: 10px;
+	display: block;
+}
+
+#li-erweima{
+	width: 300px;
+	height: 168px;
+	border: 1px solid #a0a0a0;
+}
+
+
+/* 意见反馈============================== */
+
+#yijianfankui-title{
+	width: 100%;
+	height: 74px;
+	background: black;
+	color: white;
+	font-size: 25px;
+	line-height: 74px;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+
+/* 完善个人信息 */
+#wanshanxinxi{
+	width: 1080px;
+	height: 500px;
+	background-color: #efefef;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#wanshanxinxi h2{
+	line-height: 90px;
+	color: #383838;
+}
+
+#footer-form{    /*  底部表单 */
+	width: 897px;
+	height: 38px;
+	margin: 0 auto;
+}
+
+#xingming-and-sex{/* <!-- 姓名和性别div --> */
+	width: 211px;
+	height: 37px;
+	border: 1px solid  #656972;
+	float: left;
+}
+#form-name{                /*          姓名文本框 */
+	width: 118px;
+	height: 34px;
+	border: none;
+	float: left;
+	background-color:#efefef ;
+	padding-left: 20px;
+}
+#form-sex{                  /* 性别下拉列表 */
+	width: 77px;
+	height: 35px;
+	border: none;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	background-color:#efefef ;
+	background-image: url(../image/web2/sex.png);
+	background-size: 100%;
+	background-position: 1px 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #383838;
+}
+
+#tell{/* 手机号 */
+	width: 119px;
+	height: 37px;
+	margin-left: 20px;
+	border: 1px solid #656972;
+	float: left;
+	background-color:#efefef ;
+	padding-left: 20px;
+	color: #383838;
+}
+
+
+#shengfen-2{       /* 省份 */
+	width: 119px;
+	height: 37px;
+	float: left;
+	border:1px solid  #656972 ;
+	margin-left: 20px;
+}
+
+#shengfen-2-select{       /* 省份下拉列表 */
+	width: 117px;
+	height: 35px;
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	border: none;
+	color: #383838;
+	background-image: url(../image/web2/selectRight.png);
+	background-repeat: no-repeat;
+	background-position: 76px 1px;
+	background-size: auto 100%;
+	padding-left: 20px;
+	padding-right: 50px;
+}
+
+#form-city{         /* 城市下拉列表  容器 */
+	width: 208px;
+	height: 37px;
+	background-color:#efefef;
+	float: left;
+	border: 1px solid #656972;
+	margin-left: 20px;
+}
+
+#form-city-select{      /* 城市下拉列表样式 */
+	width: 206px;
+	height:35px ;
+	color:#383838 ;
+	border: none;
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	padding-left: 20px;
+	background-image: url(../image/web2/selectRight.png);
+	background-size: auto 100%;
+	background-position: 159px 1px;
+	background-repeat: no-repeat;
+}
+
+#form-jingxiaoshang{      /*  经销商容器 */
+	width: 158px;
+	height: 37px;
+	float: left;
+	background-color:#efefef;
+	float: left;
+	border: 1px solid #656972;
+	margin-left: 20px;
+}
+
+#jingxiaoshang-select{             /* 经销商下拉 */
+	width: 156px;
+	height: 35px;
+	border: none;
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	padding-left: 20px;
+	background-image: url(../image/web2/selectRight.png);
+	background-size: auto 100%;
+	background-position: 113px 1px;
+	background-repeat: no-repeat;
+	color:#383838 ;
+}
+
+#tiaoyue{              /* 尾部的条约容器 */
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+#tiaoyue span{
+	color: #383838;
+	font-size: 13px;
+	float: left;
+	line-height: 30px;
+}
+#tiaoyue i{
+	text-decoration: underline;
+	cursor:pointer;
+	float: left;
+	line-height: 30px;
+}
+#tiaoyue-dianji{          /* 复选框样式 */
+	border: 1px solid #656972;
+	background-color:#efefef ;
+	background-image: url(../image/web2/rulesIcon.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+	float: left;
+	margin-top: 10px;
+}
+
+#tongyianniu{            /* 确认提交按钮 */
+	width: 184px;
+	height: 37px;
+	background-color:#fabe00 ;
+	float: left;
+	margin-left: 30px;
+	text-align: center;
+	color: #383838;
+	line-height: 36px;
+	background-image: url(../image/web2/rightIcon.png);
+	background-repeat: no-repeat;
+	background-position: 25px 13px;
+	cursor: pointer;
+}
+
+/* 我的车型   表单 */
+
+#chexing{
+	width: 895px;
+	height: 135px;
+	margin: 0 auto;
+	/* background: #23527C; */
+}
+
+#chexingbiaodan{
+	width: 895px;
+	height: 41px;
+	margin: 0 auto;
+	
+}
+/* 下拉列表样式 */
+#select-1{
+	width: 233px;
+	height: 40px;
+	float: left;
+	background-color: #000000;
+	border: 1px solid #656972;
+}
+#selProvince{
+	width: 231px;
+	height:38px ;
+	color:#383838 ;
+	border: none;
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	padding-left: 20px;
+	background-image: url(../image/web2/selectRight.png);
+	background-size: auto 100%;
+	background-position: 181px 1px;
+	background-repeat: no-repeat;
+}
+#select-2{
+	width: 233px;
+	height: 40px;
+	float: left;
+	background-color: #000000;
+	margin-left: 20px;
+	border: 1px solid #656972;
+}
+#selCity{
+	width: 231px;
+	height:38px ;
+	color:#383838 ;
+	border: none;
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	padding-left: 20px;
+	background-image: url(../image/web2/selectRight.png);
+	background-size: auto 100%;
+	background-position: 181px 1px;
+	background-repeat: no-repeat;
+}
+
+/* 车牌号码 */
+#chepaihao{
+	width: 100px;
+	height: 40px;
+	float: left;
+	border: 1px solid #656972;
+	margin-left:20px ;
+}
+#chepaihao input{
+	width:98px;
+	height:38px;
+	background-color: #efefef;
+	border: none;
+	padding-left: 8px;
+}
+
+
+/* 公里数 */
+#gonglishu{
+	width: 130px;
+	height: 40px;
+	float: left;
+	border: 1px solid #656972;
+	margin-left:20px ;
+	line-height: 35px;
+	
+}
+#gonglishu input{
+	width:90px;
+	height:38px;
+	background-color: #efefef;
+	border: none;
+	padding-left: 8px;
+	float: left;
+	padding-right: 5px;
+}
+#gonglishu p{
+	font-size: 12px;
+}
+/* 车架号 */
+
+#chejiahao{
+	width: 119px;
+	height: 40px;
+	float: left;
+	border: 1px solid #656972;
+	margin-left:20px ;
+}
+#chejiahao input{
+	width:117px;
+	height:38px;
+	background-color: #efefef;
+	border: none;
+	padding-left: 8px;
+	/* float: left; */
+}
+
+
+/* 留下意见 */
+
+#liuxiayijian{
+	width: 1080px;
+	height: 350px;
+	margin:0 auto;
+}
+
+/* 意见复选框容器 */
+
+#yijian-fuxuan{
+	width: 895px;
+	height: 77px;
+	margin: 0 auto;
+	border: 1px solid #656972;
+	text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+#yijian-fuxuan p{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+/* 复选框容器 */
+#fuxuankuang-rongqi{
+	width: 100%;
+	height: 40px;
+	padding:10px ;
+	padding-left: 60px;
+}
+
+#fuxuankuang-rongqi input{
+	margin-left: 60px;
+}
+
+/* 文本域布局 */
+#wenbenyu{
+	width: 895px;
+	height: 175px;
+	border: 1px solid #656972;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+#wenbenyu textarea{
+	width: 100%;
+	height: 100%;
+	background-color:#efefef;
+	border: none;
+}
+
+
+
+/* bottom文字定位容器 */
+#bottom{
+	width: 1080px;
+	height: 276px;
+	margin: 0 auto;
+	padding:51px 0px ;
+}
+
+#bottom-wenzi{  /* 底部文字布局 */
+	width: 1080px;
+	height: 40px;
+	
+}
+
+#bottom-wenzi a:link{       /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:visited{        /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:hover{          /* 文字连接样式 */
+	color: #23527c;
+	text-decoration: underline;
+	
+}
+
+#bottom-wenzi img{        /* 微信和微博 定位*/
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 30px;
+}
+#weixin-img{
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 10px;
+	position: relative;
+	cursor:pointer;
+}
+/* js鼠标放上以后  显示的二维码  */
+#onms-erweima{
+	width: 160px;
+	height: 236px;
+	/* background-color: #23527C; */
+	margin-top: -240px;
+	margin-left: -76px;
+	z-index: 999;
+	background-image: url(../image/index/footer-qr.png);
+	position: absolute;
+	cursor:pointer;
+	display: none;
+}
+/* #onms-erweima img{
+	width: 160px;
+	height:236px;
+} */
+#bottom-wenzi p{        
+	color: #818181;
+	font-size: 12px;
+	line-height: 30px;
+	margin-top: 30px;
+}

@@ -1,0 +1,730 @@
+*{
+	padding: 0px;
+	margin: 0px;
+    box-sizing: border-box;
+}
+#heard{                /* 头部定义导航栏布局 */
+	width: 1080px;
+	height: 70px;
+	margin: 0 auto;
+	
+	
+}
+#logo{
+	float: left;        /* 头标志 */
+	padding: 23px 0;
+/* 	box-sizing: border-box; */
+	cursor: pointer;
+	
+}
+#heard-left{     /* 导航栏左边 */
+	float: left;
+	height: 70px;
+	margin-left: 35px;
+	color: #ffffff;
+	width: 590px;
+	
+}
+.cars{            /* 导航栏文字定位以及样式 */
+	float: left;
+	line-height: 70px;
+	text-align: center;
+	font-size: 16px;
+	width: 98px;
+}
+
+   /* ---------------------------------------------------------------js操作区域 */
+				   
+#hid-car{                      /* jsjsjsjsjs隐藏区域   汽车 */
+	width: 1079px;
+	height: 556px;
+/* 	background-color:skyblue ; */
+	margin-left: -92px;
+	display: none;
+}
+/* <!-- js隐藏区域 汽车列表 --> */
+#hid-car-left{
+	width: 458px;
+	height: 556px;
+	float: left;
+	background-color: white;
+}
+.li-bgcolor{         /* 用于js修改li属性 */
+	background-color: white;
+}
+#hid-car-left ul{
+	list-style-type: none;
+}
+#hid-car-left li{
+	width: 229px;
+	height: 111px;
+	float: left;
+	cursor:pointer;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+#hid-car-left img{
+	height: 100%;
+}
+/* <!-- js操作隐藏汽车区域右边总体布局       容器 --> */
+#hid-car-right{
+	height: 556px;
+	width: 621px;
+	float: right;
+	background-color: white;
+}
+#hid-cars img{
+	width: 621px;
+	height: 421px;
+}
+/* <!--隐藏汽车 底部图片 --> */
+#hid-right-bottom{
+	width: 621px;
+	height: 140px;
+	text-align: left;
+}
+#hid-right-bottom img{
+	width: 50%;
+	float: left;
+}
+
+
+
+
+
+
+#heard-left a:link{       /*  导航栏链接样式 */
+	text-decoration: none;
+	color: #ffffff;
+}
+#heard-left a:hover{ /*  导航栏链接样式 */
+	text-decoration:underline;
+	color: #ffffff;
+}
+#heard-left a:visited{ /*  导航栏链接样式 */
+	color: #ffffff;
+}
+
+#heard-right{                   /* 导航栏右边链接样式 */
+	float: left;
+	width: 399px;
+	height: 70px;
+}
+.cars-right{     /* 导航栏右边 */
+	float: left;
+	line-height: 70px;
+	text-align: center;
+	width: 108px;
+}
+#xiabiao{                          /* 向下的箭头 */
+	width: 8px;
+	height: 8px;
+/* 	position: relative; */
+	border-left: 1px solid #ffffff;
+	border-bottom:1px solid #ffffff ;
+	float: right;
+	transform:rotate(-45deg);/* 旋转 */
+	margin-top: 30px;
+	margin-right: 10px;
+	
+}
+#shangbiao{                  /* 向上的箭头 */
+	width: 8px;
+	height: 8px;
+	/* 	position: relative; */
+	border-left: 1px solid #f9be01;
+	border-bottom:1px solid #f9be01 ;
+	float: right;
+	transform:rotate(135deg);/* 旋转 */
+	margin-top: 33px;
+	margin-right: 10px;
+	display: none;
+}
+
+
+#heard-right a:link{          /* 导航栏右边链接样式 */
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 16px;
+}
+#heard-right a:hover{
+	text-decoration:underline;
+	color: #ffffff;
+}
+#heard-right a:visited{
+	color: #ffffff;
+}
+#search{    /* 放大镜 */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/search.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 10px;
+	cursor: pointer;
+	
+}
+#fav{       /* 收藏夹与消息(导航栏黄色标签) */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/fav.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 29px;
+	cursor: pointer;
+}
+.fav-count{        /* 消息提示(导航栏黄色标签白点) */
+	background: #fff;
+	border-radius: 50%;
+	text-align:center;
+	position:relative;
+	left: 48.5%;
+	top:10%;
+	width: 20px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 20px;
+	cursor: pointer;   /* 链接变成小手 */
+}
+#diqiu{                                          /* 地球图片 */
+	width: 40px;
+	height: 70px;
+	float: left;
+	background-image: url(../image/index/fca.png);
+	background-repeat: no-repeat;
+	background-position: 7px 22px;
+	margin-left: 23px;
+	cursor: pointer;
+}
+#bigimg{
+	width: 1349px;
+	margin: 0 auto;
+} 
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------导航栏分割 */
+
+/* 点击五分轮播区域-------------------------------------------------------------------------------------------- */
+
+#carsflow-backgroundimg{                                          /* 汽车滚动背景图 */
+	width: 100%; 
+	background-image:url(../image/index/block1.jpg);
+	background-repeat: repeat-x;
+	background-size: 1349px 432px;
+	margin: -4 0 auto;
+}
+#carsflow{                                               /* 箭头和汽车滚动容器 */
+	width: 1200px;
+	height: 432px;
+	margin: 0 auto;
+}
+#jiantou-left{                            /* 汽车滚动左箭头 */
+	width: 17px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+	background-image: url(../image/index/prev.png);
+	background-repeat: no-repeat;
+	background-position: 0px 179px;
+}
+#jiantou-right{
+	width: 17px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+	background-image: url(../image/index/next.png);
+	background-repeat: no-repeat;
+	background-position: 0px 179px;
+}
+
+#jiantou-left:hover{
+	background-image:url(../image/index/prev_hover.png);
+	background-repeat: no-repeat;
+	background-position: 0px 179px;
+}
+
+#jiantou-right:hover{
+	background-image:url(../image/index/next_hover.png);
+	background-repeat: no-repeat;
+	background-position: 0px 179px;
+}
+
+#carmain{          /*    汽车滚动定位 */
+	width: 1166px;
+	height: 100%;
+	float: left;
+	padding-top: 6%;
+	padding-bottom: 5%;
+	overflow: hidden;
+}
+#carmain-bigdiv{   /* 所有的汽车容器 */
+	height: 233px;
+	width: 4197px;
+	/* background-color: #23527C; */
+	margin-left: -1399px;
+	
+}
+/* 每一个汽车的容器 */
+.wh{
+	width: 233px;
+	height: 233px;
+	float: left;
+	text-align: center;
+}
+.wh img{
+	width: 80%;
+	height: 80%;
+}
+.sangediv{
+	width: 1399px;
+	height: 233px;
+	float: left;
+	/* background-color: #1E1E1E; */
+}
+/* #a9{
+	width: 90%;
+	height: 90%;
+}
+ */
+/* -------------------------------------------------------轮播图区域 */
+#gundong-neirong{
+			width: 1349px;
+			height: 562px;
+			margin:  0 auto;
+			overflow: hidden;
+			/* background: bisque; */
+			position: relative;
+		}
+		
+		#gundong-neirong-content{
+			width: 8094px;
+			height: 562px;
+			margin: 0 auto;
+			/* margin-left:1349px; */
+			position: absolute;
+		}
+		#gundong-neirong-content ul{
+			list-style-type:none ;
+		}
+		
+		#gundong-neirong-content ul li{
+			float: left;
+		}
+		
+		#li-bgimg1{
+			width: 1349px;
+			height: 562px;
+			background-image:url(../image/index/2222.jpg);
+			background-size:cover;
+		}
+		#li-bgimg2{
+			width: 1349px;
+			height: 562px;
+			background-image:url(../image/index/block1-f-52.jpg);
+			background-size:cover;
+		}
+		#li-bgimg3{
+			width: 1349px;
+			height: 562px;
+			background-image: url(../image/index/k8.jpg);
+			background-size:cover;
+		}
+		#li-bgimg4{
+			width: 1349px;
+			height: 562px;
+			background-image: url(../image/index/csuv.jpg);
+			background-size:cover;
+		}
+		#li-bgimg5{
+			width: 1349px;
+			height: 562px;
+			background-image:url(../image/index/wk.jpg);
+			background-size:cover;
+		}
+		#li-bgimg6{
+			width: 1349px;
+			height: 562px;
+			background-image:url(../image/index/jl-n.jpg);
+			background-size:cover;
+		}
+		
+		/* 小点的样式 */
+	#gundong-dian{
+		width: 250px;
+		height: 22px;
+		/* border: 1px solid black; */
+		position: absolute;
+		bottom: 20px;
+		left: 40%;
+		
+	}
+		#gundong-dian ul{
+			list-style-type: none;
+		}
+		
+		#gundong-dian ul li{
+			width: 15px;
+			height: 15px;
+			/* border: 1px solid black; */
+			border-radius: 50%;
+			float: left;
+			margin-left: 25px;
+			background-color: white;
+			cursor:pointer;
+		}
+
+/* ---------------------------------------------------------------- */
+
+
+ /* 四幅图片定位 */
+
+#main1content{  
+	width: 1080px;
+	margin: 0 auto;
+	height: 397px;
+	display: -webkit-flex;
+}
+#main1{                               /*  1号图片定位 */
+	width: 25%;
+	height: 411px;
+	float: left;
+	background-image: url(../image/index/block1-f-1.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	cursor:pointer;
+	/* 变形div动画 */
+	transition:width 0.6s;
+	-moz-transition:width 0.6s; /* Firefox 4 */
+	-webkit-transition:width 0.6s; /* Safari and Chrome */
+}
+#main2{                              /*  2号图片定位 */
+	width: 25%;
+	height: 411px;
+	float: left;
+	background: url(../image/index/block1-f-5.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor:pointer;
+	/* 变形div动画 */
+	transition:width 0.6s;
+	-moz-transition:width 0.6s; /* Firefox 4 */
+	-webkit-transition:width 0.6s; /* Safari and Chrome */
+	}
+#main3{                           /*  3号图片定位 */
+	width: 25%;
+	height: 411px;
+	float: left;
+	background-image: url(../image/index/block1-f-3.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor:pointer;
+	/* 变形div动画 */
+	transition:width 0.6s;
+	-moz-transition:width 0.6s; /* Firefox 4 */
+	-webkit-transition:width 0.6s; /* Safari and Chrome */
+	}
+#main4{                          /*  4号图片定位 */
+	width: 25%;
+	height: 411px;
+	float: left;
+	background-image: url(../image/index/block1-f-4.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor:pointer;
+	/* 变形div动画 */
+	transition:width 0.6s;
+	-moz-transition:width 0.6s; /* Firefox 4 */
+	-webkit-transition:width 0.6s; /* Safari and Chrome */
+	}
+	#main1:hover{
+		width: 35%;
+	}
+	#main2:hover{
+		width: 35%;
+	}
+	#main3:hover{
+		width: 35%;
+	}
+	#main4:hover{
+		width: 35%;
+	}
+	#main1content #main1 {
+			margin-top: -57px;
+	}
+	#main1content #main3{
+		margin-top: -57px;
+	}
+	#main1content #main2{
+		margin-top: -32px;
+	}
+	#main1content #main4{
+		margin-top: -32px;
+	}
+/* .main-1-3{                     
+
+}
+.main-2-4{                    
+	
+}
+ */
+
+
+
+
+
+
+
+/* 主要内容2 */
+#main2content{
+	width: 1349px;
+	height: 1162px;
+	background-image: url(../image/index/block3.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin: 0 auto;
+	
+}
+#h2-bt{            /* Jeep 探享俱乐部 */ 
+	width: 100%;
+	height: 148px;
+	margin-top: 20px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 23px;
+	color:#333;
+	line-height:70px ;
+}
+
+
+/* 独特SUV生活方式的体验和分享平台始终与最爱出行的Jeeper们一起分享一份志同道合的情怀 */
+#h2-bt p{
+	margin-top: -13px;
+}
+#main2content-img{    /* jeep大图片 */
+	width: 1080px;
+	height: 570px;
+	margin: 0 auto;
+	background-image: url(../image/index/block2-1.jpg);
+	background-size: 100% auto;
+	background-position: center;
+}
+#main2content-img2{    /* 三张小图片 */
+	width: 900px;
+	height: 120px;
+	margin: 0 auto;
+	position: relative;
+	bottom: -507px;
+}
+.yellow-gang{
+	width: 290px;
+	height: 7px;
+	background:#fabe00;
+	display: none;
+}
+#main2-img1{   /* 第一张 */
+	width: 290px;
+	height: 120px;
+	float: left;
+	background-image:url(../image/index/block2-nav-1.jpg) ;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 0 5px;
+	cursor: pointer;
+}
+#main2-img2{ /* 第二张 */
+	width: 290px;
+	height: 120px;
+	float: left;
+	background-image: url(../image/index/block2-nav-2.jpg);
+	background-repeat: no-repeat;
+	margin: 0 5px;
+	background-size: 100%;
+	cursor: pointer;
+} 
+#main2-img3{ /* 第三张 */
+	width: 290px;
+	height: 120px;
+	float: left;
+	background-image: url(../image/index/block2-nav-3.jpg);
+	background-repeat: no-repeat;
+	margin: 0 5px;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+
+
+
+/* 底部三张图 */
+#footer-img{
+	width: 1090px;
+	height: 280px;
+	margin: 0 auto;
+	margin-top: 340px;
+}
+.linkcss{          /* 字体链接样式 */
+	
+}
+
+.linkcss a:link{
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+.linkcss a:hover{
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	border-bottom: 2px solid black;
+}
+.linkcss a:visited{
+	line-height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+.right-jiantou{                                                          /* 朝右的箭头 */
+	height: 14px;
+	width: 14px;
+	border-bottom: 3px solid #fabe00;
+	border-right:3px solid #fabe00;
+	float: right;
+	position: relative;
+	right: 117px;
+	top: 25px;
+	transform:rotate(-45deg);
+}
+
+
+
+#footer1{                   /* 第一张的文字和图片 */
+	width: 353px;
+	height: 280px;
+	float: left;
+	margin:0 5px ;
+	
+	text-align: center;
+	
+
+	
+}
+#img1{
+	width: 353px;
+	height: 235px;
+	background-image: url(../image/index/block3-1.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+}
+#footer2{                        /* 第二张的文字和图片 */
+	width: 353px;
+	height: 280px;
+	float: left;
+	margin:0 5px ;
+	
+	text-align: center;
+}
+#img2{
+	width: 353px;
+	height: 235px;
+	background-image: url(../image/index/block3-2.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+#footer3{                 /* 第三张的文字和图片 */
+	width: 353px;
+	height: 280px;
+	float: left;
+	margin:0 5px ;
+	
+	text-align: center;
+}
+
+#img3{
+	width: 353px;
+	height: 235px;
+	background-image: url(../image/index/block3-3.jpg);
+	background-position: center;
+	background-size: 100% 100%;
+}
+
+
+
+
+
+
+/* bottom文字定位容器 */
+#bottom{
+	width: 1080px;
+	height: 276px;
+	margin: 0 auto;
+	padding:51px 0px ;
+}
+
+#bottom-wenzi{  /* 底部文字布局 */
+	width: 1080px;
+	height: 40px;
+	
+}
+
+#bottom-wenzi a:link{       /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:visited{        /* 文字连接样式 */
+	text-decoration: none;
+	color: #337ac6;
+	font-size: 14px;
+}
+#bottom-wenzi a:hover{          /* 文字连接样式 */
+	color: #23527c;
+	text-decoration: underline;
+	
+}
+
+#bottom-wenzi img{        /* 微信和微博 定位*/
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 30px;
+}
+#weixin-img{
+	width: 24px;
+	height: 20px;
+	float: right;
+	margin-left: 10px;
+	position: relative;
+	cursor:pointer;
+}
+/* js鼠标放上以后  显示的二维码  */
+#onms-erweima{
+	width: 160px;
+	height: 236px;
+	/* background-color: #23527C; */
+	margin-top: -240px;
+	margin-left: -76px;
+	z-index: 999;
+	background-image: url(../image/index/footer-qr.png);
+	position: absolute;
+	cursor:pointer;
+	display: none;
+}
+/* #onms-erweima img{
+	width: 160px;
+	height:236px;
+} */
+#bottom-wenzi p{        
+	color: #818181;
+	font-size: 12px;
+	line-height: 30px;
+	margin-top: 30px;
+}

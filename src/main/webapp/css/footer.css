@@ -1,0 +1,47 @@
+/* 尾部 */
+#bottom{
+	width: 1349px;
+	height: 150px;
+	margin: 0 auto;
+	
+}
+
+#b-wenzi{
+	width: 1000px;
+	height: 148px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+#wenzi-left{
+	width: 540px;
+	float: left;
+}
+
+
+#wenzi-left ul{
+	list-style-type: none;
+	
+}
+
+#wenzi-left ul li{
+	float: left;
+	font-size: 13px;
+	border-left: 1px solid white;
+	color: white;
+	margin-left: 10px;
+	padding-left: 10px;
+	cursor:pointer;
+}
+
+
+#wenzi-right{
+	float: right;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}

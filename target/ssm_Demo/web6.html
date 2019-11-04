@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  />
+		<link rel="stylesheet" type="text/css" href="css/web6.css.css"/>
+		<script src="js/web6.js.js" type="text/javascript">
+			
+		</script>
+		<script src="js/jquery-3.3.1.js" type="text/javascript">
+			
+		</script>
+		<title>隐私声明-Jeep中国官方网站</title>
+	</head>
+	<body>
+		<div style="width: 100%; background-color: #000000; position: fixed; height: 70px; z-index: 1;"><!-- 头部定位与样式 -->
+			<div id="heard">
+				
+				<a href="index.html">
+					<div id="logo">
+					<img src="image/index/logo.png" alt="" style="width: 56px; height: 24px;"/><!-- logo -->
+					</div>
+				</a>
+				
+				<div id="heard-left"><!-- 左边导航 -->
+					<div onmouseover="oncars()" onmouseout="outcars()" id="oncar" class="cars">
+						<a href="#">品牌车型</a>
+						<div id="xiabiao"></div><!-- 向下的箭头 -->
+						<div id="shangbiao">       <!-- 隐藏的向上的箭头 -->
+							</div>
+							<div id="hid-car">        <!-- js隐藏区域 汽车 -->
+								<div id="hid-car-left"> <!-- js隐藏区域 汽车列表 -->
+									<ul>
+										<li onmouseover="onli(this,'hid-img1')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k8.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img2')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k85.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img3')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4m.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img4')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img5')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/csuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img6')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/bsuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img7')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jl.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img8')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jk.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img9')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/wk.png" >
+										</li>
+									</ul>
+								</div>
+													<!-- js操作隐藏汽车区域右边总体布局       容器 -->
+											<div id="hid-car-right">
+												<div id="hid-cars">
+												<img class="yincangcar" id="hid-img1" src="image/index/nav-cars-news-k8.jpg" style="display: block;" >
+												<img class="yincangcar" id="hid-img2" src="image/index/nav-cars-news-k85.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img3" src="image/index/nav-cars-news-mca.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img4" src="image/index/nav-cars-news-k4.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img5" src="image/index/nav-cars-news-csuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img6" src="image/index/nav-cars-news-bsuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img7" src="image/index/nav-cars-news-jl.jpg" style="display: none;" >
+													<img class="yincangcar" id="hid-img8" src="image/index/nav-cars-news-jk.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img9" src="image/index/nav-cars-news-wk.jpg" style="display: none;" >
+												
+												</div>
+												<div id="hid-right-bottom">    <!--隐藏汽车 底部图片 -->
+													<img src="image/index/nav-cars-filter.jpg" >
+												<img src="image/index/nav-cars-financial.jpg" >
+												</div>
+											</div>
+							</div>
+					</div>
+					<div class="cars">
+						<a href="web.html" target="_blank">Jeep&nbsp Life </a>
+					</div>
+					<div class="cars">
+						<a href="web2.html" target="_blank">购车支持</a>
+					</div>
+					<div class="cars">
+						<a href="web3.html" target="_blank">Jeep全境界</a>
+					</div>
+					<div class="cars">
+						<a href="web4.html" target="_blank">品牌信息</a>
+					</div>
+				</div>
+				<div id="heard-right"><!-- 右边导航 -->
+					<div class="cars-right">
+						<a href="#">查询经销商</a>
+					</div>
+					<div class="cars-right">
+						<a href="#">预约试驾</a>
+					</div>
+					<a href="web5.html">
+						<div id="search">
+						</div>
+					</a>
+					
+					
+					<div id="fav">
+						<div class="fav-count">0</div>
+					</div>
+					<div id="diqiu"></div>
+				</div>
+			</div>
+		</div>
+		<div style="width: 100%; height: 70px;"></div>  <!-- 占位div -->
+		
+		<!-- 文字区域 -->
+		<div style="width: 100%;">
+			<div class="pbq">
+				<h2>隐私声明</h2>
+				<p class="p1">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;克莱斯勒（中国）汽车销售有限公司、
+					广汽菲亚特克莱斯勒汽车销售有限公司(以下统称“我们”)向您提供车辆、配件及其他附属产品（统称
+					“产品”）及与产品相关的众多线上和线下服务（包括但不限于我们的网站、微博、微信平台、APP、车
+					载信息系统和其他车载技术、商品展览交流及其他服务，统称“服务”）。在我们向您提供产品和服务过
+					程中，我们可能会收集您的个人信息。本隐私声明将阐述我们如何收集、使用、存储、共享和保护您的
+					个人信息。
+					<br>
+					&nbsp;
+					<br>
+					请您务必认真阅读本声明，在确认充分了解并同意后使用我们的产品和服务，如果您/您的监护人不同意
+					本声明的任何内容，您应该立即停止使用。当您开始使用我们的产品和服务，即表示您/您的监护人已经
+					同意我们按照本声明来收集、使用、存储、共享和保护您的个人信息。 
+				</p>
+				<p class="pbt">
+					1. 我们将收集您的哪些信息？
+				</p>
+				<p class="p1">
+					（1）您的基本信息：包括您的姓名、性别、电话号码、电子邮箱、联系地址等；
+					<br>
+					&nbsp;
+					<br>
+					（2）您的敏感信息：包括您的身份证信息、驾驶证信息和行驶证信息等；
+					<br>
+					&nbsp;
+					<br>
+					（3）您的附加信息：包括您的购车意向和计划、预计购车时间、兴趣爱好等；
+					<br>
+					&nbsp;
+					<br>
+					（4）您的车辆信息：包括您车辆的VIN号码、车牌号、发动机号码、维修保养记录等。
+				</p>
+				<p class="pbt">
+					2. 我们为何要收集您的信息？
+				</p>
+				<p class="p1">
+					我们将您的信息用于以下目的：
+					<br>
+					&nbsp;
+					<br>
+					（1）向您销售产品以及进行与产品相关的商业营销（包括为您提供定制化的产品信息、市场推广信息、为您安排购车预约等）；
+					<br>
+					&nbsp;
+					<br>
+					（2）向您提供售后服务（包括为您安排维保预约和道路救援服务，向您发送定期保养提醒、保险到期提醒、保修到期提醒、客户生日函等）；
+					<br>
+					&nbsp;
+					<br>
+					（3）向您提供延伸服务（包括为您提供定制化的保险和贷款方案等）；
+					<br>
+					&nbsp;
+					<br>
+					（4）进行市场调研和客户满意度调查；
+					<br>
+					&nbsp;
+					<br>
+					（5）用于处理与您和您车辆相关的纠纷（包括您所提出的咨询、需求和客户投诉等）。
+				</p>
+				<p class="pbt">
+					3. 我们将如何收集您的个人信息？
+				</p>
+				<p class="p1">
+					我们通过以下途径收集您的个人信息：
+
+					（1）当您使用我们的网站、微博、微信、APP等平台或其他线上服务时，您自愿向我们提供的信息（例如，您通过我们的网站
+					或电子邮件联系我们提出问题、进行评论或参与在线调查）；
+					<br>
+					&nbsp;
+					<br>
+					（2）当您为了获得我们的线下服务而进行注册时（例如，您申请试乘试驾）；
+					<br>
+					&nbsp;
+					<br>
+					（3）当您下载或使用我们的车载信息系统或其他车载技术时；
+					<br>
+					&nbsp;
+					<br>
+					（4）当您向我们的呼叫中心代表提供信息时；
+					<br>
+					&nbsp;
+					<br>
+					（5）我们会通过Cookies和同类技术了解您使用我们产品和服务的习惯和偏好；Cookies是一
+					种能够识别您设备的特定识别符号，通过识别您的设备，我们可以为您推荐个性化的产品和服务；
+					大部分网页浏览器会自动打开Cookies，您可以随时调整您的浏览器设置，选择关闭Cookies；
+					<br>
+					&nbsp;
+					<br>
+					（6）我们会向我们的授权经销商、关联公司、商业合作伙伴以及您合法授权的第三方处获取您的个人信息。
+				</p>
+				<p class="pbt">
+					4. 我们将如何存储您的个人信息？
+				</p>
+				<p class="p1">
+					我们将采取符合国家标准的安全措施和技术手段存储和保护您的个人信息，以防止其丢失、被误用、
+					受到未授权访问或泄漏、被篡改或毁坏。您的个人信息存放在有密码控制的服务器中，访问均是受到限制的。
+					<br>
+					&nbsp;
+					<br>
+					除非您要求我们删除您的个人信息，我们将根据收集目的确定您个人信息的存储期限，以满足您不时的产品或服务需求。
+				</p>
+				
+				<p class="pbt">
+					5. 我们会与谁分享您的个人信息？
+				</p>
+				<p class="p1">
+					我们尊重您的个人隐私并遵守相关的中国法律法规，我们承诺对您的个人信息进行严格保密，并且不会将您
+					的个人信息出售给他人。我们仅会为达到本声明所述的个人信息收集目的，与遵守本隐私声明或至少提供与
+					本隐私声明同样保护性管理的以下第三方披露和分享您的个人信息。除非另有声明，此等第三方并非代表我们收集、使用或分享您的个人信息。
+					<br>
+					&nbsp;
+					<br>
+					（1）我们的关联公司和附属公司：为确保本公司集团成员向您提供大致相当的产品和服务质量，我们可能会与我们的关联公司和附属公司分享您的个人信息。
+					<br>
+					&nbsp;
+					<br>
+					（2）我们的授权经销商：授权经销商是我们的销售渠道，他们负责向您介绍、销售我们的产品及服务。为更好地向您提
+					供售前和售后服务，我们会与我们的经销商分享您的个人信息。
+					<br>
+					&nbsp;
+					<br>
+					（3）金融公司、车辆保险公司、二手车公司、车辆延长保修运作公司：我们会与其分享与您车辆融资、二手车评估、车辆延长保修相关的个人信息。
+					<br>
+					&nbsp;
+					<br>
+					（4）授权合作伙伴：我们可能会聘请第三方授权合作伙伴为我们提供相关服务（包括广告、分析、调研征询、征信调查、市
+					场推广、技术基础设施运营等服务）。此等授权合作伙伴将仅为履行其职责或协助我们达到个人信息收集目的而访问、使用、
+					处理或保留您的个人信息，除此之外，他们不能将您的个人信息用于任何其他目的。
+					<br>
+					&nbsp;
+					<br>
+					（5）业务转让：为持续发展我们的业务，我们可能会进行重组、合并或出售某些业务。当我们的资产因此被转移至相关第三方
+					时，我们收集的个人信息也会随之转让给相关第三方。
+					<br>
+					&nbsp;
+					<br>
+					（6）其他第三方：如果根据相关法律法规、规定或者相关执法机关或政府机构的要求，或者为了进行个人信息安全审计、保护用
+					户免受欺诈和严重人身伤害等，我们可能会向相关第三方披露您的个人信息，且不会再次获得您的同意。
+				</p>
+				<p class="pbt">
+					6. 您如何更改、删除您的个人信息？
+				</p>
+				<p class="p1">
+					您可通过“联系我们”条款中所列示的渠道，要求我们更改或删除您的个人信息。我们在接受您的请求前，可能会先要求您验证自己的身份。
+				</p>
+				
+				
+				
+				<p class="pbt">
+					7. 跨境传输
+				</p>
+				<p class="p1">
+					为实现上述收集目的，我们可能需要与我们境外的关联公司分
+					享您的个人信息，并将此等信息存储在境外。此等传输将依照中国法律法规的要求进行，您在此同意此等跨境传输。8. 联系我们
+				</p>
+				
+				
+				<p class="pbt">
+					8. 联系我们
+				</p>
+				<p class="p1">
+					如果您对本隐私声明有任何疑问、意见或建议，您可通过拨打我
+					们的客服电话400-650-0118（Jeep/克莱斯勒/道奇）/ 400-878-9
+					999 （FIAT）或通过发送邮件至callcenter@gacfcasales.com与我们
+					
+					联系。部分情况下，为保障您个人信息的安全，我们可能需要您提供书面请
+					求，或以其他方式证明您的身份。我们将在收到您的反馈并验证您自己的身份
+					后10天内答复您的相关请求。如果您对我们的回复不满意，您还可以将您的权
+					利通知及支持性资料发往以下地址：上海市闵行区申长路988弄虹桥万科中心5号
+					楼（200335）,021-24189888。
+				</p>
+				
+				
+				<p class="pbt">
+					9. 修订和更新
+				</p>
+				<p class="p1">
+					我们可能会不时修订和更新本隐私声明；如果我们对隐私声明作出重大变更，
+					我们将于我们的网站http://www.jeep.com.cn、微信平台（全境界和JEEP LI
+					FE）界面和卖车宝APP界面即时发布最新的隐私声明。我们亦将向我们的经销商传达
+					我们最新的隐私声明，您也可以向我们的经销商查询详情。修订和更新后的隐私声明自
+					发布之日起生效，除另有声明外，最新有效的隐私声明适用于我们所收集的、您的所
+					有个人信息。 
+				</p>
+			</div>
+		</div>
+		
+		
+		<div style="width: 100%;">
+			<div id="bottom">           <!-- 尾巴连接和文字 -->
+				<div id="bottom-wenzi">	
+				
+					<img src="image/index/wb.png" alt=""><!-- 微博和微信图片 -->
+					<div onmouseover="onmserweima()" onmouseout="outmserweima()" id="weixin-img">
+						<img src="image/index/wx.png" alt="" >
+						<div id="onms-erweima">
+							
+						</div>
+					</div>
+				
+					<span style="font-size: 14px; ">
+						<a href="web6.html" target="_blank">隐私声明</a>
+
+						丨
+						<a href="#" > 专享热线 400 6500 118</a>
+					</span>
+					<span style="float: right;"> 
+					<a href="#">CHRYSLER  </a>&nbsp
+					<a href="#">DODGE  </a>&nbsp
+					<a href="#">Jeep®  </a>  &nbsp
+					<a href="#" style="padding-left: 25px; background-image: url(image/index/country.png); background-repeat: no-repeat; background-size: auto 100%;">
+						FIND YOUR COUNTRY
+					</a>
+					</span>
+					
+					<p>网站中所有产品图片及文字说明均有可能变更。克莱斯勒[中国]汽车销售有限公司/广汽菲亚特克莱斯勒汽车销售有限公司保留对所描述车型进行更改的权利，并且任何时候都无需承担因以产品改进为目的的设计和[或]市场营销等原因而必须提前通知的义务。</p>
+					<a href="#" style="font-size: 12px; color: #818181; line-height: 75px;">沪ICP备16032951号-5</a>
+					
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+
+
+#logo{
+	width: 1000px;
+	height: 120px;
+	margin: 0 auto;
+/* 	background-color: darkblue; */
+	background-image: url(../image/jeeplogin/timg.png);
+	background-size: 125px 90px;
+	background-position: 800px 10px;
+	background-repeat: no-repeat;
+	padding-left: 100px;
+	overflow: hidden;
+}
+
+#logo-wenzi{
+	width: 600px;
+	/* height: 80px; */
+	margin-top: 15px;
+	
+}
+#sp1{
+	font-family: "blackadder itc";
+	font-weight: bold;
+	font-size: 60px;
+	color: white;
+}
+
+#sp2{
+	font-size: 15px;
+	font-weight: bold;
+	color: whitesmoke;
+}
+
+
+/* 车库 管理 */
+#cark{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #ffb400;
+	padding-left: 10px;
+	cursor: pointer;
+	color: black;
+	border-bottom: 4px solid black;
+	padding-bottom: 10px;
+	height: 44px;
+	overflow: hidden;
+}
+
+#cark ul{
+	list-style-image: url(../image/jeepmycar/arrow.png);
+	padding-left: 40px;
+}
+
+#cark ul li{
+	height: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top:10px;
+}
+
+#cark-name{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../image/jeepadmin/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 0px 14px; 
+	padding-left: 15px;
+}
+
+#cark ul li:hover{
+	text-decoration: underline;
+}
+
+/* 订单管理 */
+#carding{
+	width: 200px;
+	margin: 0 auto;
+	background-color: #ffb400;
+	padding-left: 10px;
+	cursor: pointer;
+	color: black;
+	border-bottom: 4px solid black;
+	padding-bottom: 10px;
+	height: 44px;
+	overflow: hidden;
+}
+
+#carding-name{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../image/jeepadmin/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 0px 14px; 
+	padding-left: 15px;
+}
+
+
+#carding ul{
+	list-style-image: url(../image/jeepmycar/arrow.png);
+	padding-left: 40px;
+}
+
+#carding ul li{
+	height: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top:10px;
+}
+
+#carding ul li:hover{
+	text-decoration: underline;
+}
+
+/* 管理员欢迎页 */
+#welcome-admin{
+	width: 400px;
+	height: 200px;
+	margin: 0 auto;
+	/* margin-top: 40px; */
+	border-radius: 10px;
+	background-color: white;
+	overflow: hidden;
+	font-size: 20px;
+	text-align: center;
+	color: #080808;
+	line-height: 100px;
+}

@@ -1,0 +1,88 @@
+/* 车库 管理 */
+#cark{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: #ffb400;
+	padding-left: 10px;
+	cursor: pointer;
+	color: black;
+	border-bottom: 4px solid black;
+	height:44px;
+	overflow: hidden;
+}
+#cark-name{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../image/jeepadmin/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 0px 14px; 
+	padding-left: 15px;
+}
+
+#carding-name{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../image/jeepadmin/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 0px 14px; 
+	padding-left: 15px;
+}
+#cark ul{
+	list-style-image: url(../image/jeepmycar/arrow.png);
+	padding-left: 40px;
+}
+
+
+#cark ul li{
+	
+	height: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top:10px;
+}
+
+
+
+#cark ul li:hover{
+	text-decoration: underline;
+}
+
+/* 订单管理 */
+#carding{
+	width: 200px;
+	margin: 0 auto;
+	background-color: #ffb400;
+	padding-left: 10px;
+	cursor: pointer;
+	color: black;
+	border-bottom: 4px solid black;
+	height: 44px;
+	overflow: hidden;
+}
+
+#carding-name{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: url(../image/jeepadmin/arrow_black.png);
+	background-repeat: no-repeat;
+	background-position: 0px 14px; 
+	padding-left: 15px;
+}
+
+
+#carding ul{
+	list-style-image: url(../image/jeepmycar/arrow.png);
+	padding-left: 40px;
+}
+
+#carding ul li{
+	height: 25px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top:10px;
+}
+
+#carding ul li:hover{
+	text-decoration: underline;
+}

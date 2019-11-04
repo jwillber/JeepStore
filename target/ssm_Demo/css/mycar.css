@@ -1,0 +1,244 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+
+
+
+#head{
+	width: 1349px;
+	height: 93px;
+	margin: 0 auto;
+	background-color: #232323;
+}
+
+#headul{
+	list-style-type: none;
+	float: right;
+}
+
+
+#headul li{
+	height: 30px;
+	float: left;
+	padding-left: 30px;
+	line-height: 28px;
+	color: #ffb301;
+	font-size: 13px;
+	cursor:pointer;
+	margin-left: 20px;
+}
+
+#headul a:link{
+	color: #ffb400;
+	text-decoration: none;
+}
+#headul a:hover{
+	color: #ffb400;
+	text-decoration: underline;
+}
+#headul a:visited{
+	color: #ffb400;
+}
+
+#headul a:active{
+	color: #ffb400;
+}
+
+#ul1{
+	background-image:url(../image/jeepstore/kf.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#ul2{
+	background-image: url(../image/jeepstore/s_car.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#shopcar{
+	width: 17px;
+	height: 17px;
+	float: right;
+	border-radius:50%;
+	background-color: white;
+	margin-top: 5px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 15px;
+	color: #080808;
+}
+
+#ul3{
+	background-image: url(../image/jeepstore/me.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#head-top{
+	width: 1000px;
+	height: 30px;
+	background-color: #232323;
+	margin: 0 auto;
+}
+
+#head-b{
+	width: 1349px;
+	background-color: black;
+	border-bottom: 3px solid #ffb400;
+	position: absolute;
+}
+
+#head-b2{
+	width: 1000px;
+	height: 63px;
+	margin: 0 auto;
+	
+}
+
+
+#head-b2 a:link{
+	text-decoration: none;
+	color:white;
+}
+#head-b2 a:hover{
+	color:white;
+	text-decoration: underline;
+}
+#head-b2 a:visited{
+	color:white;
+}
+
+#head-b2 a:active{
+	color:white;
+}
+
+
+
+
+#head-b2 ul{
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+}
+
+
+
+
+#head-b2 ul li{
+	float: left;
+	height: 63px;
+	width: 100px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	margin-left: 18px;
+	/*小手*/
+	cursor:pointer;
+}
+
+
+#weixin-onms{
+	background-color: rgba(51, 51, 51, 0.77);
+	width: 204px;
+	height: 240px;
+	position: relative;
+	left: 885px;
+	top: 50px;
+	line-height: 12px;
+	border: 1px solid rgb(121, 121, 121);
+	font-size: 11px;
+	text-align: center;
+	color: white;
+	display: none;
+}
+
+/* ================================== */
+
+#mycar-bt{
+	width: 990px;
+	height: 70px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	font-size: 25px;
+}
+
+#mycar-con{
+	margin: 0 auto;
+	width: 990px;
+}
+
+#mycar-con ul{
+	list-style-type: none;
+}
+
+#mycar-con ul li{
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	background-color: #c9c9c9;
+	border-left: 2px solid white;
+}
+
+.table-css{
+	background-color: white;
+	text-align: center;
+	border-collapse: collapse; 
+}
+
+
+.trb{
+	border-bottom: 5px solid #ebebeb;
+	height: 140px;
+}
+
+#mycar-bottom{
+	margin: 0 auto;
+	width: 990px;
+	height: 65px;
+	background-color: #ebebeb;
+	padding-left: 20px;
+}
+
+#ch{
+	width: 75px;
+	height: 100%;
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+#jiage{
+	width: 135px;
+	height: 100%;
+	float: right;
+	background-color: #ffb300;
+	background-image: url(../image/jeepmycar/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 125px 28px;
+	text-align: center;
+	line-height: 63px;
+	cursor: pointer;
+}
+
+#jiage2{
+	width: 125px;
+	height: 100%;
+	float: right;
+	line-height: 57px;
+	font-size: 17px;
+}
+
+#jiagehtml{
+	color: #ff4500;
+}

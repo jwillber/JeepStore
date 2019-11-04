@@ -1,0 +1,354 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+
+/* 提示框 */
+#alert-1{
+	width: 400px;
+	height: 200px;
+	background-color: white;
+	/* margin: 0 auto; */
+	position: absolute;
+	z-index: 19;
+	left: 450px;
+	top: 215px;
+	border-radius: 10px;
+	background-image: url(../image/jeepregister/login_tit.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	background-size: 100%;
+	padding-top: 90px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: center;
+}
+
+#head{
+	width: 1349px;
+	height: 93px;
+	margin: 0 auto;
+	background-color: #232323;
+}
+
+#headul{
+	list-style-type: none;
+	float: right;
+}
+
+
+#headul li{
+	height: 30px;
+	float: left;
+	padding-left: 30px;
+	line-height: 28px;
+	color: #ffb301;
+	font-size: 13px;
+	cursor:pointer;
+	margin-left: 20px;
+}
+
+#headul a:link{
+	color: #ffb400;
+	text-decoration: none;
+}
+#headul a:hover{
+	color: #ffb400;
+	text-decoration: underline;
+}
+#headul a:visited{
+	color: #ffb400;
+}
+
+#headul a:active{
+	color: #ffb400;
+}
+
+#ul1{
+	background-image:url(../image/jeepstore/kf.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#ul2{
+	background-image: url(../image/jeepstore/s_car.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#shopcar{
+	width: 17px;
+	height: 17px;
+	float: right;
+	border-radius:50%;
+	background-color: white;
+	margin-top: 5px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 15px;
+	color: #080808;
+}
+
+#ul3{
+	background-image: url(../image/jeepstore/me.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#head-top{
+	width: 1000px;
+	height: 30px;
+	background-color: #232323;
+	margin: 0 auto;
+}
+
+#head-b{
+	width: 1349px;
+	background-color: black;
+	border-bottom: 3px solid #ffb400;
+	position: absolute;
+}
+
+#head-b2{
+	width: 1000px;
+	height: 63px;
+	margin: 0 auto;
+	
+}
+
+
+#head-b2 a:link{
+	text-decoration: none;
+	color:white;
+}
+#head-b2 a:hover{
+	color:white;
+	text-decoration: underline;
+}
+#head-b2 a:visited{
+	color:white;
+}
+
+#head-b2 a:active{
+	color:white;
+}
+
+
+
+
+#head-b2 ul{
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+}
+
+
+
+
+#head-b2 ul li{
+	float: left;
+	height: 63px;
+	width: 100px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	margin-left: 18px;
+	font-size: 16px;
+	/*小手*/
+	cursor:pointer;
+}
+
+
+#weixin-onms{
+	background-color: rgba(51, 51, 51, 0.77);
+	width: 204px;
+	height: 240px;
+	position: relative;
+	left: 885px;
+	top: 50px;
+	line-height: 12px;
+	border: 1px solid rgb(121, 121, 121);
+	font-size: 11px;
+	text-align: center;
+	color: white;
+	display: none;
+}
+
+
+/* 注册内容 */
+#zhuce-con{
+	width: 1349px;
+	height: 600px;
+	background-image: url(../image/index/block3.jpg);
+	background-position: -508px -100px;
+	position: absolute;
+	margin: 0 auto;
+}
+
+/* 注册表单框架 */
+#zhuce-neirong{
+	width: 550px;
+	height: 560px;
+	float: right;
+	position: relative;
+	right: 30px;
+	top: 15px;
+	background: rgb(255,255,255,0.5);
+	border-radius: 5%;
+	/* opacity:0.7; */
+	background-image: url(../image/jeepregister/login_tit.png);
+	background-repeat: no-repeat;
+	background-position:-8px 10px;
+	padding-top: 64px;
+	padding-left: 60px;
+	padding-right: 30px;
+}
+
+/* 注册表单样式 */
+#zhuce-mui-input-row{
+	height: 406px;
+	width: 100%;
+	
+}
+
+#zhuce-mui-input-row ul{
+	list-style-type: none;
+}
+
+#zhuce-mui-input-row ul li{
+	height: 34px;
+	margin-top: 10px;
+	/* background: #0000FF; */
+	
+}
+
+.from-size{
+	font-size: 13px;
+}
+
+/* 控制div 对齐其他表单 */
+#xiangzuo{
+	margin-left: -23px;
+}
+
+/* 存放验证码 */
+#yzimg{
+	width: 120px;
+	height: 30px;
+	float: left;
+	background-color: #000000;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+/* 提交按钮 */
+#from-bottom{
+	width: 100%;
+	height: 80px;
+}
+
+#fxk{
+	float: left;
+}
+
+/* 提交按钮布局 */
+#from-bottom-subimst{
+	width: 100%;
+	height: 60px;
+	background-image: url(../image/jeepregister/login_tit2.png);
+	background-repeat: no-repeat;
+	background-position: 1px 1px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+
+/* 按钮样式 */
+#tj{
+	width: 130px;
+	height: 40px;
+	position: absolute;
+	left: 143px;
+	top: 8px;
+	background-color: #ffb400;
+	border: none;
+	opacity:1;
+}
+
+/* 下拉列表样式 */
+.xlcss{
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	border: none;
+	color: #383838;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 60px -4px;
+	margin-left: 14px;
+}
+
+
+/* 尾部 */
+#bottom{
+	width: 1349px;
+	height: 150px;
+	margin: 0 auto;
+	
+}
+
+#b-wenzi{
+	width: 1000px;
+	height: 148px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+#wenzi-left{
+	width: 540px;
+	float: left;
+}
+
+
+#wenzi-left ul{
+	list-style-type: none;
+	
+}
+
+#wenzi-left ul li{
+	float: left;
+	font-size: 13px;
+	border-left: 1px solid white;
+	color: white;
+	margin-left: 10px;
+	padding-left: 10px;
+	cursor:pointer;
+}
+
+
+#wenzi-right{
+	float: right;
+}
+
+
+			/*可以自定义时间选择器颜色*/
+			
+			/* .laydate-theme-yellow {
+				background-color: #ffb400;
+				
+				color: #007DDB;
+			} */
+			/*该选中时间的背景色*/
+			
+			/* .laydate-theme-yellow .layui-this {
+				background-color: #ffb400 !important;
+			} */
+
+/* .layui-laydate .layui-this {
+    background-color: #ffb400 !important;
+    color: #fff !important;
+} */

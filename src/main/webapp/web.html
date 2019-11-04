@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jeep Life-Jeep中国官方网站</title>
+		<link rel="stylesheet" href="css/web.css.css" type="text/css">
+		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  />
+		<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+		<script src="js/web.js.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!-- <div style="width: 100%; height: 200px; background-color: black;"></div> --> <!-- 头部定位占位符 -->
+		<div id="toptoptop" style="width: 100%; background-color: #000000; position: fixed; height: 70px; z-index: 99999;"><!-- 头部定位与样式 -->
+			<div id="heard">
+				
+				<a href="index.html">
+					<div id="logo">
+					<img src="image/index/logo.png" alt="" style="width: 56px; height: 24px;"/><!-- logo -->
+					</div>
+				</a>
+				
+				<div id="heard-left"><!-- 左边导航 -->
+					<div onmouseover="oncars()" onmouseout="outcars()" id="oncar" class="cars">
+						<a href="#">品牌车型</a>
+						<div id="xiabiao"></div><!-- 向下的箭头 -->
+						<div id="shangbiao">       <!-- 隐藏的向上的箭头 -->
+							</div>
+							<div id="hid-car">        <!-- js隐藏区域 汽车 -->
+								<div id="hid-car-left"> <!-- js隐藏区域 汽车列表 -->
+									<ul>
+										<li onmouseover="onli(this,'hid-img1')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k8.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img2')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k85.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img3')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4m.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img4')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img5')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/csuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img6')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/bsuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img7')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jl.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img8')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jk.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img9')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/wk.png" >
+										</li>
+									</ul>
+								</div>
+													<!-- js操作隐藏汽车区域右边总体布局       容器 -->
+											<div id="hid-car-right">
+												<div id="hid-cars">
+												<img class="yincangcar" id="hid-img1" src="image/index/nav-cars-news-k8.jpg" style="display: block;" >
+												<img class="yincangcar" id="hid-img2" src="image/index/nav-cars-news-k85.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img3" src="image/index/nav-cars-news-mca.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img4" src="image/index/nav-cars-news-k4.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img5" src="image/index/nav-cars-news-csuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img6" src="image/index/nav-cars-news-bsuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img7" src="image/index/nav-cars-news-jl.jpg" style="display: none;" >
+													<img class="yincangcar" id="hid-img8" src="image/index/nav-cars-news-jk.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img9" src="image/index/nav-cars-news-wk.jpg" style="display: none;" >
+												
+												</div>
+												<div id="hid-right-bottom">    <!--隐藏汽车 底部图片 -->
+													<img src="image/index/nav-cars-filter.jpg" >
+												<img src="image/index/nav-cars-financial.jpg" >
+												</div>
+											</div>
+							</div>
+					</div>
+					<div class="cars">
+						<a href="web.html" target="_blank">Jeep&nbsp Life </a>
+					</div>
+					<div class="cars">
+						<a href="web2.html" target="_blank">购车支持</a>
+					</div>
+					<div class="cars">
+						<a href="web3.html" target="_blank">Jeep全境界</a>
+					</div>
+					<div class="cars">
+						<a href="web4.html" target="_blank">品牌信息</a>
+					</div>
+				</div>
+				<div id="heard-right"><!-- 右边导航 -->
+					<div class="cars-right">
+						<a href="#">查询经销商</a>
+					</div>
+					<div class="cars-right">
+						<a href="#">预约试驾</a>
+					</div>
+					<a href="web5.html">
+						<div id="search">
+						</div>
+					</a>
+					<div id="fav">
+						<div class="fav-count">0</div>
+					</div>
+					<div id="diqiu"></div>
+				</div>
+			</div>
+		</div>
+		<div id="zhanweidiv1" style="width: 100%; height: 70px;"></div><!-- 占位div -->
+
+<!-- 导航栏第二个            非隐藏 -->
+
+	<div id="daohang2">     <!-- 第二个导航栏 -->
+		<div id="daohang2-main">
+			<div onclick="lscx()" style="border-bottom: 3px  solid #f8be00" id="lscx" class="daohang2-link">
+				<a >历史车型</a>
+			</div>
+			<div onclick="txjlb()" id="txjlb" class="daohang2-link">
+				<a >探享俱乐部</a>
+			</div>
+			<div onclick="rttop()" id="daohang2-top">
+				
+			</div>
+		</div>
+	</div>
+<div style="width: 100%; height: 70px; margin-top: 0;"></div><!-- 占位div -->
+
+
+
+
+
+
+		<!-- 整个页面容器 -->
+		<div style="width: 100%;">
+			<div id="lishichexing">历史车型</div>  <!-- 历史车型 -->
+			<div id="lishichexing-img">
+				<img src="image/web/b1.jpg" alt="" style="width: 100%;">
+			</div>     <!-- 历史车型配图 -->
+			
+			
+			<div style="width: 100%; background-color: white;" >     <!-- 历史车型配图下方留白 -->
+				<div id="lishichexing-img2">
+					<img src="image/web/b_text1.png" alt="" style="height: 100%; width: 100%;" >
+				</div><!-- 历史车型配图2 (文字) -->
+			</div>
+			
+			
+			<!--1940---2010 显示年份的div布局 -->
+			<div style="width: 100%; height:528px; background-image: url(image/web/h_bg1.jpg); background-position: 100%;">
+				<div id="look-years">
+					<div id="years-title">
+						<!-- 年份占位 -->
+						<ul>
+							<li onmouseover="onlixs('ycdiv1')" onmouseout="ouliyc('ycdiv1')" style="border-bottom: 2px solid #f8be00;" onclick="lidj('ligd1','1')" class="ligd" id="ligd1" bs="1">
+								1940s
+								<div class="ht" id="ycdiv1">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv2')" onmouseout="ouliyc('ycdiv2')" onclick="lidj('ligd2','2')"  class="ligd" id="ligd2" bs="2">
+								1950s
+								<div class="ht" id="ycdiv2" >      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv3')" onmouseout="ouliyc('ycdiv3')" onclick="lidj('ligd3','3')"  class="ligd" id="ligd3" bs="3">
+								1960s
+								<div class="ht" id="ycdiv3">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv4')" onmouseout="ouliyc('ycdiv4')" onclick="lidj('ligd4','4')"  class="ligd" id="ligd4" bs="4">
+								1970s
+								<div class="ht" id="ycdiv4">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv5')" onmouseout="ouliyc('ycdiv5')" onclick="lidj('ligd5','5')"  class="ligd" id="ligd5" bs="5">
+								1980s
+								<div class="ht" id="ycdiv5">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv6')" onmouseout="ouliyc('ycdiv6')" onclick="lidj('ligd6','6')"  class="ligd" id="ligd6" bs="6">
+								1990s
+								<div class="ht" id="ycdiv6">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv7')" onmouseout="ouliyc('ycdiv7')" onclick="lidj('ligd7','7')"  class="ligd" id="ligd7" bs="7">
+								2000s
+								<div class="ht" id="ycdiv7">      <!-- 下方的横条 -->
+								</div>
+							</li>
+							<li onmouseover="onlixs('ycdiv8')" onmouseout="ouliyc('ycdiv8')" onclick="lidj('ligd8','8')"  class="ligd" id="ligd8" bs="8">
+								2010s
+								<div class="ht" id="ycdiv8">      <!-- 下方的横条 -->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div onscroll="yearsgundong()" id="years-content">
+						
+						<div  id="years-content-gundong">
+							<img src="image/index/car1.png" >
+						</div>
+						
+						<!-- 内容占位  图片   滚动条 -->
+					</div>
+				</div>
+			</div>	
+			           <!-- 探享俱乐部文字和内容和配图 -->
+			<div id="tanxiangjulebu">
+				探享俱乐部
+			</div>
+			<!-- 探享俱乐部配图 -->
+			<div id="tanxiangjulebu-img">
+				<img src="image/web/h_bg2.jpg" alt="" style="width: 100%;" >
+			</div>
+			<!-- 探享俱乐部配图(文字) -->
+			<div style="width: 100%; background-color: #f2f2f2;">
+				<div id="tanxiangjulebu-img2">
+					<img src="image/web/b_text2.png" alt="" style="width: 100%;"><!-- 探享俱乐部配图(文字) -->
+				</div>
+			</div>
+			
+			
+			<!-- 及至之旅文字定位配图 -->
+			<div id="jizhizhilv-div" >  <!-- 及至之旅全部内容定位 -->
+				<div id="jizhizhilv">
+					及至之旅
+					<div id="wangqihuigu">  <!-- 往期回顾按钮 -->
+						往期路线回顾
+					</div>
+				</div>
+				<div id="jizhizhilv-content">   <!-- 及至之旅主要内容 -->
+					<div onclick="imgleft('-1')"  id="jizhizhilv-left">
+						<img src="image/index/lunimg/leftBtn.png" >
+					</div>
+					<div id="jizhipaoku-content-gundong">
+						<div id="gundongkuang">              <!-- 包含所有小图片的小div -->
+						<!-- 	<ul>
+								<li style="opacity:1;" class="lit" id="lit1">
+									<img src="image/index/lunimg/t1.png" >
+								</li class="lit" id="lit2">
+								<li>
+									<img src="image/index/lunimg/t2.png" >
+								</li>
+								<li class="lit" id="lit3">
+									<img src="image/index/lunimg/t3.png" >
+								</li>
+							</ul> -->
+							
+							<img src="image/index/lunimg/t1.png" style="display: block;" class="imggd"  js="0">
+							<img src="image/index/lunimg/t2.png" class="imggd"  js="1">
+							<img src="image/index/lunimg/t3.png" class="imggd"  js="2">
+							
+						</div>
+						<div id="gundong-bottom">       <!-- 小点定位 -->
+							<ul>
+								<li id="lixx1" onclick="lidiaoxian(1)"></li>
+								<li id="lixx2" onclick="lidiaoxian(2)"></li>
+								<li id="lixx3" onclick="lidiaoxian(3)"></li>
+							</ul>
+						</div>
+					</div>
+				<!-- 	及至之旅滚动图占位 -->
+					
+					<div onclick="imgleft('0')"  id="jizhizhilv-right">
+						<img src="image/index/lunimg/rightBtn.png" >
+					</div>
+				</div>
+			</div>
+			
+			
+			<div id="jizhipaoku-div"><!-- 及至跑酷全部内容定位 -->
+				<div id="jizhipaoku">
+					及至跑酷
+				</div>
+				<div id="jizhipaoku-content">  <!-- 及至跑酷配图和主要内容 -->
+				
+				<!-- 及至跑酷视频插入 -->
+				<div id="jizhipaoku-vido" style="display: none;">
+					<div id="chahao2" onclick="yincangyk()">
+						<img src="image/fancybox.png" >
+					</div>
+					<iframe id="yk" allow="autoplay" src="https://player.youku.com/embed/XMTU5OTE4MDUxNg==?client_id=0464de39d95a41e3&amp;password=&amp;#www.jeep.com.cn" name="iframeId" id="iframeId" allowfullscreen="true" scrolling="no" width="100%" height="100%" frameborder="0"></iframe>
+				</div>
+				
+				
+					<div id="jizhipaoku-content-left"> <!-- 及至跑酷左边内容 -->
+						<img src="image/web/r1.jpg" alt="" >
+						<div id="jizhipaoku-content-left2">
+							活动精彩花絮
+						</div>
+					</div>
+					<div id="jizhipaoku-content-right">    <!-- 及至跑酷右边内容 -->
+						<img src="image/web/Atlas_info.png" alt=""> <!-- 及至跑酷右边图片 -->
+						<a >
+							<img src="image/web/video1.png" style="width: 124px; height: 37px; margin-top: 30px; cursor: pointer;" onclick="ykvido()">
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- 及至摄影位置定位 -->
+			<div id="jizhisheying">
+				                       <!-- 及至摄影内容定位 -->
+				<div id="jizhisheying-content">
+					<div id="jizhisheying-title">   <!-- 及至摄影文字 -->
+						极致摄影
+					</div>
+					<div id="jizhisheying-img">
+						<img src="image/web/pg1.jpg" alt="" style="width: 100%;" >  <!-- 及至摄影大图  ----端相机 -->
+						<div id="jizhisheying-img2">   <!-- 活动锦集和图片定位 -->
+							<div class="div-wenzi">   <!-- 活动锦集文字定位 -->
+									活动集锦
+							</div>
+						</div>
+						<div id="jizhisheying-img3">  <!-- 优秀作品和图片定位 -->
+							<div class="div-wenzi">
+								优秀作品
+							</div>
+						</div>
+						<div id="jizhisheying-img4"> <!-- 向时代专业精神致敬  ----图片定位 -->
+							<img src="image/web/pg_Gallerytext.png" style="width: 100%;" >
+							<img src="image/web/video1.png" alt="" style="width: 124px; height: 37px; margin-top: 30px;" >
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width: 100%;">
+			<div id="bottom">           <!-- 尾巴连接和文字 -->
+				<div id="bottom-wenzi">	
+					<img src="image/index/wb.png" alt=""><!-- 微博和微信图片 -->
+					<div onmouseover="onmserweima()" onmouseout="outmserweima()" id="weixin-img">
+						<img src="image/index/wx.png" alt="" >
+						<div id="onms-erweima">
+							
+						</div>
+					</div>
+				
+					<span style="font-size: 14px; ">
+						<a href="web6.html" target="_blank">隐私声明</a>
+
+						丨
+						<a href="#" > 专享热线 400 6500 118</a>
+					</span>
+					<span style="float: right;"> 
+					<a href="#">CHRYSLER  </a>&nbsp
+					<a href="#">DODGE  </a>&nbsp
+					<a href="#">Jeep®  </a>  &nbsp
+					<a href="#" style="padding-left: 25px; background-image: url(image/index/country.png); background-repeat: no-repeat; background-size: auto 100%;">
+						FIND YOUR COUNTRY
+					</a>
+					</span>
+					
+					<p>网站中所有产品图片及文字说明均有可能变更。克莱斯勒[中国]汽车销售有限公司/广汽菲亚特克莱斯勒汽车销售有限公司保留对所描述车型进行更改的权利，并且任何时候都无需承担因以产品改进为目的的设计和[或]市场营销等原因而必须提前通知的义务。</p>
+					<a href="#" style="font-size: 12px; color: #818181; line-height: 75px;">沪ICP备16032951号-5</a>
+					
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

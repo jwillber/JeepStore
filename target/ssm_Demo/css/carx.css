@@ -1,0 +1,452 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+/* 鎻愮ず妗� */
+#alert-1{
+	width: 400px;
+	height: 200px;
+	background-color: white;
+	/* margin: 0 auto; */
+	position: absolute;
+	z-index: 19;
+	left: 450px;
+	top: 215px;
+	border-radius: 10px;
+	background-image: url(../image/jeepregister/login_tit.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	background-size: 100%;
+	padding-top: 90px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: center;
+}
+#head{
+	width: 1349px;
+	height: 93px;
+	margin: 0 auto;
+	background-color: #232323;
+}
+
+#headul{
+	list-style-type: none;
+	float: right;
+}
+
+
+#headul li{
+	height: 30px;
+	float: left;
+	padding-left: 30px;
+	line-height: 28px;
+	color: #ffb301;
+	font-size: 13px;
+	cursor:pointer;
+	margin-left: 20px;
+}
+
+#headul a:link{
+	color: #ffb400;
+	text-decoration: none;
+}
+#headul a:hover{
+	color: #ffb400;
+	text-decoration: underline;
+}
+#headul a:visited{
+	color: #ffb400;
+}
+
+#headul a:active{
+	color: #ffb400;
+}
+
+#ul1{
+	background-image:url(../image/jeepstore/kf.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#ul2{
+	background-image: url(../image/jeepstore/s_car.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#shopcar{
+	width: 17px;
+	height: 17px;
+	float: right;
+	border-radius:50%;
+	background-color: white;
+	margin-top: 5px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 15px;
+	color: #080808;
+}
+
+#ul3{
+	background-image: url(../image/jeepstore/me.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#head-top{
+	width: 1000px;
+	height: 30px;
+	background-color: #232323;
+	margin: 0 auto;
+}
+
+#head-b{
+	width: 1349px;
+	background-color: black;
+	border-bottom: 3px solid #ffb400;
+	position: absolute;
+}
+
+#head-b2{
+	width: 1000px;
+	height: 63px;
+	margin: 0 auto;
+	
+}
+
+
+#head-b2 a:link{
+	text-decoration: none;
+	color:white;
+}
+#head-b2 a:hover{
+	color:white;
+	text-decoration: underline;
+}
+#head-b2 a:visited{
+	color:white;
+}
+
+#head-b2 a:active{
+	color:white;
+}
+
+
+
+
+#head-b2 ul{
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+}
+
+
+
+
+#head-b2 ul li{
+	float: left;
+	height: 63px;
+	width: 100px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	margin-left: 18px;
+	/*灏忔墜*/
+	cursor:pointer;
+}
+
+
+#weixin-onms{
+	background-color: rgba(51, 51, 51, 0.77);
+	width: 204px;
+	height: 240px;
+	position: relative;
+	left: 885px;
+	top: 50px;
+	line-height: 12px;
+	border: 1px solid rgb(121, 121, 121);
+	font-size: 11px;
+	text-align: center;
+	color: white;
+	display: none;
+}
+
+
+/* ====================================== */
+
+#carxiangxi-border{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 40px;
+	background: white;
+}
+/* 宸﹁竟鍥哄畾div鍥剧墖灞曠ず */
+#carshow-img{
+	width: 335px;
+	height: 326px;
+	float: left; 
+	/* border: 1px solid #E5E5E5; */
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+
+}
+/* 灞曠ず澶у浘 */
+#img-top{
+	width: 333px;
+	height: 260px;
+	border: 1px solid #E5E5E5;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	z-index: 1;
+}
+
+
+#carshow-img ul{
+	list-style-type: none;
+	height: 56px;
+	width: 335px;
+	margin-top: 10px;
+	background-color: white;
+}
+
+#carshow-img ul li{
+	width: 67px;
+	height: 56px;
+	margin-left:10px;
+	float: left;
+	border: 1px solid #e5e5e5;
+	padding-top: 3px;
+}
+
+.small-img{
+	width: 70px;
+	width: 65px;
+}
+
+.big-img{
+	width: 330px;
+	height: 249px;
+
+}
+
+/* 鍙宠竟姹借溅淇℃伅 */
+#carxiangxi-right{
+	/* float:right; */
+	position: relative;
+	width: 535px;
+	left: 380px;
+}
+/* 姹借溅鍚� */
+#carname{
+	font-size: 23px;
+	/* font-weight: bold; */
+	
+}
+
+/* 浠锋牸 */
+#car-jiage{
+	width: 535px;
+	padding: 15px;
+	height: 100px;
+	background-color: #f2f2f2;
+	margin-top: 15px;
+	border-radius: 5px 5px;
+}
+
+/* 姹借溅鎻忚堪 */
+#car-miaoshu{
+	color: #584343;
+	font-size: 18px;
+}
+
+#car-j{
+	font-size: 15px;
+	color: #cf000e;
+}
+
+/* 閰嶇疆鍚嶅畾浣�  鏍峰紡 */
+#car-name{
+	width: 535px;
+	margin-top: 15px;
+
+}
+
+#car-name-li{
+	width: 445px;
+	float: right; 
+
+	left: -2px;
+}
+
+
+
+#car-name-li ul{
+	list-style-type: none;
+	height: 100%;
+}
+
+#car-name-li ul li{
+	border: 1px solid #808080;
+	float: left; 
+	margin-right: 8px;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right:5px;
+	border-radius: 5px;
+	cursor:pointer;
+	font-size: 13px;
+}
+
+
+#car-name-li ul li:hover{
+	border: 1px solid #ffb400;
+}
+
+
+/* 閫夋嫨姹借溅棰滆壊 */
+#car-color{
+	width: 535px;
+	margin-top: 15px;
+	
+}
+
+
+#car-color{
+	width: 535px;
+	margin-top: 15px;
+}
+
+
+ #car-color-li{
+	 	width: 445px;
+	 	float: right; 
+	 
+	 	left: -2px;
+ }
+
+
+ #car-color-li ul{
+	list-style-type: none;
+	height: 100%;
+}
+ 
+ 
+ #car-color-li ul li:hover{
+	border: 1px solid #ffb400;
+}
+
+
+ #car-color-li ul li{
+	border: 1px solid #808080;
+	float: left; 
+	margin-right: 8px;
+	margin-top: 8px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right:5px;
+	border-radius: 5px;
+	cursor:pointer;
+	font-size: 13px;
+}
+
+
+#anniu{
+	height: 69px;
+	float: right;
+	margin-top: 25px;
+}
+
+ .lidh{
+	border:1px solid #808080;
+	background-color: white;
+	color: black;
+} 
+
+
+/* 鎻愪氦鎸夐挳 */
+
+
+
+#tijiao{
+	width: 180px;
+	height: 68px;
+	padding-left: 70px;
+	padding-right: 30px;
+	border: none;
+	background-image: url(../image/jeepcarx/s_btn1.png);
+	background-size: 100% 100%;
+	cursor:pointer;
+}
+
+#tijiao:hover{
+	background-image: url(../image/jeepcarx/s_btn1_hover.png);
+	background-size: 100% 100%;
+	color: white;
+}
+
+#tijiao2{
+	width: 180px;
+	height: 68px;
+	padding-left: 70px;
+	padding-right: 30px;
+	border: none;
+	background-image: url(../image/jeepcarx/s_btn2.png);
+	background-size: 100% 100%;
+	cursor:pointer;
+	margin-left: 20px;
+}
+
+#tijiao2:hover{
+	background-image: url(../image/jeepcarx/s_btn2_hover.png);
+	background-size: 100% 100%;
+	color: #ffb400;
+}
+
+/* 姹借溅灞曠ず */
+#zhanshi-bt{
+	width: 1000px;
+	height: 40px;
+}
+
+#zhanshi-bt ul{
+	height: 40px;
+	list-style-type: none;
+}
+
+#zhanshi-bt ul li{
+	float: left;
+	height: 40px;
+	background-color: #ebebeb;
+	width: 33.3%;
+	border-left: 1px solid white;
+	text-align: center;
+	line-height: 37px;
+	font-size: 15px;
+	font-weight: bold;
+	cursor:pointer;
+	color: #434343;
+}
+
+
+/* 鍙畾鐘舵�� */
+#dingche{
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 14px;
+	color: #434343;
+}
+
+
+/* 鑷畾涔夋牱寮� */
+.disabledd{
+	pointer-events:none; 
+	background-color: #717171;
+	color: #434343;
+	border: 1px solid #f2f2f2;
+}

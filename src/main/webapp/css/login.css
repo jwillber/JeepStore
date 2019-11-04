@@ -1,0 +1,153 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+
+
+#logo{
+	width: 1000px;
+	height: 120px;
+	margin: 0 auto;
+/* 	background-color: darkblue; */
+	background-image: url(../image/jeeplogin/timg.png);
+	background-size: 125px 90px;
+	background-position: 800px 10px;
+	background-repeat: no-repeat;
+	padding-left: 100px;
+	overflow: hidden;
+}
+
+#logo-wenzi{
+	width: 600px;
+	/* height: 80px; */
+	margin-top: 15px;
+	
+}
+#sp1{
+	font-family: "blackadder itc";
+	font-weight: bold;
+	font-size: 60px;
+	color: white;
+}
+
+#sp2{
+	font-size: 15px;
+	font-weight: bold;
+	color: whitesmoke;
+}
+
+/* 中间 */
+#login-z{
+	width: 1349px;
+	height: 600px;
+	margin: 0 auto;
+	background-image: url(../image/web/h_bg3.jpg);
+	background-size: cover;
+	position: absolute;
+	margin:0 auto;
+}
+
+/* 登录框布局 */
+#login-con{
+	width: 380px;
+	height: 460px;
+	background-color: white;
+	border-radius: 5%;
+	opacity:1;
+	background-image: url(../image/jeepregister/login_tit.png);
+	background-position: -92px 5px;
+	padding-top: 59px;
+	background-repeat: no-repeat;
+	position: relative;
+	float: right;
+	right: 30px;
+	top:30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+/* 用户名框样式 */
+#login-con ul{
+	list-style-type: none;
+}
+
+#login-con ul li{
+	margin-top: 10px;
+/* 	background-color: #009688; */
+	height: 34px;
+	margin-top: 20px;
+}
+
+/* 尾部 */
+#bottom{
+	width: 1349px;
+	height: 150px;
+	margin: 0 auto;
+	
+}
+
+#b-wenzi{
+	width: 1000px;
+	height: 148px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+#wenzi-left{
+	width: 540px;
+	float: left;
+}
+
+
+#wenzi-left ul{
+	list-style-type: none;
+	
+}
+
+#wenzi-left ul li{
+	float: left;
+	font-size: 13px;
+	border-left: 1px solid white;
+	color: white;
+	margin-left: 10px;
+	padding-left: 10px;
+	cursor:pointer;
+}
+
+
+#wenzi-right{
+	float: right;
+}
+
+#yanzhengma{
+	width: 120px;
+	height: 30px;
+	float: left;
+	background-color: #009688;
+	margin-top: 3px;
+}
+
+#zc{
+	display: block;
+	float: left;
+	margin-left: 60px;
+}
+
+
+#anniu{
+	width: 100%;
+	height: 54px;
+	background-image: url(../image/jeepregister/login_tit2.png);
+	background-position: -48px -1px;
+}
+
+#anniu2{
+	width: 130px;
+	height: 40px;
+	border: none;
+	background-color:#ffb400;
+	margin-left: 99px;
+}

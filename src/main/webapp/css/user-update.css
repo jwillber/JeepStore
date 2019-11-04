@@ -1,0 +1,268 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+
+
+
+#head{
+	width: 1349px;
+	height: 93px;
+	margin: 0 auto;
+	background-color: #232323;
+}
+
+#headul{
+	list-style-type: none;
+	float: right;
+}
+
+
+#headul li{
+	height: 30px;
+	float: left;
+	padding-left: 30px;
+	line-height: 28px;
+	color: #ffb301;
+	font-size: 13px;
+	cursor:pointer;
+	margin-left: 20px;
+}
+
+#headul a:link{
+	color: #ffb400;
+	text-decoration: none;
+}
+#headul a:hover{
+	color: #ffb400;
+	text-decoration: underline;
+}
+#headul a:visited{
+	color: #ffb400;
+}
+
+#headul a:active{
+	color: #ffb400;
+}
+
+#ul1{
+	background-image:url(../image/jeepstore/kf.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#ul2{
+	background-image: url(../image/jeepstore/s_car.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#shopcar{
+	width: 17px;
+	height: 17px;
+	float: right;
+	border-radius:50%;
+	background-color: white;
+	margin-top: 5px;
+	font-size: 10px;
+	text-align: center;
+	line-height: 15px;
+	color: #080808;
+}
+
+#ul3{
+	background-image: url(../image/jeepstore/me.png);
+	background-repeat: no-repeat;
+	background-position: 13px,1px;
+}
+
+#head-top{
+	width: 1000px;
+	height: 30px;
+	background-color: #232323;
+	margin: 0 auto;
+}
+
+#head-b{
+	width: 1349px;
+	background-color: black;
+	border-bottom: 3px solid #ffb400;
+	position: absolute;
+}
+
+#head-b2{
+	width: 1000px;
+	height: 63px;
+	margin: 0 auto;
+	
+}
+
+
+#head-b2 a:link{
+	text-decoration: none;
+	color:white;
+}
+#head-b2 a:hover{
+	color:white;
+	text-decoration: underline;
+}
+#head-b2 a:visited{
+	color:white;
+}
+
+#head-b2 a:active{
+	color:white;
+}
+
+
+
+
+#head-b2 ul{
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+}
+
+
+
+
+#head-b2 ul li{
+	float: left;
+	height: 63px;
+	width: 100px;
+	line-height: 60px;
+	text-align: center;
+	color: white;
+	margin-left: 18px;
+	/*小手*/
+	cursor:pointer;
+}
+
+
+#weixin-onms{
+	background-color: rgba(51, 51, 51, 0.77);
+	width: 204px;
+	height: 240px;
+	position: relative;
+	left: 885px;
+	top: 50px;
+	line-height: 12px;
+	border: 1px solid rgb(121, 121, 121);
+	font-size: 11px;
+	text-align: center;
+	color: white;
+	display: none;
+}
+
+/* 用户定位 */
+#user-dingwei{
+	width: 990px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+#username{
+	width: 990px;
+	border: 1px solid #bfbfbf;
+	height: 75px;
+}
+
+#nameimg{
+	width: 220px;
+	height: 100%;
+	padding-left:85px;
+	padding-top: 10px;
+	float: left;
+}
+
+#denglu{
+	display: block;
+	color: #080808;
+	margin-top: 20px;
+	font-size: 14px;
+}
+/* ========================== */
+#user-caozuo{
+	width: 990px;
+	margin: 0 auto;
+	/* height: 600px; */
+	margin-top: 19px;
+}
+/* 左边定位 */
+#user-left{
+	width: 180px;
+	float: left;
+	border: 1px solid #bfbfbf;
+	height: 415px;
+}
+
+#user-left ul{
+	list-style-type: none;
+}
+
+#user-left ul li{
+	height: 30px;
+	/* text-align: center; */
+	padding-left: 20px;
+	line-height: 18px;
+	background-image: url(../image/jeepuser/order_arrow2.png);
+	background-repeat: no-repeat;
+	background-position: 160px 4px;
+	font-size: 14px;
+	margin-top: 10px;
+	border-bottom: 1px solid #bfbfbf;
+	cursor: pointer;
+}
+
+
+/* 用户修改区域定位 */
+#user-right{
+	width: 790px;
+	/* height: 500px; */
+	margin-left: 20px;
+	float: left;
+	border: 1px solid #bfbfbf;
+}
+
+#update-con{
+	
+}
+
+#user-right ul{
+	list-style-type: none;
+}
+#user-right ul li{
+	float: left;
+	width: 50%;
+	text-align: center;
+	line-height: 40px;
+	height: 45px;
+	font-size: 14px;
+	cursor: pointer;
+	border-right: 1px solid #bfbfbf;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+/* 下拉列表样式 */
+.xlcss{
+	background-color:#efefef ;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;  /* 隐藏箭头 */
+	border: none;
+	color: #383838;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 60px -4px;
+	margin-left: 14px;
+}
+
+/* 提交按钮样式 */
+#sanniu{
+	width: 120px;
+	height: 30px;
+	border:none;
+	background: #ffb400;
+}

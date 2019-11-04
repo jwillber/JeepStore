@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购车支持-Jeep中国官方网站</title>
+		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  />
+		<link rel="stylesheet" type="text/css" href="css/web2.css.css"/>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zCibULSdOIMatDETVemilg78iamHxmUB"></script>
+		<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+		<script src="js/web2.js.js" type="text/javascript"></script>
+		
+
+
+	</head>
+	<body>
+		<!-- 头部定位导航栏占位 -->
+		<div id="toptoptop" style="width: 100%; background-color: #000000; position: fixed; height: 70px; z-index: 99999;"><!-- 头部定位与样式 -->
+			<div id="heard">
+				
+				<a href="index.html">
+					<div id="logo">
+					<img src="image/index/logo.png" alt="" style="width: 56px; height: 24px;"/><!-- logo -->
+					</div>
+				</a>
+				
+				<div id="heard-left"><!-- 左边导航 -->
+					<div onmouseover="oncars()" onmouseout="outcars()" id="oncar" class="cars">
+						<a href="#">品牌车型</a>
+						<div id="xiabiao"></div><!-- 向下的箭头 -->
+						<div id="shangbiao">       <!-- 隐藏的向上的箭头 -->
+							</div>
+							<div id="hid-car">        <!-- js隐藏区域 汽车 -->
+								<div id="hid-car-left"> <!-- js隐藏区域 汽车列表 -->
+									<ul>
+										<li onmouseover="onli(this,'hid-img1')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k8.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img2')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k85.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img3')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4m.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img4')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/k4.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img5')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/csuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img6')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/bsuv.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img7')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jl.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img8')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/jk.png" >
+										</li>
+										<li onmouseover="onli(this,'hid-img9')" onmouseout="outli(this)" class="li-bgcolor">
+											<img src="image/index/wk.png" >
+										</li>
+									</ul>
+								</div>
+													<!-- js操作隐藏汽车区域右边总体布局       容器 -->
+											<div id="hid-car-right">
+												<div id="hid-cars">
+												<img class="yincangcar" id="hid-img1" src="image/index/nav-cars-news-k8.jpg" style="display: block;" >
+												<img class="yincangcar" id="hid-img2" src="image/index/nav-cars-news-k85.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img3" src="image/index/nav-cars-news-mca.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img4" src="image/index/nav-cars-news-k4.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img5" src="image/index/nav-cars-news-csuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img6" src="image/index/nav-cars-news-bsuv.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img7" src="image/index/nav-cars-news-jl.jpg" style="display: none;" >
+													<img class="yincangcar" id="hid-img8" src="image/index/nav-cars-news-jk.jpg" style="display: none;" >
+												<img class="yincangcar" id="hid-img9" src="image/index/nav-cars-news-wk.jpg" style="display: none;" >
+												
+												</div>
+												<div id="hid-right-bottom">    <!--隐藏汽车 底部图片 -->
+													<img src="image/index/nav-cars-filter.jpg" >
+												<img src="image/index/nav-cars-financial.jpg" >
+												</div>
+											</div>
+							</div>
+					</div>
+					<div class="cars">
+						<a href="web.html" target="_blank">Jeep&nbsp Life </a>
+					</div>
+					<div class="cars">
+						<a href="web2.html" target="_blank">购车支持</a>
+					</div>
+					<div class="cars">
+						<a href="web3.html" target="_blank">Jeep全境界</a>
+					</div>
+					<div class="cars">
+						<a href="web4.html" target="_blank">品牌信息</a>
+					</div>
+				</div>
+				<div id="heard-right"><!-- 右边导航 -->
+					<div class="cars-right">
+						<a href="#">查询经销商</a>
+					</div>
+					<div class="cars-right">
+						<a href="#">预约试驾</a>
+					</div>
+					<a href="web5.html">
+						<div id="search">
+						</div>
+					</a>
+					<div id="fav">
+						<div class="fav-count">0</div>
+					</div>
+					<div id="diqiu"></div>
+				</div>
+			</div>
+		</div>
+		<div id="zhanweidiv1" style="width: 100%; height: 70px;"></div>  <!-- 占位div -->
+		<!-- <div style="width: 100%; height: 140px; background-color: #000000;">
+			
+		</div> -->
+		<div id="daohang2">     <!-- 第二个导航栏 -->
+				<div id="daohang2-main">
+					<div onclick="lscx()" style="border-bottom: 3px  solid #f8be00" id="lscx" class="daohang2-link">
+						<a >Jeep商城</a>
+					</div>
+					<div onclick="txjlb()" id="txjlb" class="daohang2-link">
+						<a >车型对比</a>
+					</div>
+					<div onclick="jrfw()" id="jrfw" class="daohang2-link">
+						<a >金融服务</a>
+					</div>
+					<div onclick="zyxzh()" id="zyxzh" class="daohang2-link">
+						<a >自由享置换</a>
+					</div>
+					<div onclick="cxjxs()" id="cxjxs" class="daohang2-link">
+						<a >查询经销商</a>
+					</div>
+					<div onclick="yysj()" id="yysj" class="daohang2-link">
+						<a >预约试驾</a>
+					</div>
+					<div onclick="rttop()" id="daohang2-top">
+						
+					</div>
+				</div>
+			</div>
+		<div style="width: 100%; height: 70px; margin-top: 0;"></div><!-- 占位div -->
+		<!-- 轮播图 -->
+		<div style="width: 100%;">
+			<div id="go-img" style="margin: 0 auto;">
+				<img src="image/web2/m_banner3.jpg" style="width:100% ; height: 100%; margin: 0 auto;" >
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div style="width: 100%;">
+			<div id="content">
+				<div id="zhengchequyu"> <!-- 整车区域  图片和文字 -->
+					<span class="contenrspan">整车区域</span>
+				</div>
+				<div id="jingpinfujian">  <!-- /*  jeep精品附件文字和图片 */ -->
+					<span class="contenrspan">Jeep精品附件</span>
+				</div>
+				
+				<div id="zixun">          <!-- 咨询经销商的图片和文字 -->
+					<span class="contenrspan">咨询经销商</span>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 车型对比区域 -->
+		<div style="width: 100%;">
+			<div id="chexingduibi-content">  <!-- 车型对比区域主要容器 -->
+				<div id="chexingduibi-wenzi">
+					车型对比
+				</div>
+				<div id="chexingduibi-main">   <!-- 车型对比图片容器 -->
+					<div id="chexingduibi-tltle">
+						<h2>选择您想对比的车型</h2>
+						<p style="margin-top: 10px; color: #333333;">请最多选择4款车进行比较</p>
+					</div>
+					<div id="chexingduibi-car">
+						<ul>
+							<li>
+								<div onclick="xzcar('0')" class="car-class">   <!-- 汽车图片的class -->
+										<img src="image/web2/car1.png" >
+										<p>全新Jeep大指挥官</p>
+										<p>专业级全场合高端7座SUV</p>
+										<div class="div-fuxuan"><!-- 复选框div -->
+											<!-- <img src="image/web2/selected.png" class="imgdx" style="width: 100%; height: 100%;" > -->
+										</div>	
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('1')" class="car-class">
+									<img src="image/web2/car7.png" >
+									<p>全新Jeep指挥官</p>
+									<p>专业级高端大五座SUV</p>
+									<div class="div-fuxuan"><!-- 复选框div -->
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('2')" class="car-class">
+									<img src="image/web2/newcherokeemca_mobile.png" >
+									<p>全新Jeep自由光</p>
+									<p>专业级全驾控都市SUV</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('3')" class="car-class">
+									<img src="image/web2/car4.png" >
+									<p>Jeep自由光典尚版</p>
+									<p>&nbsp;</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('4')" class="car-class">
+									<img src="image/web2/car3.png" >
+									<p>全新Jeep指南者</p>
+									<p>专业级新中产家庭SUV</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('5')" class="car-class">
+									<img src="image/web2/car2.png" >
+									<p>全新Jeep自由侠</p>
+									<p>专业级超驾趣SUV</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('6')" class="car-class">
+									<img src="image/web2/car8.png" >
+									<p>全新一代Jeep牧马人</p>
+									<p>全球偶像级SUV</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('7')" class="car-class">
+									<img src="image/web2/car5.png" >
+									<p>进口Jeep牧马人</p>
+									<p>&nbsp;</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+							<li>
+								<div onclick="xzcar('8')" class="car-class">
+									<img src="image/web2/car6.png" >
+									<p>进口Jeep大切诺基</p>
+									<p>进口专业级豪华SUV</p>
+									<div class="div-fuxuan">
+										
+									</div>
+								</div>
+							</li>
+						</ul>
+						
+					</div>
+					<div id="duibi-button"> <!-- 对比按钮 -->
+							开始对比
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div style="width: 100%; height: 905px;">
+			<div id="jinrongfuwu">    
+				金融服务
+			</div>
+			<div id="jinrongfuwu-main">  <!-- 金融服务主要内容容器 -->
+				<div id="jinrongfuwu-maincontent">
+					<div id="jinrongfuwu-title">  <!-- 金融服务   标题 -->
+						<ul>
+							<li onclick="jrfuwu()">
+								金融活动
+								<div id="jr-border">  <!-- 金融活动下方的条 -->
+									
+								</div>
+							</li>
+							<li onclick="jrjsq()" style="border-left:1px solid white;">
+								金融计算器
+								<div id="jsq-border">
+									
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="jinrongfuwu-none"> <!-- 金融活动隐藏域 -->
+						<img src="image/web2/a1.jpg" style="width: 988px; height: 412px; margin-top: 30px;" >
+						<img src="image/web2/gs.png" style="width:987px; height: 88px; margin-top: 30px; "  >
+						<div id="ljxq">  <!-- 了解详情 -->
+							了解详情
+						</div>
+					</div>
+					
+					<!-- 金融计算器 -->
+					<div id="jrjsq-none"> <!-- 金融计算器隐藏区域 --> 						
+						<div id="select-mian">
+							<div id="select-1">
+									<select name="" id="selProvince">
+									<option value="">----请选择----</option>
+									</select>
+							</div>
+							<div id="select-2">
+								<select name="" id="selCity">
+									<option value="">----请选择----</option>
+								</select>
+							</div>
+							<div id="select-3">
+								<select  name="" id="selCountry">
+								    <option value="">----请选择----</option>
+								</select>
+							</div>
+							<div id="jsq-qian">
+								<div id="qianshu1">
+									<div id="qianshu-left">
+										<span class="mf" >官方指导价</span>
+										<div id="qianshu-left-je">
+											<span id="left-qianshu">
+												0
+											</span>
+											<span style=" color: white; margin-top:20px; display: block;" id="">
+												元
+											</span>
+										</div>
+									</div>
+									<div id="qianshu-right">
+										<span class="mf" >应付金额</span>
+										<div id="qianshu-right-je">
+											<span id="right-qianshu">
+												0
+											</span>
+											<span style=" color: white; margin-top:20px; display: block;" id="">
+												元
+											</span>
+										</div>
+									</div>
+									<div id="yuyue-an">
+										预约试驾
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+						<div id="car-manei">
+							<img id="car-img1" style=" height: 100%;" src="image/web2/car-manei/grand_cherokee.png" >
+							<img id="car-img2" style=" display: none; height: 100%;" src="image/web2/car-manei/renegade.png" >
+							<img id="car-img3" style=" display: none; height: 100%;" src="image/web2/car-manei/wk.png" >
+						</div>
+						<div id="fenqifukuan">  <!-- 分期付款列表 -->
+							<ul>
+								<li>贷款期限</li>
+								<li>12期</li>
+								<li>13期</li>
+								<li>18期</li>
+								<li>24期</li>
+								<li>36期</li>
+								<li>48期</li>
+								<li>60期</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div id="jisuanqi-none">  <!-- 金融计算器隐藏域 -->
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 自由享换至内容容器 -->
+		<div style="width: 100%; height: 985px; margin-top: 40px; background: #323232;">
+			<div id="ziyouhuanzhi-title">   <!-- 自由换至标题 -->
+				自由享换至
+			</div>
+			<div id="ziyouhuanzhi-main">   <!-- 自由换至主要内容容器 -->
+				<div id="main-title">    <!-- 主要内容标题 -->
+					<ul>
+						<li style="list-style-image: url(image/web2/QQ截图20181225184214.png);">
+							选择关注的车辆
+						</li>
+						<li style="border-left: 1px solid white; list-style-image: url(image/web2/QQ截图20181225185250.png);">
+							选择置换的车辆
+						</li>
+						<li style="border-left: 1px solid white; list-style-image: url(image/web2/QQ截图20181225185314.png);">
+							填写信息
+						</li>
+					</ul>
+				</div>
+				<div id="ziyouhuanzhi-car-main">  <!-- 自由换至汽车内容 -->
+					<ul>
+						<li>
+							<div class="car-class">
+								<img src="image/web2/newcherokee.png" >
+								<p>Jeep自由光典尚版</p>
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>
+						</li>
+						<li>
+							<div class="car-class">
+								<img src="image/web2/compass.png" >
+								<p>全新Jeep指南者</p>
+								<p>专业级新中产家庭SUV</p>
+								<p>&nbsp;</p>
+							</div>
+							
+							
+						</li>
+						<li>
+							<div class="car-class">
+								<img src="image/web2/car2.png" >
+								<p>全新Jeep自由侠</p>
+								<p>专业超级驾趣SUV</p>
+								<p>&nbsp;</p>
+							</div>
+						</li>
+						<li>
+							<div class="car-class">
+								<img src="image/web2/car5.png" >
+								<p>全新Jeep自由侠</p>
+								<p>专业超级驾趣SUV</p>
+								<p>&nbsp;</p>
+							</div>
+						</li>
+						<li>
+							<div class="car-class">
+								<img src="image/web2/car6.png" >
+								<p>进口Jeep大切诺基</p>
+								<p>进口专业级豪华SUV</p>
+								<p>&nbsp;</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="xuanze">  <!-- 选择车型下拉列表 -->
+					<select id="select-css">
+						<option value ="">请选择配置</option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+						<option value =""></option>
+					</select>
+				</div>
+				<div id="select-jiage">   <!-- 下拉列表价格传输    容器 -->
+					<div id="jiage">       <!-- 价格乘放 -->
+						<p>官方指导价</p>
+						<div id="money">
+							<span id="qian"> <!-- 放钱的容器 -->
+								179.800
+							</span>
+							<span id="yuan">   <!-- 元 -->
+								元
+							</span>
+						</div>
+						<div id="money-xiayibu">   <!-- 钱数旁边的下一步按钮 -->
+							下一步
+						</div>
+					</div>
+				</div>
+				<p class="up">此能正在升级，敬请期待！</p>
+			</div>
+			
+			
+			
+			
+			<!-- 查询经销商       容器 -->
+			<div style="width: 100%; margin-top: 26px;">      
+				<div id="chaxunjingxiaoshang">    <!-- 查询经销商  文字标题 -->
+							查询经销商
+						</div>
+				<div id="chaxunjingxiaoshang-main">
+						
+						
+						
+						<div id="select-and-map">  <!-- 下拉列表和地图容器 -->
+							<div id="chaxunjingxiaoshang-select">
+								<div id="shengfen">  <!-- 省份 -->
+									<select name="" id="sf">
+										<option value="">----请选择----</option>
+									</select>
+								</div>
+								<div id="city">    <!-- 城市 -->
+									<select name="" id="quxian">
+										<option value="">----请选择----</option>
+									</select>
+								</div>
+								<div id="liebiao">
+									<div id="liebiao-title">
+										经销商列表
+									</div>
+									<div id="liebiao-main">
+										<div id="liebiao-main-content" style="display: none;">   <!-- 列表内容 -->
+											<ul>
+												<li onmouseover="carli(0)" onclick="carli1()" id="carli1" class="car-li">
+													<img src="image/web2/li1.png" >
+												</li>
+												<li onmouseover="carli(1)" onclick="carli2()" id="carli2" class="car-li">
+													<img src="image/web2/li2.png" >
+													</li>
+												<li onmouseover="carli(2)" onclick="carli3()" id="carli3" class="car-li">
+													<img src="image/web2/li3.png" >
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="chaxunjingxiaoshang-map">
+								
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+					
+					
+					
+					<!-- 	预约试驾  内容 -->
+					<div style="width: 100%; background-color: #323232; height: 1200px;">
+						<div id="yuyueshijia">
+							预约试驾
+						</div>
+						<div id="yuyueshijia-cars">
+							<h2>选择您要试驾的车型</h2>
+							<div id="yuyueshijia-cars-div">
+								<ul>
+									<li class="lixs">
+										<div onclick="zxc(0)" class="car-class carxxx">   <!-- 汽车图片的class -->
+											<img src="image/web2/car1.png" >
+											<p>全新Jeep大指挥官</p>
+											<p>专业级全场合高端7座SUV</p>
+											<p>&nbsp;</p>
+												
+										</div>	
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(1)" class="car-class carxxx">
+											<img src="image/web2/car7.png" >
+											<p>全新Jeep指挥官</p>
+											<p>专业级高端大五座SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(2)" class="car-class carxxx">
+											<img src="image/web2/newcherokeemca_mobile.png" >
+											<p>全新Jeep自由光</p>
+											<p>专业级全驾控都市SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(3)" class="car-class carxxx">
+											<img src="image/web2/car4.png" >
+											<p>Jeep自由光典尚版</p>
+											<p>&nbsp;</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(4)" class="car-class carxxx">
+											<img src="image/web2/compass.png" >
+											<p>全新Jeep指南者</p>
+											<p>专业级新中产家庭SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(5)" class="car-class carxxx">
+											<img src="image/web2/car2.png" >
+											<p>全新Jeep自由侠</p>
+											<p>专业超级驾趣SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(6)" class="car-class carxxx">
+											<img src="image/web2/car8.png" >
+											<p>全新一代Jeep牧马人</p>
+											<p>全球偶像级SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(7)" class="car-class carxxx">
+											<img src="image/web2/car5.png" >
+											<p>进口Jeep牧马人</p>
+											<p>&nbsp;</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+									<li class="lixs">
+										<div onclick="zxc(8)" class="car-class carxxx">
+											<img src="image/web2/car6.png" >
+											<p>进口Jeep大切诺基</p>
+											<p>进口专业级豪华SUV</p>
+											<p>&nbsp;</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div id="wanshanxinxi">  <!-- 完善个人信息 -->
+							<h2>完善您的个人信息</h2>
+							<div id="footer-form">
+								<form action="" method="">
+									<div id="xingming-and-sex">   <!-- 姓名和性别div -->
+										<input placeholder="姓名" type="text" name="" id="form-name" value="" />
+										<select id="form-sex">
+											<option value =""> 男</option>
+											<option value ="">女</option>
+										</select>
+									</div>
+									
+									 <!-- 手机号 -->
+									
+									<input placeholder="手机号" type="text" name="" id="tell" value="" />
+									
+									<div id="shengfen-2">  <!-- 省份 -->
+										<select name="" id="shengfen-2-select">
+											<option value="">----请选择----</option>
+										</select>
+									</div>
+									<div id="form-city">    <!--  选择城市 -->
+										<select name="" id="form-city-select">
+											<option value="">----请选择----</option>
+										</select>
+									</div>
+									
+									<div id="form-jingxiaoshang">       <!-- 经销商 -->
+										<select name="" id="jingxiaoshang-select">
+											<option value="">----请选择----</option>
+										</select>
+									</div>
+								</form>
+								
+								
+							</div>
+							
+							<div id="tiaoyue">      <!-- 条约和按钮 -->
+								<input id="tiaoyue-dianji" type="checkbox"  value="" />   <!-- 签约框 -->
+								<span>我同意Jeep品牌的<i>《隐私声明》</i>条约与条件</span>
+								<div onclick="yz()" id="tongyianniu">
+									确认提交
+								</div>
+							</div>
+							
+						</div>
+				</div>
+				<div style="width: 100%;">
+					<div id="bottom">           <!-- 尾巴连接和文字 -->
+						<div id="bottom-wenzi">	
+							<img src="image/index/wb.png" alt=""><!-- 微博和微信图片 -->
+							<div onmouseover="onmserweima()" onmouseout="outmserweima()" id="weixin-img">
+								<img src="image/index/wx.png" alt="" >
+								<div id="onms-erweima">
+									
+								</div>
+							</div>
+						
+							<span style="font-size: 14px; ">
+								<a href="web6.html" target="_blank">隐私声明</a>
+
+								丨
+								<a href="#" > 专享热线 400 6500 118</a>
+							</span>
+							<span style="float: right;"> 
+							<a href="#">CHRYSLER  </a>&nbsp
+							<a href="#">DODGE  </a>&nbsp
+							<a href="#">Jeep®  </a>  &nbsp
+							<a href="#" style="padding-left: 25px; background-image: url(image/index/country.png); background-repeat: no-repeat; background-size: auto 100%;">
+								FIND YOUR COUNTRY
+							</a>
+							</span>
+							
+							<p>网站中所有产品图片及文字说明均有可能变更。克莱斯勒[中国]汽车销售有限公司/广汽菲亚特克莱斯勒汽车销售有限公司保留对所描述车型进行更改的权利，并且任何时候都无需承担因以产品改进为目的的设计和[或]市场营销等原因而必须提前通知的义务。</p>
+							<a href="#" style="font-size: 12px; color: #818181; line-height: 75px;">沪ICP备16032951号-5</a>
+							
+						</div>
+						
+					</div>
+				</div>
+		</div>	
+		
+	</body>
+</html>
