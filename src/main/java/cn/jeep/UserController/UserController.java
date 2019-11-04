@@ -51,7 +51,7 @@ public class UserController {
 	public String outlogin(HttpServletRequest request){
 		request.getSession().removeAttribute("uid");
 		request.getSession().removeAttribute("goucarcount");
-		return "jeepstore";
+		return "redirect:/jeepstore.jsp";
 	}
 	
 }
