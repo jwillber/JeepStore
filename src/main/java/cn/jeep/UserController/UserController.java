@@ -48,11 +48,10 @@ public class UserController {
 	
 	//ÍË³öµÇÂ¼
 	@RequestMapping("/outlogin")
-	public ModelAndView outlogin(ModelAndView model,HttpServletRequest request){
+	public String outlogin(HttpServletRequest request){
 		request.getSession().removeAttribute("uid");
 		request.getSession().removeAttribute("goucarcount");
-		model.setViewName("jeepstore");
-		return model;
+		return "jeepstore";
 	}
 	
 }
