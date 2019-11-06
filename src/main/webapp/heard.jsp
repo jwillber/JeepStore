@@ -112,7 +112,7 @@
 		}
 		if(id==1)
 		{
-			location.href="${pageContext.request.contextPath}/limitServlet?id="+id;
+			location.href="${pageContext.request.contextPath}/showcar/allCar.do";
 		}
 		if(id==2)
 		{

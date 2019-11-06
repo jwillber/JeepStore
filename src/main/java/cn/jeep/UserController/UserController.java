@@ -20,7 +20,7 @@ public class UserController {
 	UserServise userServise;
 	
 	
-	//²éÑ¯ËùÓĞÓÃ»§
+	//æŸ¥è¯¢æ‰€æœ‰ç”¨æˆ·
 	@RequestMapping("/AllUser")
 	public ModelAndView selectAllUserInfo(ModelAndView model){
 		List<User> list = userServise.selectAllUserInfo();
@@ -30,7 +30,7 @@ public class UserController {
 		return model;
 	}
 	
-	//µÇÂ¼
+	//ç™»å½•
 	@RequestMapping("/login")
 	public ModelAndView login(User user,ModelAndView model,HttpServletRequest request){
 		System.out.println(user);
@@ -40,13 +40,13 @@ public class UserController {
 			request.getSession().setAttribute("goucarcount", userServise.gouCarCount(oneUser.getUid()));
 			model.setViewName("jeepstore");
 		}else{
-			model.addObject("logininfo", "ÓÃ»§Ãû»òÃÜÂë´íÎó");
+			model.addObject("logininfo", "è´¦å·æˆ–å¯†ç ä¸æ­£ç¡®");
 			model.setViewName("login");
 		}
 		return model;
 	}
 	
-	//ÍË³öµÇÂ¼
+	//é€€å‡ºç™»å½•
 	@RequestMapping("/outlogin")
 	public String outlogin(HttpServletRequest request){
 		request.getSession().removeAttribute("uid");

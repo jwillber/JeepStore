@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="js/bootstrap.css" />
-<script src="js/bootstrap.js" type="text/javascript">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/js/bootstrap.css" />
+<script src="${pageContext.request.contextPath }/js/bootstrap.js" type="text/javascript">
 	
 </script>
 <link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
 <!-- title图片 -->
-<link rel="stylesheet" type="text/css" href="css/showcar.css" />
-<script type="text/javascript" src="js/showcar.js"></script>
-<script type="text/javascript" src="js/jquery-3.3.1%20-%20xz.js"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/showcar.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/showcar.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-3.3.1%20-%20xz.js"></script>
 
 <title>单品列表-Jeep</title>
 </head>
@@ -28,12 +28,12 @@
 	<!-- 标题 -->
 	<div style="width: 100%; background-color: #dadada;">
 		<div style="width: 100%; height: 228px;">
-			<img src="image/jeepshowcar/bda971e9-ad85-4d91-a244-f7e2bd8e99e6.png"
+			<img src="${pageContext.request.contextPath }/image/jeepshowcar/bda971e9-ad85-4d91-a244-f7e2bd8e99e6.png"
 				style="display: block; margin: 0 auto;">
 		</div>
 		<div id="showcar">
 			<ul>
-				<!-- 				<li>
+				<!-- <li>
 					<div class="car-image">
 						<img src="image/jeepshowcar/list_jeep.png" class="imgd1"> <img
 							src="image/jeepshowcar/dq.jpg" class="img2">
@@ -48,8 +48,8 @@
 					<c:if test="${car.carzt==0 }">
 						<li onClick="carx(${car.carid})">
 							<div class="car-image">
-								<img src="image/jeepshowcar/list_jeep.png" class="imgd1">
-								<img src="${car.carimg }" class="img2">
+								<img src="${pageContext.request.contextPath }/image/jeepshowcar/list_jeep.png" class="imgd1">
+								<img src="${pageContext.request.contextPath }/${car.carimg }" class="img2">
 							</div>
 							<div class="car-font">
 								<h3 style="margin-top: 6px;">${car.carname }</h3>
@@ -61,8 +61,8 @@
 					<c:if test="${car.carzt==1 }">
 						<li>
 							<div class="car-image">
-								<img src="image/jeepshowcar/list_jeep.png" class="imgd1">
-								<img src="${car.carimg }" class="img2">
+								<img src="${pageContext.request.contextPath }/image/jeepshowcar/list_jeep.png" class="imgd1">
+								<img src="${pageContext.request.contextPath }/${car.carimg }" class="img2">
 							</div>
 							<div class="car-font">
 								<h3 style="margin-top: 6px;">${car.carname }</h3>
@@ -78,7 +78,7 @@
 		</div>
 		<div style="background-color: #dadada; width: 100%;">
 			<div style="margin: 0 auto; width: 990px; text-align: center;">
-				<!-- 				<ul class="pagination">
+				<!-- <ul class="pagination">
 						<li class=""><a href="#">&laquo;</a></li>
 						<li class="active"><a href="#">1</a></li>
 						<li><a href="#">&raquo;</a></li>
@@ -94,7 +94,7 @@
 					</c:if>
 					<c:if test="${lim.curr!=1 }">
 						<li>
-							<a href="${pageContext.request.contextPath }/limitServlet?curr=${lim.curr-1}" aria-label="Next">
+							<a href="${pageContext.request.contextPath }/showcar/allCar.do?curr=${lim.curr-1}" aria-label="Next">
 							 		<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
@@ -103,12 +103,12 @@
 					<c:forEach begin="1" end="${lim.zcurr }" var="page">
 						<c:if test="${page==lim.curr }">
 							<li class="active">
-								<a href="${pageContext.request.contextPath }/limitServlet?curr=${page}">${page }</a>
+								<a href="${pageContext.request.contextPath }/showcar/allCar.do?curr=${page}">${page }</a>
 							</li>
 						</c:if>
 						<c:if test="${page!=lim.curr }">
 							<li>
-								<a href="${pageContext.request.contextPath }/limitServlet?curr=${page}">${page }</a>
+								<a href="${pageContext.request.contextPath }/showcar/allCar.do?curr=${page}">${page }</a>
 							</li>
 						</c:if>
 					</c:forEach>
@@ -122,7 +122,7 @@
 					</c:if>
 					<c:if test="${lim.curr!=lim.zcurr }">
 						<li>
-							<a href="${pageContext.request.contextPath }/limitServlet?curr=${lim.curr+1}"aria-label="Next"> 
+							<a href="${pageContext.request.contextPath }/showcar/allCar.do?curr=${lim.curr+1}"aria-label="Next"> 
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>

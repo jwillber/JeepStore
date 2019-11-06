@@ -2,15 +2,14 @@ package cn.jeep.UserMapper;
 
 import java.util.List;
 
-
 import cn.jeep.UserBean.User;
 
 
 public interface UserMapper {
-	//ËùÓĞÓÃ»§ĞÅÏ¢
+	//æŸ¥è¯¢æ‰€æœ‰ç”¨æˆ·
 	List<User> selectAllUserInfo();
-	//µÇÂ¼
+	//ç™»å½•
 	User login(User user);
-	//²éÑ¯µÇÂ½ÓÃ»§µÄ¹ºÎï³µ
+	//è´­ç‰©è½¦ï³µ
 	Integer gouCarCount(String uid);
 }

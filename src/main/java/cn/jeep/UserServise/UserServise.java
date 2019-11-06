@@ -5,10 +5,10 @@ import java.util.List;
 import cn.jeep.UserBean.User;
 
 public interface UserServise {
-	//ËùÓĞÓÃ»§ĞÅÏ¢
+	//æŸ¥è¯¢æ‰€æœ‰
 	List<User> selectAllUserInfo();
-	//µÇÂ¼
+	//ç™»å½•
 	User login(User user);
-	//²éÑ¯µÇÂ½ÓÃ»§µÄ¹ºÎï³µ
+	//è´­ç‰©è½¦ï³µ
 	Integer gouCarCount(String uid);
 }

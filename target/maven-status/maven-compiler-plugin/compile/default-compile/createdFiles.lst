@@ -1,5 +1,5 @@
-cn\jeep\UserController\UserController.class
 cn\jeep\UserBean\User.class
+cn\jeep\UserController\UserController.class
 cn\jeep\UserServiseImpl\UserServiseImpl.class
 cn\jeep\UserServise\UserServise.class
 cn\jeep\UserMapper\UserMapper.class

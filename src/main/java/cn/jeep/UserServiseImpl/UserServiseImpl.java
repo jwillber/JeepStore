@@ -21,14 +21,14 @@ public class UserServiseImpl implements UserServise{
 		return userMapper.selectAllUserInfo();
 	}
 	
-	//登录
+	//鐧诲綍
 	public User login(User user) {
 		// TODO Auto-generated method stub
 		
 		return userMapper.login(user);
 	}
 	
-	//查询登陆用户的购物车
+	//璐墿杞︼车
 	public Integer gouCarCount(String uid) {
 		// TODO Auto-generated method stub
 		return userMapper.gouCarCount(uid);
