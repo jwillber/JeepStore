@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
-		<script type="text/javascript" src="js/login.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/login.js"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css"/>
 			<!-- boots -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
+		<script src="j${pageContext.request.contextPath}/s/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
 		<title>客户登录-Jeep</title>
 	</head>
 	<body>

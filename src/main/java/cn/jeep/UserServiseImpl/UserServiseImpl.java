@@ -34,6 +34,24 @@ public class UserServiseImpl implements UserServise{
 		return userMapper.gouCarCount(uid);
 	}
 	
+	//查询身份证是否重复
+	public Integer isIdCode(String ushenfen) {
+		// TODO Auto-generated method stub
+		return userMapper.isIdCode(ushenfen);
+	}
+
+	//注册新用户
+	public Integer saveUserInfo(User user) {
+		// TODO Auto-generated method stub
+		Integer res = userMapper.saveUserInfo(user);
+		return res;
+	}
+	
 	
 	
 }
+
+
+
+
+

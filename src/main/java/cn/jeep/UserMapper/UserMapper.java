@@ -12,4 +12,8 @@ public interface UserMapper {
 	User login(User user);
 	//购物车ﳵ
 	Integer gouCarCount(String uid);
+	//查询身份证是否重复
+	Integer isIdCode(String ushenfen);
+	//注册新用户
+	Integer saveUserInfo(User user);
 }

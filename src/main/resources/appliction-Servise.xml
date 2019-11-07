@@ -36,8 +36,10 @@
 	<aop:config>
 		<!-- 声明切面 -->
 		<aop:pointcut expression="execution(* cn.jeep.UserServiseImpl.*.*(..))" id="pc1"/>
+		<aop:pointcut expression="execution(* cn.jeep.CarServiseImpl.*.*(..))" id="pc2"/>
 		<!-- 织入 -->
 		<aop:advisor advice-ref="advise" pointcut-ref="pc1"/>
+		<aop:advisor advice-ref="advise" pointcut-ref="pc2"/>
 	</aop:config>
 		
 </beans>

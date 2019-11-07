@@ -9,7 +9,7 @@
 <script src="${pageContext.request.contextPath }/js/bootstrap.js" type="text/javascript">
 	
 </script>
-<link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
+<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" />
 <!-- title图片 -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/css/showcar.css" />
 <script type="text/javascript" src="${pageContext.request.contextPath }/js/showcar.js"></script>

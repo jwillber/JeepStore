@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
-		<link rel="stylesheet" type="text/css" href="css/register.css" />
-		<script type="text/javascript" src="js/register.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/register.css" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/register.js"></script>
 		<!-- boots -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 		<!-- 日历引入 -->
-		<script type="text/javascript" src="layDate-v5.0.9/laydate/laydate.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/layDate-v5.0.9/laydate/laydate.js"></script>
 		<title>用户注册-Jeep</title>
 	</head>
 	<!--  -->
@@ -56,7 +56,7 @@
 		<%-- <span>${uid }</span> --%>
 			<div id="zhuce-con" style="margin: 0 auto">
 				<div id="zhuce-neirong">
-					<form method="post" action="${pageContext.request.contextPath}/registerServlet" class="form-horizontal" role="form">
+					<form method="post" action="${pageContext.request.contextPath}/user/newUserInfo.do" class="form-horizontal" role="form">
 						<div id="zhuce-mui-input-row">
 							<ul>
 								<li>
@@ -82,18 +82,7 @@
 												</span></label>
 											<div class="col-sm-10">
 												<!-- 获取class -->
-												<input  type="text" class="form-control ze2-2" id="firstname" placeholder="字母数字下划线开头，6~16位，包含字母数字下划线" onblur="upwd()">
-											</div>
-										</div>
-									</div>
-								</li>
-								<li>
-									<!-- 确认密码 -->
-									<div style="width: 400px;">
-										<div class="form-group ze3-1">
-											<label for="firstname" class="col-sm-2 control-label" style="padding-right: 3px;"><span class="from-size">确认密码</span></label>
-											<div class="col-sm-10">
-												<input name="pwd" type="text" class="form-control ze3-2" id="firstname" placeholder="重复输入密码" onblur="qpwd()">
+												<input name="upwd" type="text" class="form-control ze2-2" id="firstname" placeholder="字母数字下划线开头，6~16位，包含字母数字下划线" onblur="upwd()">
 											</div>
 										</div>
 									</div>
@@ -112,26 +101,14 @@
 									</div>
 								</li>
 								<li>
-									<!-- 家庭住址 -->
+									<!-- 住址 -->
 									<div style="width: 400px;">
-										<div class="form-group">
+										<div class="form-group ze4-1">
 											<label for="firstname" class="col-sm-2 control-label" style="padding-right: 3px;"><span class="from-size">
 													家庭住址
 												</span></label>
 											<div class="col-sm-10">
-												<select name="province" class="form-control xlcss" style="width: 100px; float: left; background-image: url(image/web2/selectRight.png); margin-left: 0px;"
-												 id="shengfen-2-select">
-
-												</select>
-												<select name="city" class="form-control xlcss" style="width: 100px; float: left; background-image: url(image/web2/selectRight.png);"
-												 id="form-city-select">
-													
-												</select>
-												<select name="areaa" class="form-control xlcss" style="width: 100px; float: left; background-image: url(image/web2/selectRight.png); "
-												 id="jingxiaoshang-select">
-													
-												</select>
-												<!-- <input type="text" class="form-control" id="firstname" placeholder="请输入家庭住址"> -->
+												<input name="uaddr" type="text" class="form-control" id="firstname" placeholder="住址">
 											</div>
 										</div>
 									</div>
@@ -178,23 +155,6 @@
 										</div>
 									</div>
 								</li>
-								<li>
-									<!-- 验证码 -->
-									<div style="width: 312px; float: left;">
-										<div class="form-group">
-											<label for="firstname" class="col-sm-2 control-label" style="padding-right: 3px;"><span class="from-size">
-													验证码
-												</span></label>
-											<div class="col-sm-10">
-												<input name="check" value="${registerInfo}" type="text" class="form-control" id="firstname" placeholder="请输入验证码" style="margin-left: 15px;">
-											</div>
-										</div>
-									</div>
-									<!-- 存放验证码 -->
-									<div id="yzimg">
-										<img alt="" src="${pageContext.request.contextPath}/CheckImgServlet" onclick="imgs(this)">
-									</div>
-								</li>
 							</ul>
 							<div id="from-bottom">
 								<div id="fxk">
@@ -227,10 +187,6 @@
 			elem: '#test1', //指定元素
 			theme: 'yellow'
 		});
-		function imgs(obj)
-		{
-			$(obj).attr("src","${pageContext.request.contextPath}/CheckImgServlet?time="+new Date().getTime());
-		}
 		
 		function gologin()
 		{
@@ -248,16 +204,15 @@
 				//验证身份是否重复
 				var usershenfeninput=$(".ze4-2").val();
 				$.ajax({
-					url:"${pageContext.request.contextPath}/ushenfenServlet",
+					url:"${pageContext.request.contextPath}/user/isIdCode.do",
 					async:true,
 					type:"post",
-					data:{"usershenfeninput":usershenfeninput},
+					data:{"ushenfen":usershenfeninput},
 					success:function(data){
 						/* alert("1"); */
-						var isExist=data.isExist;
-						console.log(isExist);
+						console.log(data)
 						var userinfo="";
-						if(isExist)
+						if(data == 1)
 							{
 								userinfo="该身份注册过了~";
 								$(".ze4-2").val(userinfo);

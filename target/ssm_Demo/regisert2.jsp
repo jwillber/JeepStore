@@ -7,15 +7,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
-		<link rel="stylesheet" type="text/css" href="css/register.css" />
-		<script type="text/javascript" src="js/register.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/register.css" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/register.js"></script>
 		<!-- boots -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
 		<!-- 日历引入 -->
-		<script type="text/javascript" src="layDate-v5.0.9/laydate/laydate.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/layDate-v5.0.9/laydate/laydate.js"></script>
 		<title>用户注册-Jeep</title>
 	</head>
 	<!--  -->
@@ -178,23 +178,6 @@
 										<div class="col-sm-10">
 											<input name="br" type="text" class="demo-input" placeholder="请选择日期" id="test1" style="border: 2px solid rgba(#5e5e5e,0,0,0.8);;">
 										</div>
-									</div>
-								</li>
-								<li>
-									<!-- 验证码 -->
-									<div style="width: 312px; float: left;">
-										<div class="form-group">
-											<label for="firstname" class="col-sm-2 control-label" style="padding-right: 3px;"><span class="from-size">
-													验证码
-												</span></label>
-											<div class="col-sm-10">
-												<input name="check" type="text" class="form-control" id="firstname" placeholder="请输入验证码" style="margin-left: 15px;">
-											</div>
-										</div>
-									</div>
-									<!-- 存放验证码 -->
-									<div id="yzimg">
-										<img alt="" src="${pageContext.request.contextPath}/CheckImgServlet" onclick="imgs(this)">
 									</div>
 								</li>
 							</ul>

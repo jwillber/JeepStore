@@ -18,10 +18,9 @@ public class ShowCarController {
 	//查询所有车辆
 	@RequestMapping("/allCar")
 	public <T> ModelAndView AllCar(ModelAndView model,PageCar<T> pageCar){
-		System.out.println(pageCar.toString());
+		System.out.println(pageCar.toString()+"---------------------------------");
 		model.addObject("lim", showCarServiseImpl.AllCar(pageCar));
 		model.setViewName("showcar");
 		return model;
 	}
-	
 }

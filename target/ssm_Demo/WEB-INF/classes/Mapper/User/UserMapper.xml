@@ -10,16 +10,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <result column="uname" jdbcType="VARCHAR" property="uname" />
     <result column="upwd" jdbcType="VARCHAR" property="upwd" />
     <result column="ushenfen" jdbcType="VARCHAR" property="ushenfen" />
-    <result column="province" jdbcType="VARCHAR" property="province" />
-    <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="areaa" jdbcType="VARCHAR" property="areaa" />
+    <result column="uaddr" jdbcType="VARCHAR" property="uaddr" />
     <result column="usex" jdbcType="INTEGER" property="usex" />
     <result column="utell" jdbcType="VARCHAR" property="utell" />
     <result column="br" jdbcType="VARCHAR" property="br" />
     <result column="zt" jdbcType="INTEGER" property="zt" />
   </resultMap>
   <sql id="Base_Column_List">
-    uoid,uid,uname,upwd,ushenfen,province,city,areaa,usex,utell,br,zt
+    uoid,uid,uname,upwd,ushenfen,uaddr,usex,utell,br,zt
   </sql>
 	<select id="selectAllUserInfo" resultMap="BaseResultMap">
 		select
@@ -39,10 +37,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		SELECT count(*) FROM zys_users JOIN zys_goucar ON zys_users.`uid`=zys_goucar.`uid` WHERE zys_users.`uid`=#{uid}
 	</select>
 	
+	<!-- 验证身份证是否已经注册了 -->
+	<select id="isIdCode" resultType="java.lang.Integer">
+		select count(ushenfen) from zys_users where ushenfen=#{ushenfen}
+	</select>
 	
-	
-	
-	
-	
+	<!-- 注册用户 -->
+	<insert id="saveUserInfo">
+		insert into zys_users(uoid,uid,uname,upwd,ushenfen,uaddr,usex,utell,br,zt)
+		values(#{uoid},#{uid},#{uname},#{upwd},#{ushenfen},#{uaddr},#{usex},#{utell},#{br},#{zt})
+	</insert>
 	
 </mapper>
+
+
+
+
+
+

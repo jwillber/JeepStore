@@ -83,25 +83,6 @@ var znum=0;
 		}
 	}
 	
-	/* 确认密码 */
-	function qpwd()
-	{
-		var upwd=$(".ze2-2").val();
-		var qpwd=$(".ze3-2").val();
-		console.log(qpwd==upwd);
-		if(qpwd==upwd)
-		{
-			$(".ze3-1").attr("class","form-group ze3-1 has-success");
-			$(".ze3-2").attr("id","inputSuccess");
-			znum++;
-		}else{
-			$(".ze3-1").attr("class","form-group ze3-2 has-error");
-			$(".ze3-2").attr("id","inputError");
-			/* alert("两次密码不一致！"); */
-			$("#alert-1").html("两次密码不一致!<div id='okokok' onclick='alertt()' style='cursor: pointer; width: 100px; height: 40px; margin: 0 auto; background-color: #ffb400; margin-top: 35px; text-align: center; line-height: 40px;'>确定</div>");
-			$("#alert-2").css("display","block");
-		}
-	}
 	
 	
 	/* 身份证号 */

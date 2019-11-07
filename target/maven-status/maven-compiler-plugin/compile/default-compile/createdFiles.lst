@@ -1,5 +1,12 @@
+cn\jeep\CarBean\Car.class
 cn\jeep\UserBean\User.class
+cn\jeep\Util\randomId.class
+cn\jeep\CarServiseImpl\ShowCarServiseImpl.class
+cn\jeep\CarServise\ShowCarServise.class
+cn\jeep\CarMapper\ShowCarMapper.class
 cn\jeep\UserController\UserController.class
+cn\jeep\CarBean\PageCar.class
 cn\jeep\UserServiseImpl\UserServiseImpl.class
 cn\jeep\UserServise\UserServise.class
+cn\jeep\CarController\ShowCarController.class
 cn\jeep\UserMapper\UserMapper.class
