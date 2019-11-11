@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.jeep.UserBean.User;
+import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserMapper.UserMapper;
 import cn.jeep.UserServise.UserServise;
 
@@ -45,6 +46,18 @@ public class UserServiseImpl implements UserServise{
 		// TODO Auto-generated method stub
 		Integer res = userMapper.saveUserInfo(user);
 		return res;
+	}
+	//加入购物车
+	public Integer saveGouCar(userGouCar uGC) {
+		// TODO Auto-generated method stub
+		userMapper.saveGouCar(uGC);
+		int row = userMapper.gouCarCount(uGC.getUid());
+		return row;
+	}
+	//查看购物车内容
+	public List<userGouCar> goGouCar(String uid) {
+		// TODO Auto-generated method stub
+		return userMapper.goGouCar(uid);
 	}
 	
 	

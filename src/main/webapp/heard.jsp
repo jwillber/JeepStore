@@ -136,7 +136,7 @@
 		
 		function trueelogin(id)
 		{
-			  location.href="${pageContext.request.contextPath}/usergoucarServlet?uid="+id;
+			  location.href="${pageContext.request.contextPath}/user/goGouCar.do?uid="+id;
 		}
 		
 	</script>

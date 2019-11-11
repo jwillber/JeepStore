@@ -16,6 +16,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <result column="br" jdbcType="VARCHAR" property="br" />
     <result column="zt" jdbcType="INTEGER" property="zt" />
   </resultMap>
+  
+  <!-- 购物车 -->
+  <resultMap type="cn.jeep.UserBean.userGouCar" id="lookGouCar">
+  	<id column="gid" jdbcType="INTEGER" property="gid" />
+    <result column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="carname" jdbcType="VARCHAR" property="carname" />
+    <result column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="colorname" jdbcType="VARCHAR" property="colorname" />
+    <result column="carimg" jdbcType="VARCHAR" property="carimg" />
+    <result column="jiage" jdbcType="INTEGER" property="jiage" />
+  </resultMap>
+  
+  
+  
   <sql id="Base_Column_List">
     uoid,uid,uname,upwd,ushenfen,uaddr,usex,utell,br,zt
   </sql>
@@ -48,6 +62,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{uoid},#{uid},#{uname},#{upwd},#{ushenfen},#{uaddr},#{usex},#{utell},#{br},#{zt})
 	</insert>
 	
+	<!-- 用户购物车 -->
+	<insert id="saveGouCar">
+		insert into zys_goucar(uid,carname,pname,colorname,carimg,jiage) values(#{uid},#{carname},#{pname},#{colorname},#{carimg},#{jiage})
+	</insert>
+	
+	<!-- 跳转到购物车页面 -->
+	<select id="goGouCar" resultMap="lookGouCar">
+		select * from zys_goucar where uid=#{uid}
+	</select>
 </mapper>
 
 

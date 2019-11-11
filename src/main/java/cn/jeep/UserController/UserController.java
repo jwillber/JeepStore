@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import cn.jeep.UserBean.User;
+import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserServise.UserServise;
 import cn.jeep.Util.randomId;
 
@@ -84,8 +85,24 @@ public class UserController {
 		}
 		return model;
 	}
+	//添加购物车
+	@RequestMapping("/gouCar")
+	@ResponseBody
+	public Integer gouCar(userGouCar uGC,HttpServletRequest request){
+		uGC.setUid((String)request.getSession().getAttribute("uid"));
+		int row = userServise.saveGouCar(uGC);
+		System.out.println(uGC.toString()+"---------------");
+		request.getSession().setAttribute("goucarcount", row);
+		return row;
+	}
 	
-	
+	//跳转购物车页面
+	@RequestMapping("/goGouCar")
+	public ModelAndView goGouCar(ModelAndView model,@Param("uid")String uid){
+		model.addObject("goucar", userServise.goGouCar(uid));
+		model.setViewName("mycar");
+		return model;
+	}
 	
 }
 

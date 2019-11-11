@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/mycar.css"/>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
-		<script type="text/javascript" src="js/mycar.js"></script>
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/mycar.css"/>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/mycar.js"></script>
 		
 		<title>我的购物车-Jeep</title>
 	</head>
@@ -55,7 +55,7 @@
 							<input type="checkbox" names="aaa" name=${car.gid } id="" value="" onclick="onecbox('${car.gid}')" bs="${car.gid }" />
 						</td>
 						<td style="width: 180px">
-							<img src="${car.carimg }" style="width: 85%;" >
+							<img src="${pageContext.request.contextPath}/${car.carimg }" style="width: 85%;" >
 						</td>
 						<td style="width: 240px;">
 							<span>
@@ -75,7 +75,7 @@
 								订金:¥ <span id="baba">${car.jiage }</span>
 							</span>
 							<div style="float: right; margin-top: 33px;">
-								<img src="image/jeepmycar/delete.png" style="margin-right: 10px;" ><a href="javascript:void(0)" onClick="delmycar(${car.gid})">删除</a>
+								<img src="${pageContext.request.contextPath}/image/jeepmycar/delete.png" style="margin-right: 10px;" ><a href="javascript:void(0)" onClick="delmycar(${car.gid})">删除</a>
 							</div>
 						</td>
 					</tr>

@@ -314,7 +314,7 @@ function pz(id,peizhiid,pname)
 							console.log('${carx.carimg}');
 							//使用ajax
 					        $.ajax( { type:"post",
-								url:"${pageContext.request.contextPath}/goucarServlet",
+								url:"${pageContext.request.contextPath}/user/gouCar.do",
 								data:{
 									"carname":'${carx.carname }',
 									"colorname":colorname,
@@ -356,7 +356,7 @@ function pz(id,peizhiid,pname)
 			
 			//收藏和购买按钮判断是否登录，否则跳转登录页面
 			function gologin(){
-				location.href="login.jsp";
+				location.href="${pageContext.request.contextPath}/login.jsp";
 			}
 			
 		</script>
