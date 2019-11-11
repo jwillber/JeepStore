@@ -1,13 +1,17 @@
 package cn.jeep.CarController;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import cn.jeep.CarBean.PageCar;
 import cn.jeep.CarBean.detailsCar;
+import cn.jeep.CarBean.peizhiColor;
 import cn.jeep.CarServise.ShowCarServise;
 
 @Controller
@@ -40,9 +44,10 @@ public class ShowCarController {
 	
 	//选中车辆配置显示当前配置的颜色配置
 	@RequestMapping("/pColor")
-	public ModelAndView getPColor(ModelAndView model,@Param("pid")String pid){
-		
-		return model;
+	@ResponseBody
+	public List<peizhiColor> getPColor(ModelAndView model,@Param("pid")String pid){
+		List<peizhiColor> pc = showCarServiseImpl.selectOneColor(pid);
+		return pc;
 	}
 	
 }

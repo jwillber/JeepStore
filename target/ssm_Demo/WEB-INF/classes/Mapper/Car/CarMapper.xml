@@ -100,4 +100,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   		SELECT zys_pcolor.`colorid`,zys_color.`colorname`,zys_pcolor.`czt` FROM zys_carpeizhi JOIN zys_pcolor JOIN zys_color ON zys_carpeizhi.`pid`=zys_pcolor.`pid` AND 
 		zys_color.`colorid`=zys_pcolor.`colorid` WHERE carid=#{carid} AND zys_carpeizhi.`pid`=#{pid}
   	</select>
+  	
+  	<!-- 查一个汽车配置的颜色 -->
+  	<select id="selectOneColor" resultMap="selectPcolor">
+  		SELECT zys_pcolor.`colorid`,zys_color.`colorname`,zys_pcolor.`czt` FROM zys_carpeizhi JOIN zys_pcolor JOIN zys_color 
+		ON zys_carpeizhi.`pid`=zys_pcolor.`pid` AND zys_color.`colorid`=zys_pcolor.`colorid` WHERE zys_carpeizhi.`pid`=#{pid}
+  	</select>
 </mapper>

@@ -214,9 +214,6 @@ function pz(id,peizhiid,pname)
 		peizhiname=pname;
 		
 		console.log(peizhiname);
-/* 	peizhiname = peizhiname.replace(/\ +/g,"");
-		peizhiname = peizhiname.replace(/[\r\n]/g,"");
-		console.log(peizhiname); */
 		peizhi=1;
 		color=0;
 		//--
@@ -237,7 +234,7 @@ function pz(id,peizhiid,pname)
 		})
 		/* console.log(car); */
         $.ajax( { type:"get",
-			url:"${pageContext.request.contextPath}/colorajaxServlet",//将数据转成int 类型
+			url:"${pageContext.request.contextPath}/showcar/pColor.do",//将数据转成int 类型
 			data:{
 				"pid":peizhiid
 			},
@@ -248,7 +245,7 @@ function pz(id,peizhiid,pname)
         	 	/* $.each(data,function(n,item){
         	 		
             });  */
-           		//console.log(data);
+           		console.log(data);
            		 var colornum=0;
            		$("#newul").html("");
 				for(var i=0; i<data.length;i++)

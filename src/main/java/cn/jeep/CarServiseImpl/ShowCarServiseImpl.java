@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import cn.jeep.CarBean.Car;
 import cn.jeep.CarBean.PageCar;
 import cn.jeep.CarBean.detailsCar;
+import cn.jeep.CarBean.peizhiColor;
 import cn.jeep.CarMapper.ShowCarMapper;
 import cn.jeep.CarServise.ShowCarServise;
 
@@ -46,6 +47,12 @@ public class ShowCarServiseImpl implements ShowCarServise{
 		detC.setPandc(showCarMapper.selectCarColor(carid, pid));
 		System.out.println(detC.fatherString()+"~~~"+detC.toString());
 		return detC;
+	}
+
+
+	public List<peizhiColor> selectOneColor(String pid) {
+		// TODO Auto-generated method stub
+		return showCarMapper.selectOneColor(pid);
 	}
 
 

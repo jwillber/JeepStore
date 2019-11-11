@@ -30,4 +30,6 @@ public interface ShowCarMapper {
 	List<carImg> selectPimg(@Param("carid")String carid);
 	//颜色
 	List<peizhiColor> selectCarColor(@Param("carid")String carid,@Param("pid")String pid);
+	//一组对应配置的颜色
+	List<peizhiColor> selectOneColor(String pid);
 }
