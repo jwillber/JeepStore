@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import cn.jeep.CarBean.Car;
 import cn.jeep.CarBean.PageCar;
+import cn.jeep.CarBean.detailsCar;
 import cn.jeep.CarMapper.ShowCarMapper;
 import cn.jeep.CarServise.ShowCarServise;
 
@@ -34,6 +35,17 @@ public class ShowCarServiseImpl implements ShowCarServise{
 		//
 		System.out.println(pageCar.toString());
 		return pageCar;
+	}
+
+
+	public detailsCar detailsCars(String carid) {
+		// TODO Auto-generated method stub
+		//找下這個mapper在哪 
+		String pid = carid.substring(0,carid.length()-1)+"1";
+		detailsCar detC = showCarMapper.detailsCars(carid);
+		detC.setPandc(showCarMapper.selectCarColor(carid, pid));
+		System.out.println(detC.fatherString()+"~~~"+detC.toString());
+		return detC;
 	}
 
 

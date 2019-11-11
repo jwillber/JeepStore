@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
+<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" />
 <!-- title图片 -->
-<link rel="stylesheet" type="text/css" href="css/carx.css" />
-<script type="text/javascript" src="js/carx.js"></script>
-<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="js/bootstrap.css" />
-<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/carx.css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/carx.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/bootstrap.css" />
+<script src="${pageContext.request.contextPath}/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
 <title>汽车名-Jeep专业SUV制造者</title>
 </head>
 <body>
@@ -37,10 +37,10 @@
 				<div id="img-top">
 					<c:forEach items="${carx.liimg }" var="carimg" varStatus="jishu">
 						<c:if test="${jishu.count==1 }">
-							<img src="${carimg.carimg }" class="big-img" style="">
+							<img src="${pageContext.request.contextPath}/${carimg.carimg }" class="big-img" style="">
 						</c:if>
 						<c:if test="${jishu.count!=1 }">
-							<img src="${carimg.carimg }" class="big-img"
+							<img src="${pageContext.request.contextPath}/${carimg.carimg }" class="big-img"
 								style="display: none;">
 						</c:if>
 					</c:forEach>
@@ -49,12 +49,12 @@
 				<ul>
 					<c:forEach items="${carx.liimg }" var="carimgg" varStatus="jishu">
 						<c:if test="${jishu.count==1 }">
-							<li style="margin-left: 0px;"><img src="${carimgg.carimg }"
+							<li style="margin-left: 0px;"><img src="${pageContext.request.contextPath}/${carimgg.carimg }"
 								class="small-img" onmousemove="showcar(${jishu.count-1})">
 							</li>
 						</c:if>
 						<c:if test="${jishu.count!=1 }">
-							<li><img src="${carimgg.carimg }" class="small-img"
+							<li><img src="${pageContext.request.contextPath}/${carimgg.carimg }" class="small-img"
 								onmousemove="showcar(${jishu.count-1})"></li>
 						</c:if>
 
@@ -170,12 +170,12 @@
 				<c:forEach items="${carx.liximg }" var="xcarimg" varStatus="jishu">
 					<c:if test="${jishu.count==1 }">
 						<div style="width: 1000px; display: block;" class="bottom-img">
-							<img src="${xcarimg.xcarimg }" style="width: 100%;">
+							<img src="${pageContext.request.contextPath}/${xcarimg.xcarimg }" style="width: 100%;">
 						</div>
 					</c:if>
 					<c:if test="${jishu.count!=1 }">
 						<div style="width: 1000px; display: none;" class="bottom-img">
-							<img src="${xcarimg.xcarimg }" style="width: 100%;">
+							<img src="${pageContext.request.contextPath}/${xcarimg.xcarimg }" style="width: 100%;">
 						</div>
 					</c:if>
 				</c:forEach>

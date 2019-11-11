@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/heard.css" />
-		<script type="text/javascript" src="js/heard.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/heard.js"></script>
 		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
 		
 		<title></title>

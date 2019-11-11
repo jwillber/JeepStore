@@ -12,14 +12,92 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    <result column="carzt" jdbcType="INTEGER" property="carzt" />
   	</resultMap>
   	
+  	<resultMap type="cn.jeep.CarBean.detailsCar" id="oneCar">
+  		<id column="carid" jdbcType="VARCHAR" property="carid" />
+	    <result column="carimg" jdbcType="VARCHAR" property="carimg" />
+	    <result column="carname" jdbcType="VARCHAR" property="carname" />
+	    <result column="cartext" jdbcType="VARCHAR" property="cartext" />
+	    <result column="carzt" jdbcType="INTEGER" property="carzt" />
+	    <!-- 多表 -->
+	    <!-- 配置信息 -->
+	    <collection property="peizhi" ofType="cn.jeep.CarBean.carPeizhi" javaType="java.util.ArrayList" column="carid" select="selectPerizhi">
+		 	<id column="zys_carpeizhi_id" jdbcType="VARCHAR" property="carid" />
+		    <result column="pid" jdbcType="VARCHAR" property="pid" />
+		    <result column="pname" jdbcType="VARCHAR" property="pname" />
+		    <result column="pzt" jdbcType="INTEGER" property="pzt" />
+	    </collection>
+	    <!-- 配置图片 -->	
+ 	    <collection property="liimg" ofType="cn.jeep.CarBean.carImg" javaType="java.util.ArrayList" column="carid" select="selectPimg">
+		  	<id column="carid" jdbcType="VARCHAR" property="carid" />
+		    <result column="carimg" jdbcType="VARCHAR" property="carimg" />
+	    </collection>
+	   <!--  详细配置图片 -->
+	    <collection property="liximg" ofType="cn.jeep.CarBean.xCarImg" javaType="java.util.ArrayList" column="carid" select="selectPximg">
+		  	<id column="xcarid" jdbcType="VARCHAR" property="xcarid" />
+		    <result column="xcarimg" jdbcType="VARCHAR" property="xcarimg" />
+	    </collection>
+  	</resultMap>
+  	<!-- 多表 -->
+	<!-- 配置信息 -->
+  	<resultMap id="perizhiMap" type="cn.jeep.CarBean.carPeizhi">
+  		<id column="zys_carpeizhi_id" jdbcType="VARCHAR" property="carid" />
+		<result column="pid" jdbcType="VARCHAR" property="pid" />
+		<result column="pname" jdbcType="VARCHAR" property="pname" />
+		<result column="pzt" jdbcType="INTEGER" property="pzt" />
+	</resultMap>
+	<!-- 配置图片 -->	
+  	<resultMap id="carImg" type="cn.jeep.CarBean.carImg">
+		  	<id column="carid" jdbcType="VARCHAR" property="carid" />
+		    <result column="carimg" jdbcType="VARCHAR" property="carimg" />
+	</resultMap>
+	<!-- 详细配置图片 -->	
+  	<resultMap id="xcarImg" type="cn.jeep.CarBean.xCarImg">
+		  	<id column="xcarid" jdbcType="VARCHAR" property="xcarid" />
+		    <result column="xcarimg" jdbcType="VARCHAR" property="xcarimg" />
+	</resultMap>
+	<!-- 第一个配置颜色 -->
+	<resultMap id="selectPcolor" type="cn.jeep.CarBean.peizhiColor">
+		  	<id column="colorid" jdbcType="VARCHAR" property="colorid" />
+		    <result column="colorname" jdbcType="VARCHAR" property="colorname" />
+	</resultMap>
+	
   	<!-- 查询所有车辆 -->
   	<select id="AllCar" resultMap="BaseResultMap">
   		select * from zys_cark limit #{start},#{end}
   	</select>
-  	
   	<!-- 查询总条数 -->
   	<select id="AllCarCount" resultType="java.lang.Integer">
   		select count(*) from zys_cark
   	</select>
   	
+  	<!-- 封装大型产品详情页的业务bean -->
+  	
+  	<!-- 测试多字段映射===================================================  -->
+  	<select id="detailsCars" resultMap="oneCar">
+		SELECT 
+		zys_cark.`carid`,
+		zys_cark.`carimg`,
+		zys_cark.`carname`,
+		zys_cark.`cartext`,
+		zys_cark.`carzt`
+		from zys_cark
+		WHERE zys_cark.`carid`=#{carid}
+  	</select>
+  	<!-- 配置图片 -->	
+  	<select id="selectPerizhi" resultMap="perizhiMap">
+  		select * from zys_carpeizhi where zys_carpeizhi.`carid` =#{carid}
+  	</select>
+  	<!-- 详细配置 -->
+  	<select id="selectPimg" resultMap="carImg">
+  		SELECT * FROM zys_carimg WHERE carid=#{#carid}
+  	</select>
+  	<!-- 详细图片 -->
+  	<select id="selectPximg" resultMap="xcarImg">
+  		select * from zys_xcarimg where xcarid=#{carid}
+  	</select>
+  	<!-- 颜色信息 -->
+  	<select id="selectCarColor" resultMap="selectPcolor">
+  		SELECT zys_pcolor.`colorid`,zys_color.`colorname`,zys_pcolor.`czt` FROM zys_carpeizhi JOIN zys_pcolor JOIN zys_color ON zys_carpeizhi.`pid`=zys_pcolor.`pid` AND 
+		zys_color.`colorid`=zys_pcolor.`colorid` WHERE carid=#{carid} AND zys_carpeizhi.`pid`=#{pid}
+  	</select>
 </mapper>

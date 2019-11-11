@@ -140,7 +140,7 @@
 <script type="text/javascript">
 	function carx(carid)
 	{
-		location.href="${pageContext.request.contextPath }/carxServlet?carid="+carid;
+		location.href="${pageContext.request.contextPath }/showcar/oneCarInfo.do?carid="+carid;
 	}
 </script>
 </html>
