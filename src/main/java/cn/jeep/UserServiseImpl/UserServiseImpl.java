@@ -2,6 +2,9 @@ package cn.jeep.UserServiseImpl;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +28,6 @@ public class UserServiseImpl implements UserServise{
 	//登录
 	public User login(User user) {
 		// TODO Auto-generated method stub
-		
 		return userMapper.login(user);
 	}
 	
@@ -59,8 +61,17 @@ public class UserServiseImpl implements UserServise{
 		// TODO Auto-generated method stub
 		return userMapper.goGouCar(uid);
 	}
-	
-	
+
+	public List<userGouCar> deleteGouCar(String gid,HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		userMapper.deleteGouCar(gid);
+		List<userGouCar> arr = userMapper.goGouCar((String)request.getSession().getAttribute("uid"));
+		//查询条数
+		int row = userMapper.gouCarCount((String)request.getSession().getAttribute("uid"));
+		request.getSession().setAttribute("goucarcount",row);
+		return arr;
+	}
+
 	
 }
 

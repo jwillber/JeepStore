@@ -2,6 +2,8 @@ package cn.jeep.UserServise;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.userGouCar;
 
@@ -20,4 +22,6 @@ public interface UserServise {
 	Integer saveGouCar(userGouCar uGC);
 	//查看购物车商品
 	List<userGouCar> goGouCar(String uid);
+	//删除一条购物车
+	List<userGouCar> deleteGouCar(String gid,HttpServletRequest request);
 }

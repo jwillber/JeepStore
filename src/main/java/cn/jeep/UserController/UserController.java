@@ -104,6 +104,13 @@ public class UserController {
 		return model;
 	}
 	
+	//删除购物车内容
+	@RequestMapping("/delGouCar")
+	@ResponseBody
+	public List<userGouCar> delGouCar(@Param("gid")String gid,HttpServletRequest request){
+		List<userGouCar> arr = userServise.deleteGouCar(gid,request);
+		return arr;
+	}
 }
 
 

@@ -21,4 +21,6 @@ public interface UserMapper {
 	Integer saveGouCar(userGouCar uGC);
 	//查看购物车商品
 	List<userGouCar> goGouCar(String uid);
+	//删除一条购物车
+	Integer deleteGouCar(String gid);
 }

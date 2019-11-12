@@ -71,6 +71,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="goGouCar" resultMap="lookGouCar">
 		select * from zys_goucar where uid=#{uid}
 	</select>
+	
+	<!-- 删除一条购物车 -->
+	<delete id="deleteGouCar">
+		DELETE FROM zys_goucar WHERE gid=#{gid}
+	</delete>
 </mapper>
 
 

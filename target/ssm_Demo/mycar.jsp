@@ -149,7 +149,7 @@
 		function delmycar(gid)
 		{
 	        $.ajax( { type:"post",
-				url:"${pageContext.request.contextPath}/delgoucarServlet",
+				url:"${pageContext.request.contextPath}/user/delGouCar.do",
 				data:{
 					"gid":gid
 				},
