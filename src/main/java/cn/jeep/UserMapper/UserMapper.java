@@ -23,4 +23,6 @@ public interface UserMapper {
 	List<userGouCar> goGouCar(String uid);
 	//删除一条购物车
 	Integer deleteGouCar(String gid);
+	//查询多条即将生成的订单
+	
 }

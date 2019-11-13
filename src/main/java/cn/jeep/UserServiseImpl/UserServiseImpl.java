@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.jeep.UserBean.User;
+import cn.jeep.UserBean.deluserGouCar;
 import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserMapper.UserMapper;
 import cn.jeep.UserServise.UserServise;
@@ -62,14 +63,17 @@ public class UserServiseImpl implements UserServise{
 		return userMapper.goGouCar(uid);
 	}
 
-	public List<userGouCar> deleteGouCar(String gid,HttpServletRequest request) {
+	public deluserGouCar deleteGouCar(String gid,HttpServletRequest request,deluserGouCar dGC) {
 		// TODO Auto-generated method stub
 		userMapper.deleteGouCar(gid);
-		List<userGouCar> arr = userMapper.goGouCar((String)request.getSession().getAttribute("uid"));
+		List<userGouCar> goucarArr = userMapper.goGouCar((String)request.getSession().getAttribute("uid"));
+		dGC = new deluserGouCar();
+		dGC.setGoucarArr(goucarArr);
 		//查询条数
 		int row = userMapper.gouCarCount((String)request.getSession().getAttribute("uid"));
 		request.getSession().setAttribute("goucarcount",row);
-		return arr;
+		dGC.setCount(row);
+		return dGC;
 	}
 
 	

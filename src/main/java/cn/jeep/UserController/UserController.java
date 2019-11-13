@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import cn.jeep.UserBean.User;
+import cn.jeep.UserBean.deluserGouCar;
 import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserServise.UserServise;
 import cn.jeep.Util.randomId;
@@ -104,12 +105,24 @@ public class UserController {
 		return model;
 	}
 	
-	//删除购物车内容
+	//删除1购物车内容
 	@RequestMapping("/delGouCar")
 	@ResponseBody
-	public List<userGouCar> delGouCar(@Param("gid")String gid,HttpServletRequest request){
-		List<userGouCar> arr = userServise.deleteGouCar(gid,request);
-		return arr;
+	public deluserGouCar delGouCar(@Param("gid")String gid,HttpServletRequest request,deluserGouCar dGC){
+		dGC = userServise.deleteGouCar(gid,request,dGC);
+		return dGC;
+	}
+	
+	//把选中的商品生成订单，但是不插入订单库，
+	@RequestMapping("/dingDan")
+	public ModelAndView dingDan(ModelAndView model,@Param("arr")String arr){
+		System.out.println(arr);
+		String[] gid= arr.split(",");
+//		for(int i=0;i<gid.length;i++){
+//			System.out.println(gid[i]);
+//		}
+		
+		return model;
 	}
 }
 

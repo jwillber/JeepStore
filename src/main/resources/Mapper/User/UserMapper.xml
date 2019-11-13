@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <result column="carimg" jdbcType="VARCHAR" property="carimg" />
     <result column="jiage" jdbcType="INTEGER" property="jiage" />
   </resultMap>
-  
+
   
   
   <sql id="Base_Column_List">
@@ -76,6 +76,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<delete id="deleteGouCar">
 		DELETE FROM zys_goucar WHERE gid=#{gid}
 	</delete>
+	
+	<!-- 查询生成的订单但是未插入订单表  ==批量 -->
+	<select id="moreSelectDingDan" resultMap="lookGouCar">
+		select * from zys_goucar where gid=
+		<foreach collection="list" item="gId">
+   			#{gId}
+   		</foreach>
+	</select>
+	
 </mapper>
 
 

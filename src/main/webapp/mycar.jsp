@@ -145,67 +145,66 @@
 	</div>
 	</body>
 	<script type="text/javascript">
-	
-		function delmycar(gid)
-		{
-	        $.ajax( { type:"post",
-				url:"${pageContext.request.contextPath}/user/delGouCar.do",
-				data:{
-					"gid":gid
-				},
-	            success: function (data) {
-	            	//遍历数组
-	            	/* alter(data); */
-	        	 	/* $.each(data,function(n,item){
-	        	 		
-	           		 });  */
-	           		/* $("#shopcar").html(data); */
-	           		//清空原本回弹模量内容
-	           		 $("#ajaxcount").html(""); 
-	           		//添加新的返回内容
-	           		
-	           		data = eval("("+data+")");//让系统识别json格式
-	           		$("#shopcar").html(data.count);
-	           		var count=$("#shopcar").html();
-	           		if(count==0){
-	           			$("#ajaxcount").html("<div style='width:990px; height:200px; text-align: center; line-height: 100px; font-weight: bold; background-color: #dadada;'>还没有收藏~</div>");
-	           		}
-	           		/* console.log(data.goucarArr[0].carimg); */
-	           		if(count>0){
-	           		for(var i=0;i<data.goucarArr.length;i++){
-	           				$("#ajaxcount").append("<tr class='trb'>"+
-						"<td style='width: 20px;'>"+
-							"<input type='checkbox' name='aaa' id='' value='' onclick='onecbox()' bs='1' />"+
-						"</td>"+
-						"<td style='width: 180px'>"+
-							"<img src='"+data.goucarArr[i].carimg+"' style='width: 85%;' >"+
-						"</td>"+
-						"<td style='width: 240px;'>"+
-							"<span>"+data.goucarArr[i].carname+
-							"</span>"+
-						"</td>"+
-						"<td style='width: 400px;'>"+
-							"<span>"+data.goucarArr[i].pname+
-							"</span><br />"+
-							"<p>"+data.goucarArr[i].colorname+
-							"</p>"+
-						"</td>"+
-						"<td style='width: 150px;'>"+
-							"<span style='color: #ff4500; display: block; margin: 0 auto; margin-top: 45px;'>"+
-								"订金:¥ <span id='baba'>"+data.goucarArr[i].jiage+"</span>"+
-							"</span>"+
-							"<div style='float: right; margin-top: 33px;'>"+
-								"<img src='image/jeepmycar/delete.png' style='margin-right: 10px;' ><a href='javascript:void(0)' onClick='delmycar("+data.goucarArr[i].gid+")'>删除</a>"+
-							"</div>"+
-						"</td>"+
-					"</tr>");
-		           		} 
-	           		}
-	           		/* console.log(data); */
-	            }
-	        }
-	);
-		}
+	function delmycar(gid)
+	{
+        $.ajax( { type:"post",
+        	url:"${pageContext.request.contextPath}/user/delGouCar.do",
+			data:{
+				"gid":gid
+			},
+            success: function (data) {
+            	//遍历数组
+            	/* alter(data); */
+        	 	/* $.each(data,function(n,item){
+        	 		
+           		 });  */
+           		/* $("#shopcar").html(data); */
+           		//清空原本回弹模量内容
+           		 $("#ajaxcount").html(""); 
+           		//添加新的返回内容
+           		console.log(data)
+           		/* data = eval("("+data+")"); *///让系统识别json格式
+           		$("#shopcar").html(data.count);
+           		var count=$("#shopcar").html();
+           		if(count==0){
+           			$("#ajaxcount").html("<div style='width:990px; height:200px; text-align: center; line-height: 100px; font-weight: bold; background-color: #dadada;'>还没有收藏~</div>");
+           		}
+           		/* console.log(data.goucarArr[0].carimg); */
+           		if(count>0){
+           		for(var i=0;i<data.goucarArr.length;i++){
+           				$("#ajaxcount").append("<tr class='trb'>"+
+					"<td style='width: 20px;'>"+
+						"<input type='checkbox' name='aaa' id='' value='' onclick='onecbox()' bs='1' />"+
+					"</td>"+
+					"<td style='width: 180px'>"+
+						"<img src='${pageContext.request.contextPath}/"+data.goucarArr[i].carimg+"' style='width: 85%;' >"+
+					"</td>"+
+					"<td style='width: 240px;'>"+
+						"<span>"+data.goucarArr[i].carname+
+						"</span>"+
+					"</td>"+
+					"<td style='width: 400px;'>"+
+						"<span>"+data.goucarArr[i].pname+
+						"</span><br />"+
+						"<p>"+data.goucarArr[i].colorname+
+						"</p>"+
+					"</td>"+
+					"<td style='width: 150px;'>"+
+						"<span style='color: #ff4500; display: block; margin: 0 auto; margin-top: 45px;'>"+
+							"订金:¥ <span id='baba'>"+data.goucarArr[i].jiage+"</span>"+
+						"</span>"+
+						"<div style='float: right; margin-top: 33px;'>"+
+							"<img src='${pageContext.request.contextPath}/image/jeepmycar/delete.png' style='margin-right: 10px;' ><a href='javascript:void(0)' onClick='delmycar("+data.goucarArr[i].gid+")'>删除</a>"+
+						"</div>"+
+					"</td>"+
+				"</tr>");
+	           		} 
+           		}
+            }
+        }
+);
+	}
+
 	
 //选择提交
 	var names=document.querySelectorAll('input[names="aaa"]');
@@ -312,7 +311,7 @@
 	function gojiesuan(){
 		mycars.splice(0,1);
 		console.log(mycars);
-	 	location.href="${pageContext.request.contextPath}/moredingdanServlet?arr="+mycars;
+	 	location.href="${pageContext.request.contextPath}/user/dingDan.do?arr="+mycars;
 	}
 	
 	</script>
