@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.deluserGouCar;
 import cn.jeep.UserBean.userGouCar;
+import cn.jeep.UserBean.userMoreDingDan;
 
 public interface UserServise {
 	//查询所有
@@ -25,4 +26,6 @@ public interface UserServise {
 	List<userGouCar> goGouCar(String uid);
 	//删除一条购物车
 	deluserGouCar deleteGouCar(String gid,HttpServletRequest request,deluserGouCar dGC);
+	//查询多条即将生成的订单
+	userMoreDingDan moreSelectDingDan(List<String> list,HttpServletRequest request);
 }

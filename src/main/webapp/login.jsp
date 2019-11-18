@@ -10,7 +10,7 @@
 			<!-- boots -->
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css"/>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.js"></script>
-		<script src="j${pageContext.request.contextPath}/s/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
 		<title>客户登录-Jeep</title>
 	</head>
 	<body>

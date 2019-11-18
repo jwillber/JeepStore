@@ -27,8 +27,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <result column="carimg" jdbcType="VARCHAR" property="carimg" />
     <result column="jiage" jdbcType="INTEGER" property="jiage" />
   </resultMap>
-  
-  
+
+  <resultMap type="cn.jeep.UserBean.userMoreDingDan" id="lookdingdan">
+    <result column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="uname" jdbcType="VARCHAR" property="uname" />
+    <result column="uaddr" jdbcType="VARCHAR" property="uaddr" />
+    <result column="utell" jdbcType="VARCHAR" property="utell" />
+  </resultMap>
   
   <sql id="Base_Column_List">
     uoid,uid,uname,upwd,ushenfen,uaddr,usex,utell,br,zt
@@ -76,6 +81,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<delete id="deleteGouCar">
 		DELETE FROM zys_goucar WHERE gid=#{gid}
 	</delete>
+	
+	<!-- 查询生成的订单但是未插入订单表  ==批量 -->
+	<select id="moreSelectDingDan" resultMap="lookGouCar">
+		select * from zys_goucar where gid in
+    <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+        #{item}
+    </foreach>
+	</select>
+	
+	<!-- 查看订单需要的用户信息 -->
+	<select id="lookdingdanuser" resultMap="lookdingdan">
+		SELECT uid,uname,utell,uaddr FROM zys_users WHERE uid=#{uid}
+	</select>
 </mapper>
 
 

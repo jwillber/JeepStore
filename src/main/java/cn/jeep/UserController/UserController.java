@@ -1,5 +1,6 @@
 package cn.jeep.UserController;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.deluserGouCar;
 import cn.jeep.UserBean.userGouCar;
+import cn.jeep.UserBean.userMoreDingDan;
 import cn.jeep.UserServise.UserServise;
 import cn.jeep.Util.randomId;
 
@@ -115,15 +117,25 @@ public class UserController {
 	
 	//把选中的商品生成订单，但是不插入订单库，
 	@RequestMapping("/dingDan")
-	public ModelAndView dingDan(ModelAndView model,@Param("arr")String arr){
+	public ModelAndView dingDan(ModelAndView model,@Param("arr")String arr,HttpServletRequest request){
 		System.out.println(arr);
+		List<String> list = new ArrayList<String>();
 		String[] gid= arr.split(",");
-//		for(int i=0;i<gid.length;i++){
-//			System.out.println(gid[i]);
-//		}
-		
+		for(int i=0;i<gid.length;i++){
+			System.out.println(gid[i]);
+			list.add(gid[i]);
+		}
+		userMoreDingDan userDD = userServise.moreSelectDingDan(list,request);
+		request.getSession().setAttribute("moredingdan", userDD);
+		model.addObject("rmoredingdan", userDD);
+		model.setViewName("moneycar2");
 		return model;
 	}
+	
+	
+	//此方法用户删了购物车信息，插入了订单
+	
+	
 }
 
 

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.deluserGouCar;
 import cn.jeep.UserBean.userGouCar;
+import cn.jeep.UserBean.userMoreDingDan;
 import cn.jeep.UserMapper.UserMapper;
 import cn.jeep.UserServise.UserServise;
 
@@ -62,7 +63,7 @@ public class UserServiseImpl implements UserServise{
 		// TODO Auto-generated method stub
 		return userMapper.goGouCar(uid);
 	}
-
+	//删除一条购物车
 	public deluserGouCar deleteGouCar(String gid,HttpServletRequest request,deluserGouCar dGC) {
 		// TODO Auto-generated method stub
 		userMapper.deleteGouCar(gid);
@@ -76,6 +77,19 @@ public class UserServiseImpl implements UserServise{
 		return dGC;
 	}
 
+	//生成一条或多条订单
+	public userMoreDingDan moreSelectDingDan(List<String> list,HttpServletRequest request){
+		userMoreDingDan userDD = new userMoreDingDan();
+		userDD = userMapper.lookdingdanuser((String)request.getSession().getAttribute("uid"));
+		userDD.setZongjia(list.size()*8.8);
+		List<userGouCar> morearr = userMapper.moreSelectDingDan(list);
+		userDD.setMorearr(morearr);
+		for(int i = 0;i<morearr.size();i++){
+			System.out.println(morearr.get(i));
+		}
+		System.out.println(userDD);
+		return userDD;
+	}
 	
 }
 

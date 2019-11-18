@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
+<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" />
 <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/moneycar.css"/>
-		<script src="js/moneycar.js" type="text/javascript"></script>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/moneycar.css"/>
+		<script src="${pageContext.request.contextPath}/js/moneycar.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
 		<title>提交订单-Jeep</title>
 	</head>
 	<body>
@@ -35,11 +35,11 @@
 						</tr>
 						<tr>
 							<td>地址</td>
-							<td><input type="text" name="" id="" disabled="disabled" value="${rmoredingdan.shen }，${rmoredingdan.shi }，${rmoredingdan.qu }" /></td>
+							<td><input type="text" name="" id="" disabled="disabled" value="${rmoredingdan.uaddr}" /></td>
 						</tr>
 						<tr>
 							<td>电话</td>
-							<td><input type="text" name="" id="" disabled="disabled" value="${rmoredingdan.tel }" /></td>
+							<td><input type="text" name="" id="" disabled="disabled" value="${rmoredingdan.utell }" /></td>
 						</tr>
 					</table>
 					

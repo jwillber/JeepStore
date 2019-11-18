@@ -2,8 +2,11 @@ package cn.jeep.UserMapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.userGouCar;
+import cn.jeep.UserBean.userMoreDingDan;
 
 
 public interface UserMapper {
@@ -24,5 +27,7 @@ public interface UserMapper {
 	//删除一条购物车
 	Integer deleteGouCar(String gid);
 	//查询多条即将生成的订单
-	
+	List<userGouCar> moreSelectDingDan(List<String> list);
+	//为了查看订单查询的一部分用户信息
+	userMoreDingDan lookdingdanuser(@Param("uid")String uid);
 }
