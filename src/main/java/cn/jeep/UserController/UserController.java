@@ -1,10 +1,13 @@
 package cn.jeep.UserController;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +16,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.deluserGouCar;
+import cn.jeep.UserBean.userAddDingDan;
+import cn.jeep.UserBean.userDingDanShow;
 import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserBean.userMoreDingDan;
 import cn.jeep.UserServise.UserServise;
@@ -122,7 +128,6 @@ public class UserController {
 		List<String> list = new ArrayList<String>();
 		String[] gid= arr.split(",");
 		for(int i=0;i<gid.length;i++){
-			System.out.println(gid[i]);
 			list.add(gid[i]);
 		}
 		userMoreDingDan userDD = userServise.moreSelectDingDan(list,request);
@@ -134,8 +139,96 @@ public class UserController {
 	
 	
 	//此方法用户删了购物车信息，插入了订单
+	@RequestMapping("/addDingDan")
+	public ModelAndView addDingDan(ModelAndView model,HttpServletRequest request){
+		HttpSession session = request.getSession();
+		userMoreDingDan userDD = (userMoreDingDan) session.getAttribute("moredingdan");
+		List<userGouCar> morearr = userDD.getMorearr();
+		List<userAddDingDan> arr = new ArrayList<userAddDingDan>();
+		userAddDingDan userdd = new userAddDingDan();
+		SimpleDateFormat s=new SimpleDateFormat("yyyy-MM-dd");
+		List<String> list = new ArrayList<String>();
+		for(int i=0;i<morearr.size();i++){
+			userdd.setUid(morearr.get(i).getUid());
+			userdd.setCarimg(morearr.get(i).getCarimg());
+			userdd.setCarname(morearr.get(i).getCarname());
+			userdd.setColorname(morearr.get(i).getColorname());
+			userdd.setJiage("8.8");
+			userdd.setPname(morearr.get(i).getPname());
+			userdd.setShijian(s.format(new Date()));
+			userdd.setUaddr(userDD.getUaddr());
+			userdd.setUname(userDD.getUname());
+			userdd.setZhuangtai(0);
+			userdd.setUtell(userDD.getUtell());
+			arr.add(userdd);
+			list.add(morearr.get(i).getGid());
+		}
+		System.out.println(arr+"----------------------------------------------------------");
+		System.out.println(list+"----------------------------------------------------------");
+		userServise.saveDingDan(arr, list,request);
+		model.setViewName("dingdanYes");
+		return model;
+	}
 	
+	//查询用户所有订单
+	@RequestMapping("/lookdingdan")
+	public ModelAndView lookDingDan(ModelAndView model,HttpServletRequest request){
+		String uid = (String)request.getSession().getAttribute("uid");
+		List<userDingDanShow> arr = userServise.selectDingDan(uid);
+		model.addObject("userdingdan", arr);
+		model.setViewName("user");
+		return model;
+	}
 	
+	//查询正在进行的订单
+	@RequestMapping("/longDingDan")
+	public ModelAndView longDingDan(ModelAndView model,HttpServletRequest request){
+		String zhuangtai = "0";		
+		String uid = (String)request.getSession().getAttribute("uid");
+		List<userDingDanShow> arr = userServise.selectLongDingDan(uid,zhuangtai);
+		model.addObject("userdingdan", arr);
+		model.setViewName("user-jdingdan");
+		return model;
+	}
+	
+	//查看完成的订单
+	@RequestMapping("/okDingDan")
+	public ModelAndView okDingDan(ModelAndView model,HttpServletRequest request){
+		String zhuangtai = "1";		
+		String uid = (String)request.getSession().getAttribute("uid");
+		List<userDingDanShow> arr = userServise.selectOkDingDan(uid, zhuangtai);
+		model.addObject("userdingdan", arr);
+		model.setViewName("user-okdingdan");
+		return model;
+	}
+	//确认订单按钮
+	@RequestMapping("/yesDingDan")
+	@ResponseBody
+	public ModelAndView yesDingDan(ModelAndView model,HttpServletRequest request,@Param("did")String did){
+		userServise.updateDingDan(did);
+		String zhuangtai = "0";		
+		String uid = (String)request.getSession().getAttribute("uid");
+		List<userDingDanShow> arr = userServise.selectLongDingDan(uid,zhuangtai);
+		model.addObject("userdingdan", arr);
+		model.setViewName("user-jdingdan");
+		return model;
+	}
+	//用户修改密码
+	@RequestMapping("/newPwd")
+	@ResponseBody
+	public Integer newPwd(@Param("upwd")String upwd,HttpServletRequest request){
+		String uid = (String)request.getSession().getAttribute("uid");
+		int a = userServise.updatePwd(upwd, uid);
+		return a;
+	}
+	//用户修改家庭住址
+	@RequestMapping("/newUaddr")
+	@ResponseBody
+	public Integer newUaddr(@Param("uaddr")String uaddr,HttpServletRequest request){
+		String uid = (String)request.getSession().getAttribute("uid");
+		int a = userServise.updateUaddr(uaddr, uid);
+		return a;
+	}
 }
 
 

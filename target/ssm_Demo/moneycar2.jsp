@@ -67,7 +67,7 @@
 							
 						</td>
 						<td style="width: 180px">
-							<img src="${mored.carimg }" style="width: 85%;" >
+							<img src="${pageContext.request.contextPath}/${mored.carimg }" style="width: 85%;" >
 						</td>
 						<td style="width: 240px;">
 							<span>
@@ -146,7 +146,7 @@
 	
 		function adddingdan()
 		{
-			location.href="${pageContext.request.contextPath}/adddingdanServlet2";
+			location.href="${pageContext.request.contextPath}/user/addDingDan.do";
 		}
 	
 	</script>

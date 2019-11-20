@@ -35,6 +35,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <result column="utell" jdbcType="VARCHAR" property="utell" />
   </resultMap>
   
+  <!-- 订单 -->
+  <resultMap type="cn.jeep.UserBean.userDingDanShow" id="lookDingDan">
+  	<id column="did" jdbcType="INTEGER" property="did" />
+  	<result column="uid" jdbcType="VARCHAR" property="uid" />
+    <result column="carname" jdbcType="VARCHAR" property="carname" />
+    <result column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="colorname" jdbcType="VARCHAR" property="colorname" />
+    <result column="shijian" jdbcType="VARCHAR" property="shijian" />
+    <result column="uaddr" jdbcType="VARCHAR" property="uaddr" />
+    <result column="zhuangtai" jdbcType="INTEGER" property="zhuangtai" />
+    <result column="jiage" jdbcType="VARCHAR" property="jiage" />
+  </resultMap>
+  
   <sql id="Base_Column_List">
     uoid,uid,uname,upwd,ushenfen,uaddr,usex,utell,br,zt
   </sql>
@@ -94,6 +107,65 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="lookdingdanuser" resultMap="lookdingdan">
 		SELECT uid,uname,utell,uaddr FROM zys_users WHERE uid=#{uid}
 	</select>
+	
+	
+	<!-- 批量插入 用户订单  -->
+	<insert id="saveDingDan">
+		INSERT INTO zys_dingdan(uid,carname,pname,colorname,carimg,shijian,zhuangtai,jiage,utell,uname,uaddr) values
+		<foreach collection="arr" item="item" index="index" separator=",">
+    				(
+    					#{item.uid},
+    					#{item.carname},
+    					#{item.pname},
+    					#{item.colorname},
+    					#{item.carimg},
+    					#{item.shijian},
+    					#{item.zhuangtai},
+    					#{item.jiage},
+    					#{item.utell},
+    					#{item.uname},
+    					#{item.uaddr}
+    				)
+    	</foreach>	
+	</insert>
+	
+	<!-- 批量删除旧购物车信息 -->
+	<delete id="deleteOldGou">
+		delete from zys_goucar where gid in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+	
+	<!-- 查看所有订单 -->
+	<select id="selectDingDan" resultMap="lookDingDan">
+		SELECT did,uid,carname,pname,colorname,shijian,zhuangtai,jiage,uaddr FROM zys_dingdan WHERE uid=#{uid}
+	</select>
+	
+	<!-- 查看进行订单 -->
+	<select id="selectLongDingDan" resultMap="lookDingDan">
+		SELECT did,uid,carname,pname,colorname,shijian,zhuangtai,jiage,uaddr FROM zys_dingdan WHERE uid=#{uid} and zhuangtai=#{zhuangtai}
+	</select>
+	
+	<!-- 查看结束订单 -->
+	<select id="selectOkDingDan" resultMap="lookDingDan">
+		SELECT did,uid,carname,pname,colorname,shijian,zhuangtai,jiage,uaddr FROM zys_dingdan WHERE uid=#{uid} and zhuangtai=#{zhuangtai}
+	</select>
+	
+	<!-- 修改订单状态 -->
+	<update id="updateDingDan">
+		update zys_dingdan set zhuangtai='1' where did=#{did};
+	</update>
+	
+	<!-- 改密码 -->
+	<update id="updatePwd">
+		update zys_users set upwd=#{upwd} where uid=#{uid}
+	</update>
+	
+	<!-- 改地址 -->
+	<update id="updateUaddr">
+		update zys_users set uaddr=#{uaddr} where uid=#{uid}
+	</update>
 </mapper>
 
 

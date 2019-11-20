@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 import cn.jeep.UserBean.User;
 import cn.jeep.UserBean.deluserGouCar;
+import cn.jeep.UserBean.userAddDingDan;
+import cn.jeep.UserBean.userDingDanShow;
 import cn.jeep.UserBean.userGouCar;
 import cn.jeep.UserBean.userMoreDingDan;
 import cn.jeep.UserMapper.UserMapper;
@@ -89,6 +91,52 @@ public class UserServiseImpl implements UserServise{
 		}
 		System.out.println(userDD);
 		return userDD;
+	}
+
+	public Integer saveDingDan(List<userAddDingDan> arr, List<String> list,HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		int a = userMapper.saveDingDan(arr);
+		int b = userMapper.deleteOldGou(list);
+		//返回购物车条数
+		int row = userMapper.gouCarCount((String)request.getSession().getAttribute("uid"));
+		request.getSession().setAttribute("goucarcount",row);
+		return 1;
+	}
+
+	public List<userDingDanShow> selectDingDan(String uid) {
+		// TODO Auto-generated method stub
+		List<userDingDanShow> arr = userMapper.selectDingDan(uid);
+		return arr;
+	}
+
+	public List<userDingDanShow> selectLongDingDan(String uid,String zhuangtai) {
+		// TODO Auto-generated method stub
+		List<userDingDanShow> arr = userMapper.selectLongDingDan(uid,zhuangtai);
+		return arr;
+	}
+
+	public List<userDingDanShow> selectOkDingDan(String uid, String zhuangtai) {
+		// TODO Auto-generated method stub
+		List<userDingDanShow> arr = userMapper.selectLongDingDan(uid,zhuangtai);
+		return arr;
+	}
+
+	public Integer updateDingDan(String did) {
+		// TODO Auto-generated method stub
+		Integer a = userMapper.updateDingDan(did);
+		return a;
+	}
+
+	public Integer updatePwd(String upwd, String uid) {
+		// TODO Auto-generated method stub
+		int a = userMapper.updatePwd(upwd, uid);
+		return a;
+	}
+
+	public Integer updateUaddr(String uaddr, String uid) {
+		// TODO Auto-generated method stub
+		int a = userMapper.updateUaddr(uaddr, uid);
+		return a;
 	}
 	
 }

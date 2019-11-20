@@ -54,7 +54,7 @@
 		<!-- 注册 -->
 		<div style="width: 100%;height: 600px;">
 		<%-- <span>${uid }</span> --%>
-			<div id="zhuce-con" style="margin: 0 auto">
+			<div id="zhuce-con" style="width:100%;">
 				<div id="zhuce-neirong">
 					<form method="post" action="${pageContext.request.contextPath}/user/newUserInfo.do" class="form-horizontal" role="form">
 						<div id="zhuce-mui-input-row">

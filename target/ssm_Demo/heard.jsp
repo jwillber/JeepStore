@@ -40,7 +40,7 @@
 								<a href="${pageContext.request.contextPath}/register.jsp">注册/登录</a>
 							</c:if>
 							<c:if test="${uid!=null}">
-								<a href="${pageContext.request.contextPath}/lookdingdanServlet">我的账户</a>&nbsp;&nbsp;<a href="${pageContext.request.contextPath}/user/outlogin.do" style="color:#ffb400" >退出登录</a>
+								<a href="${pageContext.request.contextPath}/user/lookdingdan.do">我的账户</a>&nbsp;&nbsp;<a href="${pageContext.request.contextPath}/user/outlogin.do" style="color:#ffb400" >退出登录</a>
 							</c:if>
 						</li>
 					</ul>

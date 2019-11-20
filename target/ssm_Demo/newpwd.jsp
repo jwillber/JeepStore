@@ -105,10 +105,10 @@
 		}
 		function newaddr() {
 			$.ajax({
-				url : "${pageContext.request.contextPath}/newpwdServlet",
+				url : "${pageContext.request.contextPath}/user/newPwd.do",
 				async : true,
 				data : {
-					"newpwd" : newpwd
+					"upwd" : newpwd
 				},
 				success : function(data) {
 					if (data == 1) {

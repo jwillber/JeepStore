@@ -7,9 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="image/index/timg.jpg" rel="SHORTCUT ICON" />
 <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/moneycar.css"/>
-		<script src="js/moneycar.js" type="text/javascript"></script>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/moneycar.css"/>
+		<script src="${pageContext.request.contextPath}/js/moneycar.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript"></script>
 		<title>提交订单-Jeep</title>
 	</head>
 	<body>
@@ -101,26 +101,6 @@
 						</td>
 					</tr>
 				</c:forEach>
-					<%-- <tr class="trb">
-						<td style="width: 20px;">
-							
-						</td>
-						<td style="width: 180px">
-							<img src="${dingdanq.carimg }" style="width: 85%;" >
-						</td>
-						<td style="width: 240px;">
-							<span>
-								${dingdanq.carname }
-							</span>
-						</td>
-						<td style="width: 400px;">
-							<span>
-								${dingdanq.pname }
-							</span><br />
-							<p>
-								${dingdanq.colorname }
-							</p>
-						</td> --%>
 				</table>
 				<div id="mycar-bottom">
 					<div id="ch">
@@ -140,10 +120,10 @@
 				<div style="height: 50px;">
 					
 				</div>
-											<!-- 清除浮动 -->
-											<div style="clear: both;">
+					<!-- 清除浮动 -->
+					<div style="clear: both;">
 			
-											</div>
+					</div>
 			</div>
 		</div>
 			<!-- 尾巴 -->
@@ -153,7 +133,7 @@
 	</body>
 	<script type="text/javascript">
 		function alertt(){
-			location.href="jeepstore.jsp";
+			location.href="${pageContext.request.contextPath}/jeepstore.jsp";
 		}
 	</script>
 </html>

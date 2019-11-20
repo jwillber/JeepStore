@@ -146,7 +146,7 @@
 	
 		function adddingdan()
 		{
-			location.href="${pageContext.request.contextPath}/adddingdanServlet2";
+			location.href="${pageContext.request.contextPath}/user/addDingDan.do";
 		}
 	
 	</script>

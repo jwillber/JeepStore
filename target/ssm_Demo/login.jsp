@@ -31,9 +31,9 @@
 		
 		<!-- 中间 -->
 		<div style="width: 100%; height: 600px;">
-			<div id="login-z">
+			<div id="login-z" style="width:100%;">
 				<div id="login-con">
-					<form class="form-horizontal" role="form" action="user/login.do" method="post">
+					<form class="form-horizontal" role="form" action="${pageContext.request.contextPath}/user/login.do" method="post">
 					<!-- 此div提示账号用户错误 -->
 						<div style="padding-top: 5px; padding-bottom: 5px; color: red;">
 							${logininfo }

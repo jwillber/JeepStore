@@ -5,15 +5,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="js/bootstrap.css"/>
-		<script src="js/bootstrap.js" type="text/javascript">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/bootstrap.css"/>
+		<script src="${pageContext.request.contextPath}/js/bootstrap.js" type="text/javascript">
 			
 		</script>
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/user.css"/>
-		<script type="text/javascript" src="js/user.js">
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/user.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/user.js">
 		</script>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
 		</script>
 
 		<title>用户页面-Jeep</title>
@@ -34,7 +34,7 @@
 				<!-- 用户名定位 -->
 				<div id="username">
 					<div id="nameimg">
-						<img src="image/jeepuser/head.png" >
+						<img src="${pageContext.request.contextPath}/image/jeepuser/head.png" >
 					</div>
 					<span id="denglu">
 						尊敬的${uid }欢迎登陆~
@@ -86,7 +86,7 @@
 									<tr>
 										<td style="width:290px;">${ud.carname }${ud.pname }${ud.colorname }</td>
 										<td>${ud.shijian }</td>
-										<td>${ud.sheng }${ud.shi }${ud.qu }</td>
+										<td>${ud.uaddr }</td>
 										<td>${ud.jiage }</td>
 
 										<td>
@@ -124,15 +124,15 @@
 	{
 		if(id==0)
 		{
-			location.href="${pageContext.request.contextPath}/lookdingdanServlet";
+			location.href="${pageContext.request.contextPath}/user/lookdingdan.do";
 		}
 		if(id==1)
 		{
-			location.href="${pageContext.request.contextPath}/jinxingdingdanServlet";
+			location.href="${pageContext.request.contextPath}/user/longDingDan.do";
 		}
 		if(id==2)
 		{
-			location.href="${pageContext.request.contextPath}/okdingdanSrvlet";
+			location.href="${pageContext.request.contextPath}/user/okDingDan.do";
 		}
 	}
 	//
