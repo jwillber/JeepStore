@@ -27,9 +27,9 @@ public class loginInterceptor implements HandlerInterceptor {
 		String uri = request.getRequestURI();
 		HttpSession session = request.getSession();
 		String uid = (String) session.getAttribute("uid");
-		if (uri.indexOf("/login.do") >= 0) {
-			return true;
-		}
+//		if (uri.indexOf("/login.do") >= 0) {
+//			return true;
+//		}
 		if(uid == null){
 			response.sendRedirect(request.getContextPath()+"/login.jsp");
 			System.out.println("使用了拦截器--拦截成功");

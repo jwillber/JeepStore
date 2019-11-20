@@ -1,5 +1,6 @@
 package cn.jeep.UserController;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.annotations.Param;
@@ -46,8 +48,12 @@ public class UserController {
 	
 	//登录
 	@RequestMapping("/login")
-	public ModelAndView login(User user,ModelAndView model,HttpServletRequest request){
+	public ModelAndView login(User user,ModelAndView model,HttpServletRequest request,HttpServletResponse response) throws IOException{
 		System.out.println(user);
+		//登录超级管理员admin
+		if(user.getUid().equals("admin") && user.getUpwd().equals("admin")){
+			response.sendRedirect(request.getContextPath()+"/admin.html");
+		}
 		User oneUser = userServise.login(user);
 		if(oneUser!=null){
 			request.getSession().setAttribute("uid", oneUser.getUid());
@@ -164,7 +170,7 @@ public class UserController {
 			list.add(morearr.get(i).getGid());
 		}
 		System.out.println(arr+"----------------------------------------------------------");
-		System.out.println(list+"----------------------------------------------------------");
+		System.out.println(list+"---------------------------------------------------------");
 		userServise.saveDingDan(arr, list,request);
 		model.setViewName("dingdanYes");
 		return model;
