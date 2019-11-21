@@ -11,6 +11,7 @@
 		
 	<context:component-scan base-package="cn.jeep.UserServiseImpl"></context:component-scan>
 	<context:component-scan base-package="cn.jeep.CarServiseImpl"></context:component-scan>
+	<context:component-scan base-package="cn.jeep.AdminServiseImpl"></context:component-scan>
 	<!-- 1,声明事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		 <property name="dataSource" ref="dataSource"></property>
@@ -37,9 +38,11 @@
 		<!-- 声明切面 -->
 		<aop:pointcut expression="execution(* cn.jeep.UserServiseImpl.*.*(..))" id="pc1"/>
 		<aop:pointcut expression="execution(* cn.jeep.CarServiseImpl.*.*(..))" id="pc2"/>
+		<aop:pointcut expression="execution(* cn.jeep.AdminServiseImpl.*.*(..))" id="pc3"/>
 		<!-- 织入 -->
 		<aop:advisor advice-ref="advise" pointcut-ref="pc1"/>
 		<aop:advisor advice-ref="advise" pointcut-ref="pc2"/>
+		<aop:advisor advice-ref="advise" pointcut-ref="pc3"/>
 	</aop:config>
 		
 </beans>

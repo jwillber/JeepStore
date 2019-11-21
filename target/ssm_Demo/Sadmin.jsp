@@ -4,12 +4,12 @@
 <html style="height: 100%;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="css/admin.css"/>
-		<script src="js/admin.js" type="text/javascript">
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON"  /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/admin.css"/>
+		<script src="${pageContext.request.contextPath}/js/admin.js" type="text/javascript">
 			
 		</script>
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
 			
 		</script>
 		<title>Admin-Jeep</title>
@@ -64,7 +64,7 @@
 		</div>
 		
 		<!-- 内容区域 -->
-		<div style="width: 100%; height: 100%; background-image: url(image/web/h_bg1.jpg); background-size: 100%; padding-top: 50px;">
+		<div style="width: 100%; height: 100%; background-image: url(${pageContext.request.contextPath}/image/web/h_bg1.jpg); background-size: 100%; padding-top: 50px;">
 			<div id="welcome-admin">
 				欢迎使用~
 			</div>
@@ -73,7 +73,7 @@
 	<script type="text/javascript">
 		function lookcar()
 		{
-			location.href="${pageContext.request.contextPath}/lookcarnameServlet";
+			location.href="${pageContext.request.contextPath}/admin/lookcarname.do";
 		}
 		function updatecar()
 		{

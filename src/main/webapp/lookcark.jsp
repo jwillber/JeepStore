@@ -5,17 +5,17 @@
 <html style="height:100%">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="image/index/timg.jpg" rel="SHORTCUT ICON" /> <!-- title图片 -->
-		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
-		<script type="text/javascript" src="layui/layui.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/lookcark.css" />
-		<script src="js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
+		<link href="${pageContext.request.contextPath}/image/index/timg.jpg" rel="SHORTCUT ICON" /> <!-- title图片 -->
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/layui/css/layui.css"/>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/layui/layui.js"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/lookcark.css" />
+		<script src="${pageContext.request.contextPath}/js/jquery-3.3.1%20-%20xz.js" type="text/javascript">
 		</script>
-		<script src="js/lookcark.js" type="text/javascript">
+		<script src="${pageContext.request.contextPath}/js/lookcark.js" type="text/javascript">
 		</script>
 		<!-- boos -->
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-		<script src="js/bootstrap.js" type="text/javascript">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.css" />
+		<script src="${pageContext.request.contextPath}/js/bootstrap.js" type="text/javascript">
 		</script>
 		<title>LOOK-Jeep</title>
 	</head>
@@ -71,7 +71,7 @@
 			</div>
 
 			<!-- 内容区域 -->
-			<div style="width: 100%;  background-image: url(image/web/h_bg1.jpg); background-size: 100%; padding-top: 50px; padding-left: 260px;">
+			<div style="width: 100%;  background-image: url(${pageContext.request.contextPath}/image/web/h_bg1.jpg); background-size: 100%; padding-top: 50px; padding-left: 260px;">
 								<div id="tiaojian">
 					<div id="xxcarname">
 						系列：
@@ -86,6 +86,7 @@
 						配置：
 						<ul id="getpeizhi">
 						</ul>
+						<div style="clear: both;"></div>
 					</div>
 					<!-- 颜色 -->
 					<div id="xxcolor">
@@ -126,7 +127,7 @@
 						<c:forEach items="${lookcar }" var="car">
 							<tr>
 								<td>${car.carid }</td>
-								<td><img src="${car.carimg }" style="width: 120px; height: 90px;"></td>
+								<td><img src="${pageContext.request.contextPath}/${car.carimg }" style="width: 120px; height: 90px;"></td>
 								<td>${car.carname }</td>
 								<c:if test="${car.carzt==1 }">
 									<td style="color:red;">停售</td>
@@ -192,7 +193,7 @@
 		console.log(carname);
 		
 	 	 $.ajax({
-			              url:"${pageContext.request.contextPath}/lookpeizhiServlet",
+			              url:"${pageContext.request.contextPath}/admin/lookpeizhi.do",
 			              async:true,
 			              data:{"carid":carname},
 			              success:function(data){
@@ -219,7 +220,7 @@
 			            		  $("#newtables").append("<tbody>"+
 			            				  	"<tr>"+
 												"<td>"+data[i].pid+"</td>"+
-												"<td><img src='"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
+												"<td><img src='${pageContext.request.contextPath}/"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
 												"<td>"+data[i].pname+"</td>"+
 													ts+
 												"<td><a href='javascript:void(0)' onClick='uppeizhi("+data[i].pid+")'>上架</a></td>"+
@@ -252,7 +253,7 @@
 		pname=pid;
 		/* alert(pname); */
 		     $.ajax({
-              		url:"${pageContext.request.contextPath}/lookcolorServlet",
+              		url:"${pageContext.request.contextPath}/admin/lookcolor.do",
               		async:true,
              		data:{"pid":pname},
               		success:function(data){
@@ -302,7 +303,7 @@
 		$("#xxsp3").html("&nbsp;&nbsp>>&nbsp;&nbsp"+str);
 		colorname=colorid;
 		          $.ajax({
-			              url:"${pageContext.request.contextPath}/onelookcolorServlet",
+			              url:"${pageContext.request.contextPath}/admin/lookcolors.do",
 			              async:true,
 			              data:{"colorid":colorname,"pid":pname},
 			              success:function(data){
@@ -343,14 +344,14 @@
 
 	function lookcar()
 	{
-		location.href="${pageContext.request.contextPath}/lookcarnameServlet";
+		location.href="${pageContext.request.contextPath}/admin/lookcarname.do";
 	}
 	
 	//上架车
  	function carup(carid)
 	{
 		          $.ajax({
-			              url:"${pageContext.request.contextPath}/carupServlet",
+			              url:"${pageContext.request.contextPath}/admin/upcarname.do",
 			              async:true,
 			              data:{"carid":carid},
 			              success:function(data){
@@ -377,7 +378,7 @@
 				            		  $("#newtables").append("<tbody>"+
 				            				  	"<tr>"+
 													"<td>"+data[i].carid+"</td>"+
-													"<td><img src='"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
+													"<td><img src='${pageContext.request.contextPath}/"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
 													"<td>"+data[i].carname+"</td>"+
 														ts+
 													"<td><a href='javascript:void(0)' onClick='carup("+data[i].carid+")'>上架</a></td>"+

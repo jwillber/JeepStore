@@ -49,6 +49,7 @@
 			<value>
 				cn.jeep.UserMapper
 				cn.jeep.CarMapper
+				cn.jeep.AdminMapper
 			</value>
 		</property>
 		<!-- 注入sqlSessionFactory -->

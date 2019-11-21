@@ -52,7 +52,9 @@ public class UserController {
 		System.out.println(user);
 		//登录超级管理员admin
 		if(user.getUid().equals("admin") && user.getUpwd().equals("admin")){
-			response.sendRedirect(request.getContextPath()+"/admin.html");
+			/*response.sendRedirect(request.getContextPath()+"/admin.html");*/
+			model.setViewName("Sadmin");
+			return model;
 		}
 		User oneUser = userServise.login(user);
 		if(oneUser!=null){
