@@ -26,10 +26,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<resultMap type="cn.jeep.AdminBean.candpBean" id="lookcolors">
+		<result column="pid" jdbcType="VARCHAR" property="pid"/>
 		<result column="colorid" jdbcType="VARCHAR" property="colorid"/>
 		<result column="colorname" jdbcType="VARCHAR" property="colorname"/>
 		<result column="czt" jdbcType="VARCHAR" property="czt"/>
-		<result column="pid" jdbcType="VARCHAR" property="pid"/>
 	</resultMap>
 	<!-- 查看所有车 -->
 	<select id="lookCarName" resultMap="lookcarname">
@@ -60,7 +60,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		AND 
 		zys_color.`colorid`=#{colorid}
 	</select>
-	
-	
-	
+
 </mapper>
