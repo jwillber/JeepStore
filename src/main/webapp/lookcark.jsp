@@ -394,7 +394,7 @@
 	//下架汽车
 	function cardow(carid){
         $.ajax({
-            url:"${pageContext.request.contextPath}/cardowServlet",
+            url:"${pageContext.request.contextPath}/admin/downcarname.do",
             async:true,
             data:{"carid":carid},
             success:function(data){
@@ -421,7 +421,7 @@
 	            		  $("#newtables").append("<tbody>"+
 	            				  	"<tr>"+
 										"<td>"+data[i].carid+"</td>"+
-										"<td><img src='"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
+										"<td><img src='${pageContext.request.contextPath}/"+data[i].carimg+"' style='width: 120px; height: 90px;''></td>"+
 										"<td>"+data[i].carname+"</td>"+
 											ts+
 										"<td><a href='javascript:void(0)' onClick='carup("+data[i].carid+")'>上架</a></td>"+

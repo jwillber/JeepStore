@@ -53,5 +53,20 @@ public class AdminController {
 		candpBean arr = adminServise.lookcolors(colorid, pid);
 		return arr;
 	}
-
+	//上加车辆
+	@RequestMapping("/upcarname")
+	@ResponseBody
+	public List<lookCarNameBean> upcarname(@Param("carid")String carid){
+		List<lookCarNameBean> arr = adminServise.updateUpcar(carid);
+		System.out.println(carid);
+		return arr;
+	}
+	//下架车辆
+	@RequestMapping("/downcarname")
+	@ResponseBody
+	public List<lookCarNameBean> downcarname(ModelAndView model,@Param("carid")String carid){
+		List<lookCarNameBean> arr = adminServise.updateDouwncar(carid);
+		System.out.println(carid);
+		return arr;
+	}
 }

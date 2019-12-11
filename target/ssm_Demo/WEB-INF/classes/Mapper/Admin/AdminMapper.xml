@@ -60,5 +60,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		AND 
 		zys_color.`colorid`=#{colorid}
 	</select>
-
+	<!-- 上架车辆  -->
+	<update id="updateUpcar">
+		update zys_cark set carzt='0' where carid=#{carid};
+	</update>
+	<!-- 下架车辆 -->
+	<update id="updateDouwncar">
+		update zys_cark set carzt='1' where carid=#{carid};
+	</update>
 </mapper>

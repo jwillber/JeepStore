@@ -18,4 +18,8 @@ public interface AdminMapper {
 	List<peizhiColor> lookcolor(String pid);
 	//详细颜色
 	candpBean lookcolors(@Param("colorid")String colorid,@Param("pid")String pid);
+	//上加车辆
+	Integer updateUpcar(String carid);
+	//下架车辆
+	Integer updateDouwncar(String carid);
 }

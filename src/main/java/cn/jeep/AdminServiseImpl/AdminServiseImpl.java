@@ -27,7 +27,7 @@ public class AdminServiseImpl implements AdminServise {
 	}
 	
 	//插配置
-	@RequestMapping("/lookpeizhi")
+	
 	public List<carPeizhi> lookpeizhi(String carid) {
 		// TODO Auto-generated method stub
 		List<carPeizhi> arr = adminMapper.lookpeizhi(carid);
@@ -43,6 +43,20 @@ public class AdminServiseImpl implements AdminServise {
 	public candpBean lookcolors(String colorid,String pid) {
 		// TODO Auto-generated method stub
 		candpBean arr = adminMapper.lookcolors(colorid, pid);
+		return arr;
+	}
+
+	public List<lookCarNameBean> updateUpcar(String carid) {
+		// TODO Auto-generated method stub
+		adminMapper.updateUpcar(carid);
+		List<lookCarNameBean> arr = adminMapper.lookCarName();
+		return arr;
+	}
+
+	public List<lookCarNameBean> updateDouwncar(String carid) {
+		// TODO Auto-generated method stub
+		adminMapper.updateDouwncar(carid);
+		List<lookCarNameBean> arr = adminMapper.lookCarName();
 		return arr;
 	}
 	

@@ -16,4 +16,8 @@ public interface AdminServise {
 	List<peizhiColor> lookcolor(String pid);
 	//详细颜色
 	candpBean lookcolors(String colorid,String pid);
+	//上加车辆
+	List<lookCarNameBean> updateUpcar(String carid);
+	//下架车辆
+	List<lookCarNameBean> updateDouwncar(String carid);
 }
